@@ -1,0 +1,15 @@
+@import "../../../../../assets/colors.scss";
+
+:host {
+  z-index: 2;
+  user-select: none;
+}
+
+.pane-divider {
+  transition: opacity 0.2s;
+  width: 0.4rem;
+  height: 100%;
+  position: absolute;
+  background-color: $bg-primary-50;
+  touch-action: none;
+}

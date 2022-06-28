@@ -1,0 +1,38 @@
+<form [formGroup]="projectForm" (ngSubmit)="submit()">
+  <div class="network-explorer-inspector__header">
+    <h1 *ngIf="!editing">{{ project?.name ?? "Loading..." }}</h1>
+    <input
+      class="inspector-explorer-inspector__title-edit"
+      formControlName="name"
+      *ngIf="editing"
+      type="text"
+      name="projectName"
+      id="projectName"
+    />
+    <div class="network-explorer-inspector__network-button-container">
+      <button a-sia-button-small buttonStyle="delete" (click)="delete()" type="delete" *ngIf="!editing" type="button">
+        Delete?
+      </button>
+      <button a-sia-button-small buttonStyle="modify" (click)="enableEditing()" *ngIf="!editing" type="button">
+        Modify
+      </button>
+      <button a-sia-button-small buttonStyle="primary" [disabled]="projectForm.invalid" *ngIf="editing" type="submit">
+        Save
+      </button>
+      <button a-sia-button-small buttonStyle="cancel" (click)="cancel()" type="cancel" *ngIf="editing">Cancel</button>
+    </div>
+  </div>
+</form>
+<button (click)="createNetwork()" a-sia-button buttonStyle="create">Create Network</button>
+<ul class="network-explorer-inspector__network-list">
+  <li class="network-explorer-inspector__network-list-item" *ngFor="let network of networks">
+    <button
+      (click)="navigate(network.id)"
+      a-sia-button
+      class="network-explorer-inspector__button network-explorer-inspector__network-button"
+    >
+      <div class="network-explorer-inspector__network-list-name">{{ network.name }}</div>
+      <div class="network-explorer-inspector__network-list-network-count">17 Networks</div>
+    </button>
+  </li>
+</ul>

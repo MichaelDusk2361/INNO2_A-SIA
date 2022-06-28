@@ -1,0 +1,93 @@
+@import "../../../../assets/colors.scss";
+@import "../../../../assets/borders.scss";
+@import "../../../../assets/shadows.scss";
+
+:host {
+  display: grid;
+  grid-template-columns: 13rem auto 7rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  --bg: $bg-primary-100;
+}
+label {
+  font-size: 1.6rem;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+$track-height: 0.6rem;
+$thumb-height: 1.4rem;
+@mixin track {
+  background: $bg-primary-500;
+  height: $track-height;
+  border-radius: 1rem;
+}
+@mixin thumb {
+  background-color: var(--bg);
+  height: $thumb-height;
+  width: $thumb-height;
+  border-radius: $thumb-height;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 90%;
+  &::-webkit-slider-runnable-track {
+    @include track();
+  }
+  &::-moz-range-track {
+    @include track();
+  }
+  &::-webkit-slider-thumb {
+    margin-top: calc(calc($track-height/2) - calc($thumb-height/2));
+    -webkit-appearance: none;
+    appearance: none;
+    @include thumb();
+  }
+  &::-moz-range-thumb {
+    border: none;
+    @include thumb();
+  }
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  background-color: $bg-primary-500;
+  border: none;
+  border-radius: 0.2rem;
+  height: 3.4rem;
+  padding: 1rem;
+  background-image: none;
+  box-shadow: none;
+  outline: none;
+  color: $bg-primary-50;
+  font-size: 1.6rem;
+  font-family: var(--font-family);
+
+  &::-webkit-input-placeholder {
+    color: $bg-primary-300;
+  }
+  &:-moz-placeholder {
+    color: $bg-primary-300;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    color: $bg-primary-300;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: $bg-primary-300;
+  }
+  &::-ms-input-placeholder {
+    color: $bg-primary-300;
+  }
+
+  &::placeholder {
+    color: $bg-primary-300;
+  }
+}

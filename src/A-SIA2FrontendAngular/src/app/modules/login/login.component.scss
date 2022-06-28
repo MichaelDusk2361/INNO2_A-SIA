@@ -1,0 +1,21 @@
+@import "../../../assets/colors.scss";
+:host {
+  padding: 1rem;
+  display: block;
+}
+
+.button {
+  color: $bg-primary-200;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.loginFooter {
+  padding: 1rem 0 1rem 0;
+  order: 0;
+  display: flex;
+}
+
+.forgot-password {
+  color: $bg-primary-300;
+}

@@ -1,0 +1,12 @@
+@import "../../../../assets/colors.scss";
+
+:host {
+  display: grid;
+  grid-template-columns: 13rem auto;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+label {
+  font-size: 1.6rem;
+}

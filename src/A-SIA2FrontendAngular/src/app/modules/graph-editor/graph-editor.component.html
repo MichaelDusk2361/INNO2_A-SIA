@@ -1,0 +1,56 @@
+<div class="overlay">
+  <a-sia-graph-editor-controls
+    [viewportScale]="viewportScale"
+    (viewportScaleChange)="onControlZoomChange($event)"
+    [centerPosition]="graphEditorViewport.centerPosition"
+    (creatingConnection)="updateTempConnection($event)"
+    (activeCreateConnectionStatus)="setIsCreatingConnectionStatus($event)"
+  ></a-sia-graph-editor-controls>
+</div>
+<div
+  class="graph-editor-viewport"
+  (pointerdown)="onGraphEditorViewportClick($event)"
+  (wheel)="onGraphEditorViewportWheel($event)"
+  [class.transitionInterpolation]="graphEditorViewport.transitionInterpolation"
+  [style.transform]="graphEditorViewport.transform"
+  [style.width.px]="graphEditorViewport.width"
+  [style.height.px]="graphEditorViewport.height"
+></div>
+<div
+  class="graph-editor-contents"
+  [class.transitionInterpolation]="graphEditorViewport.transitionInterpolation"
+  [style.transform]="graphEditorViewport.transform"
+  [style.width.px]="graphEditorViewport.width"
+  [style.height.px]="graphEditorViewport.height"
+>
+  <a-sia-connection
+    *ngFor="let connection of connectedPersons | keyvalue"
+    [connection]="connection.key"
+    [personA]="connection.value.a"
+    [personB]="connection.value.b"
+  ></a-sia-connection>
+  <a-sia-connection
+    *ngIf="isCreatingConnection && this.tempConnection"
+    [connection]="tempConnection.connection"
+    [personA]="tempConnection.personA"
+    [personB]="tempConnection.personB"
+    [tempEndPosition]="{ x: tempConnection.cursorPos.x, y: tempConnection.cursorPos.y }"
+    style="pointer-events: none"
+  ></a-sia-connection>
+  <a-sia-person-node
+    *ngFor="let person of personNodes"
+    [person]="person"
+    (pointerdown)="onNodeClick($event, person)"
+  ></a-sia-person-node>
+  <div
+    *ngFor="let viewBox of selectionViewBoxes"
+    [style.left.px]="viewBox.x"
+    [style.top.px]="viewBox.y"
+    [style.width.px]="viewBox.width"
+    [style.height.px]="viewBox.height"
+    [style.transform]="' translate(0,.3rem) rotate(' + viewBox.rotationRad + 'rad)'"
+    class="graph-editor__selected-container"
+  >
+    <div class="graph-editor__selected"></div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+@import "../../../assets/measurements.scss";
+@import "../../../assets/shadows.scss";
+
+:host {
+  padding-top: $height-menubar;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+.menubar {
+  z-index: 2;
+}
+
+.pane-container {
+  height: 100%;
+  &__data-panel {
+    box-shadow: $shadow-left-blur;
+    position: relative;
+    z-index: 1;
+  }
+  &__graph-editor {
+    position: relative;
+    z-index: 0;
+  }
+  &__simulation-diagram {
+    position: relative;
+    z-index: 1;
+    box-shadow: $shadow-right-blur;
+  }
+}

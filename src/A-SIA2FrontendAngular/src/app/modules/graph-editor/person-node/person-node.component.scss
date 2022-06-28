@@ -1,0 +1,62 @@
+@import "../../../../assets/colors.scss";
+:host {
+  display: grid;
+  width: max-content;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  place-items: center;
+  gap: 0.7rem;
+  position: absolute;
+  pointer-events: all;
+}
+
+.simulation-circle {
+  border: 0.6rem $bg-primary-900 solid;
+  border-radius: 50%;
+  width: 9.3rem;
+  height: 9.3rem;
+  display: grid;
+  place-items: center;
+}
+.node {
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border: 0.6rem $bg-primary-900 solid;
+  background-color: $bg-primary-600;
+  border-radius: 50%;
+  width: 7.3rem;
+  height: 7.3rem;
+}
+.identifier-circle {
+  // transform-origin: center;
+  transform: translate(2.8rem, -2.8rem);
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.6rem $bg-primary-900 solid;
+  border-radius: 50%;
+  stroke: $bg-primary-900;
+  background-color: $color-negative; // temp
+}
+.anonymous-icon {
+  &__fill {
+    fill: $bg-primary-100;
+  }
+  &__stroke {
+    stroke: $bg-primary-600;
+  }
+}
+
+.name-container {
+  width: min-content;
+  min-width: 10rem;
+  grid-row: 2;
+  background-color: $bg-primary-900;
+  padding: 0.3rem;
+  border-radius: 1rem;
+}
+.name {
+  text-align: center;
+  margin: 0;
+}

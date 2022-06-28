@@ -1,0 +1,25 @@
+<ng-content></ng-content>
+<ng-template
+  ngFor
+  let-isLastPane="last"
+  let-isFirstPane="first"
+  let-length="count"
+  let-paneIndex="index"
+  [ngForOf]="_displayedPanes"
+>
+  <a-sia-pane-divider
+    #divider
+    [order]="paneIndex * 2 + 1"
+    [direction]="direction"
+    *ngIf="
+      !(
+        isLastPane ||
+        (paneIndex == length - 2 &&
+          _displayedPanes.get(paneIndex + 1)?.maxSize == _displayedPanes.get(paneIndex + 1)?.minSize) ||
+        (paneIndex == length - 2 &&
+          _displayedPanes.get(paneIndex + 1)?.maxSize == _displayedPanes.get(paneIndex + 1)?.minSize) ||
+        (isFirstPane && _displayedPanes.get(0)?.maxSize == _displayedPanes.get(0)?.minSize)
+      )
+    "
+  ></a-sia-pane-divider>
+</ng-template>

@@ -1,0 +1,6 @@
+<a-sia-data-panel-navbar class="data-panel__navbar"></a-sia-data-panel-navbar>
+<div class="data-panel__content">
+  <a-sia-network-panel *ngIf="navigationService.networksPanelIsOpen"></a-sia-network-panel>
+  <a-sia-inspector-panel *ngIf="navigationService.inspectorPanelIsOpen"></a-sia-inspector-panel>
+  <a-sia-structure-panel *ngIf="navigationService.structurePanelIsOpen"></a-sia-structure-panel>
+</div>

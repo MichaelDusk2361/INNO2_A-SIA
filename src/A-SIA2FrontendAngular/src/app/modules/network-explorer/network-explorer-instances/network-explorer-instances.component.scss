@@ -1,0 +1,31 @@
+@import "../../../../assets/measurements.scss";
+@import "../../../../assets/shadows.scss";
+@import "../../../../assets/colors.scss";
+
+:host {
+  display: block;
+}
+
+.network-explorer-inspector {
+  &__instance-list {
+    list-style: none;
+    padding-left: 0;
+    &-item {
+      margin-top: 2rem;
+    }
+  }
+  &__instance-button {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  &__instance-list-name {
+    white-space: nowrap;
+  }
+  &__instance-list-project-count {
+    white-space: nowrap;
+    text-align: right;
+  }
+  &__instance-list-network-count {
+    white-space: nowrap;
+    text-align: right;
+  }
+}

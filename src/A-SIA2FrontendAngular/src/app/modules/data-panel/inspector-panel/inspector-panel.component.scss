@@ -1,0 +1,52 @@
+@import "../../../../assets/colors.scss";
+:host {
+  padding: 1rem;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow-y: scroll;
+}
+
+.inspector-nothing {
+  &__info {
+    text-align: center;
+    font-size: 1.3rem;
+    color: $bg-primary-500;
+  }
+}
+.inspector-person {
+  &__heading {
+    font-size: 2.6rem;
+    margin-top: 1rem;
+    width: fit-content;
+  }
+}
+.inspector-connection {
+  &__heading {
+    font-size: 2.6rem;
+    margin-top: 1rem;
+  }
+}
+.delete-connection-container {
+  margin: 0 auto 1rem auto;
+}
+.relation {
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 8rem 1fr;
+  align-items: center;
+  &__person-name {
+    text-align: center;
+    overflow: ellipsis;
+  }
+  &__incoming-symbol {
+    text-align: center;
+  }
+}
+.header {
+  display: grid;
+  grid-template-columns: auto min-content;
+  align-items: center;
+}

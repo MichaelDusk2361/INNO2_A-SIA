@@ -1,0 +1,5 @@
+<div class="data-panel-navbar-entry__label-container"
+  (click)="navigationService.navigate(this.label)">
+  <span [ngClass]="{'data-panel-navbar-entry__label__active': navigationService.getStatus(this.label)}" 
+  class="data-panel-navbar-entry__label">{{ this.label }}</span>
+</div>

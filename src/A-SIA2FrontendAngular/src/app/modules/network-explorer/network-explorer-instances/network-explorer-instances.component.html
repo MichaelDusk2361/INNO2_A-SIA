@@ -1,0 +1,15 @@
+<h1>Your Work</h1>
+<button (click)="createInstance()" a-sia-button buttonStyle="create">Create Instance</button>
+<ul class="network-explorer-inspector__instance-list">
+  <li class="network-explorer-inspector__instance-list-item" *ngFor="let instance of instances">
+    <button
+      (click)="navigate(instance.id)"
+      a-sia-button
+      class="network-explorer-inspector__button network-explorer-inspector__instance-button"
+    >
+      <div class="network-explorer-inspector__instance-list-name">{{ instance.name }}</div>
+      <div class="network-explorer-inspector__instance-list-project-count">5 Projects</div>
+      <div class="network-explorer-inspector__instance-list-network-count">17 Networks</div>
+    </button>
+  </li>
+</ul>

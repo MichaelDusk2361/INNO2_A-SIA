@@ -1,0 +1,43 @@
+// colors are not named the same as in figma!
+
+$bg-primary-50: #ffffff;
+$bg-primary-100: #f1f4f8;
+$bg-primary-200: #e1e6ee;
+$bg-primary-300: #c8d2e4;
+$bg-primary-400: #869ec5;
+$bg-primary-500: #4d6b9e;
+$bg-primary-600: #394f75;
+$bg-primary-700: #2b3d5a;
+$bg-primary-800: #202c41;
+$bg-primary-900: #121a26;
+
+:root {
+  --bg-primary-50: #{$bg-primary-50};
+  --bg-primary-100: #{$bg-primary-100};
+  --bg-primary-200: #{$bg-primary-200};
+  --bg-primary-300: #{$bg-primary-300};
+  --bg-primary-400: #{$bg-primary-400};
+  --bg-primary-500: #{$bg-primary-500};
+  --bg-primary-600: #{$bg-primary-600};
+  --bg-primary-700: #{$bg-primary-700};
+  --bg-primary-800: #{$bg-primary-800};
+  --bg-primary-900: #{$bg-primary-900};
+}
+
+$color-negative: #ff013d;
+$color-negative-slightly: #ff5623;
+$color-neutral: #ffb805;
+$color-positive-slightly: #a9ce27;
+$color-positive: #4bdb50;
+
+$color-1: #556ceb;
+$color-2: #00aaf4;
+$color-3: #4adb50;
+$color-4: #ffc201;
+$color-5: #ff561c;
+$color-6: #ff005d;
+$color-7: #b93ecc;
+
+@function url-friendly-colour($colour) {
+  @return "%23" + str-slice("#{$colour}", 2, -1);
+}

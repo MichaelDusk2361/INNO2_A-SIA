@@ -1,0 +1,37 @@
+<div class="structure-creation">
+  <button a-sia-button buttonStyle="primary" type="button" (click)="addPerson()">+ Person</button>
+  <button a-sia-button buttonStyle="primary" type="button" (click)="addGroup()">+ Group</button>
+</div>
+<div class="network-structure-panel">
+  <ng-container *ngIf="networkHierarchy">
+    <ng-container *ngTemplateOutlet="recursiveNodeTmpl; context: { node: networkHierarchy }"></ng-container>
+  </ng-container>
+
+  <ng-template #recursiveNodeTmpl let-node="node">
+    <ng-container *ngIf="node?.children?.length === 0; else detailsTmpl">
+      <span
+        #leaf
+        #element
+        [attr.data-id]="node?.id"
+        class="network-structure-panel__leaf"
+        (click)="clickDetail($event, leaf, node.id)"
+      >
+        {{ node?.name }}
+      </span>
+    </ng-container>
+    <ng-template #detailsTmpl>
+      <details #detail #element [attr.data-id]="node?.id">
+        <summary (dblclick)="toggleDetail(detail)" (click)="clickDetail($event, detail, node?.id)">
+          {{ node?.name }}
+        </summary>
+        <ul *ngIf="node?.children?.length > 0; else detailsTmpl" class="network-structure-panel__list">
+          <ng-container *ngFor="let childNode of node?.children">
+            <li class="network-structure-panel__list-item">
+              <ng-container *ngTemplateOutlet="recursiveNodeTmpl; context: { node: childNode }"></ng-container>
+            </li>
+          </ng-container>
+        </ul>
+      </details>
+    </ng-template>
+  </ng-template>
+</div>

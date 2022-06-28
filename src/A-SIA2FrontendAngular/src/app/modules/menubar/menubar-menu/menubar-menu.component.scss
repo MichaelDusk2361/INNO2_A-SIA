@@ -1,0 +1,52 @@
+@import "../../../../assets/colors.scss";
+@import "../../../../assets/measurements.scss";
+@import "../../../../assets/shadows.scss";
+
+:host {
+  height: 100%;
+  width: 6.5rem;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  left: 0;
+  &.open {
+    background-color: $bg-primary-100;
+    border: none;
+    color: $bg-primary-900;
+    & .menubar-menu {
+      display: block;
+    }
+    & .menubar-menu__label-container {
+      background-color: $bg-primary-100;
+      color: $bg-primary-900;
+      border: none;
+    }
+  }
+}
+
+.menubar-menu {
+  display: none;
+  position: absolute;
+  top: $height-menubar;
+  background-color: $bg-primary-100;
+  color: $bg-primary-900;
+  left: 0;
+  box-shadow: $shadow-down-blur;
+  padding: 0.5rem 1rem;
+  &__label {
+    user-select: none;
+  }
+  &__label-container {
+    height: 100%;
+    width: 100%;
+    // is a flex for vertical (and horizontal) label alignment
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: $bg-primary-500;
+      border: solid 0.5rem $bg-primary-600;
+    }
+  }
+}

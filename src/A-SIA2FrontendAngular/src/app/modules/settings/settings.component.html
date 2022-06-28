@@ -1,0 +1,24 @@
+<h2>Settings</h2>
+<form>
+  <div class="toggles flip">
+    <input
+      [checked]="network?.anonymous"
+      (change)="network.anonymous = !network.anonymous"
+      type="checkbox"
+      name="anonymousDisplay"
+      id="anonymousDisplay"
+    />
+    <label for="anonymousDisplay" class="anonymousDisplayLabel">Anonymous Display</label>
+  </div>
+</form>
+<div class="shortcuts">
+  <ng-container *ngFor="let shortcut of getShortcutNames()">
+    <div class="shortcut shortcutHTMLString">
+      {{ this.inputservice.shortcuts.get(shortcut)?.shortcut?.HTMLString }}
+    </div>
+    <div class="shortcutDescription">
+      {{ this.inputservice.shortcuts.get(shortcut)?.shortcut?.Description }}
+    </div>
+  </ng-container>
+</div>
+<button a-sia-button buttonStyle="primary" (click)="onApply()" class="button">Apply</button>

@@ -1,0 +1,22 @@
+<label class="graphEditorZoom-label" [for]="for">{{ label }}</label>
+<input
+  #sliderInput
+  [attr.style]="sanitizer.bypassSecurityTrustStyle('--bg:' + color)"
+  type="range"
+  [name]="for + 'Slider'"
+  [min]="min"
+  [max]="max"
+  [step]="step"
+  (input)="onSliderInput($event)"
+  [value]="value"
+/>
+<input
+  type="number"
+  #numberInput
+  [name]="for"
+  (input)="onNumberInput($event)"
+  [min]="min"
+  [max]="max"
+  [step]="step"
+  (blur)="refreshNumberInputValue()"
+/>

@@ -1,0 +1,13 @@
+{
+  "semi": true,
+  "overrides": [
+    {
+      "files": ["*.html", "*.js", "*.ts", "*.json", "*.scss"],
+      "options": {
+        "tabWidth": 2,
+        "trailingComma": "none",
+        "printWidth": 120
+      }
+    }
+  ]
+}

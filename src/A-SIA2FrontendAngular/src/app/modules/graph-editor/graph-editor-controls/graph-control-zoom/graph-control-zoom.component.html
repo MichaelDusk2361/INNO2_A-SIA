@@ -1,0 +1,13 @@
+<span class="graphEditorZoom-minus" (click)="changeControlZoomBy(-0.1)">-</span>
+<input
+  type="range"
+  name="graphEditorZoom"
+  min="0"
+  max="100"
+  step="2"
+  (input)="onControlZoomChange($event)"
+  [value]="viewportScaleCorrected"
+  id="graphEditorZoom"
+/>
+<span class="graphEditorZoom-plus" (click)="changeControlZoomBy(0.1)">+</span>
+<label class="graphEditorZoom-label" for="graphEditorZoom">{{ viewportScale | percent }}</label>

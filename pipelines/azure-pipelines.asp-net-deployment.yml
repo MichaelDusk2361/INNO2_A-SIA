@@ -1,0 +1,65 @@
+# ASP.NET Core (.NET Framework)
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger: none
+pr: none
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+- task: NuGetToolInstaller@1
+
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '5.0.x'
+  displayName: "Install .NET Core SDK"
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'miduskanich.com VPS'
+    runOptions: 'commands'
+    commands: |
+      sudo systemctl stop kestrel-asia.service
+    readyTimeout: '20000'
+
+- task: CopyFilesOverSSH@0
+  inputs:
+    sshEndpoint: 'miduskanich.com VPS'
+    sourceFolder: '$(Build.ArtifactStagingDirectory)'
+    contents: '**'
+    targetFolder: '/var/www/a-sia_server'
+    readyTimeout: '20000' 
+    cleanTargetFolder: true
+    overwrite: true
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'miduskanich.com VPS'
+    runOptions: 'commands'
+    commands: |
+      unzip /var/www/a-sia_server/WebApp.zip -d /var/www/a-sia_server
+      rm /var/www/a-sia_server/WebApp.zip
+      sudo systemctl start kestrel-asia.service
+    readyTimeout: '20000'
+
+
+    

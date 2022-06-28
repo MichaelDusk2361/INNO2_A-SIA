@@ -1,0 +1,30 @@
+@import "../../../../../assets/colors.scss";
+
+:host {
+    height: 100%;
+    width: 33.33%;
+    display: inline-block;
+}
+
+.data-panel-navbar-entry {
+    &__label {
+        user-select: none;
+        color: $bg-primary-600;
+
+        &:hover {
+            color: $bg-primary-200;
+        }
+
+        &__active {
+          color: $bg-primary-200;
+        }
+      }
+      &__label-container {
+        height: 100%;
+
+        // is a flex for vertical (and horizontal) label alignment
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+}

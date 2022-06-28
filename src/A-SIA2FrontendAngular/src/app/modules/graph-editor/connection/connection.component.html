@@ -1,0 +1,9 @@
+<div class="connection__label-background">
+  <p class="connection__label" [style.transform]="flipText ? 'rotate(180deg)' : ''">
+    {{ connection.influence.toFixed(2) }}
+  </p>
+  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="12" viewBox="0 0 22 10" fill="none">
+    <path d="M20.3429 8H2L2 2L20.3429 8Z" fill="#E7EBEE" stroke="#E7EBEE" stroke-width="2.5" stroke-linejoin="round" />
+  </svg>
+</div>
+<div class="connection__line" [style.background]="getInfluenceColor()"></div>

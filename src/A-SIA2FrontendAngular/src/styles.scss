@@ -1,0 +1,332 @@
+@import "assets/colors.scss";
+@import "assets/shadows.scss";
+
+@font-face {
+  font-family: "Rubik";
+  src: url("assets/Rubik/static/Rubik-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("assets/Rubik/static/Rubik-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("assets/Rubik/static/Rubik-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("assets/Rubik/static/Rubik-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("assets/Rubik/static/Rubik-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("assets/Rubik/static/Rubik-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("assets/Rubik/static/Rubik-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("assets/Rubik/static/Rubik-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("assets/Rubik/static/Rubik-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("assets/Rubik/static/Rubik-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("assets/Rubik/static/Rubik-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("assets/Rubik/static/Rubik-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("assets/Rubik/static/Rubik-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("assets/Rubik/static/Rubik-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Rubik";
+  color: $bg-primary-100;
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-color: $bg-primary-600;
+  scrollbar-width: thin;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: $bg-primary-900;
+  margin: 0;
+}
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+}
+
+body.ew-resize {
+  cursor: ew-resize;
+}
+
+body.ns-resize {
+  cursor: ns-resize;
+}
+
+.input-small {
+  background-color: $bg-primary-500;
+  border: none;
+  border-radius: 0.2rem;
+  height: 3.4rem;
+  padding: 1rem;
+  background-image: none;
+  box-shadow: none;
+  outline: none;
+  color: $bg-primary-50;
+  font-size: 1.6rem;
+  font-family: var(--font-family);
+
+  &::-webkit-input-placeholder {
+    color: $bg-primary-300;
+  }
+  &:-moz-placeholder {
+    color: $bg-primary-300;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    color: $bg-primary-300;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: $bg-primary-300;
+  }
+  &::-ms-input-placeholder {
+    color: $bg-primary-300;
+  }
+
+  &::placeholder {
+    color: $bg-primary-300;
+  }
+}
+
+.input-medium {
+  background-color: $bg-primary-500;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0.2rem;
+  height: 3.8rem;
+  padding: 1rem;
+  background-image: none;
+  box-shadow: none;
+  outline: none;
+  color: $bg-primary-50;
+  font-size: 1.6rem;
+  font-family: var(--font-family);
+
+  &::-webkit-input-placeholder {
+    color: $bg-primary-300;
+  }
+  &:-moz-placeholder {
+    color: $bg-primary-300;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    color: $bg-primary-300;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: $bg-primary-300;
+  }
+  &::-ms-input-placeholder {
+    color: $bg-primary-300;
+  }
+
+  &::placeholder {
+    color: $bg-primary-300;
+  }
+}
+
+.a-sia-button {
+  display: block;
+  font-family: var(--font-family);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.8rem 1.3rem;
+  border-radius: 2px;
+  box-shadow: $shadow-down-hard;
+  border: none;
+  background-color: $color-1;
+  color: $bg-primary-200;
+  &-small {
+    padding: 0.3rem 1rem;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.a-sia-button--create {
+  background-color: $color-positive;
+  color: $bg-primary-900;
+}
+
+.a-sia-button--delete {
+  background-color: $color-negative;
+  color: $bg-primary-900;
+}
+
+.a-sia-button--modify {
+  background-color: $bg-primary-200;
+  color: $bg-primary-900;
+}
+
+.a-sia-button--primary {
+  background-color: $color-1;
+  color: $bg-primary-200;
+}
+
+.a-sia-button--cancel {
+  background-color: $bg-primary-400;
+  color: $bg-primary-200;
+}
+
+.input-large {
+  background-color: $bg-primary-500;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0.2rem;
+  height: 15rem;
+  padding: 1rem;
+  background-image: none;
+  box-shadow: none;
+  outline: none;
+  color: $bg-primary-50;
+  font-size: 1.6rem;
+  font-family: var(--font-family);
+
+  &::-webkit-input-placeholder {
+    color: $bg-primary-300;
+  }
+  &:-moz-placeholder {
+    color: $bg-primary-300;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    color: $bg-primary-300;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: $bg-primary-300;
+  }
+  &::-ms-input-placeholder {
+    color: $bg-primary-300;
+  }
+  &::placeholder {
+    color: $bg-primary-300;
+  }
+}
+
+.network-explorer-inspector__button {
+  width: 100%;
+  background-color: $bg-primary-600;
+  color: $bg-primary-200;
+  text-align: left;
+  box-shadow: $shadow-down-blur;
+  font-weight: 400;
+  font-size: 1.6rem;
+  display: grid;
+}
+
+.inspector-explorer-inspector__title-edit {
+  background-color: $bg-primary-800;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0.2rem;
+  height: 3.8rem;
+  padding: 1rem;
+  background-image: none;
+  box-shadow: none;
+  outline: none;
+  color: $bg-primary-50;
+  font-size: 2.4rem;
+  font-style: italic;
+  font-weight: 500;
+  font-family: var(--font-family);
+  margin: 2.2rem 0;
+
+  &::-webkit-input-placeholder {
+    color: $bg-primary-300;
+  }
+  &:-moz-placeholder {
+    color: $bg-primary-300;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    color: $bg-primary-300;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: $bg-primary-300;
+  }
+  &::-ms-input-placeholder {
+    color: $bg-primary-300;
+  }
+  &::placeholder {
+    color: $bg-primary-300;
+  }
+}
+
+.shortcut {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  background-color: $bg-primary-200;
+  color: $bg-primary-900;
+  user-select: none;
+}

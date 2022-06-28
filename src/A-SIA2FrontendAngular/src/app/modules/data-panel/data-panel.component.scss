@@ -1,0 +1,17 @@
+@import "../../../assets/colors.scss";
+
+:host {
+  display: flex;
+  flex-flow: column;
+  background-color: $bg-primary-800;
+  height: 100%;
+}
+
+.data-panel {
+  &__navbar {
+  }
+  &__content {
+    flex-grow: 1;
+    position: relative;
+  }
+}

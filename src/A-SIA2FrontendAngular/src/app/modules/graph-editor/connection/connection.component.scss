@@ -1,0 +1,30 @@
+@import "../../../../assets/colors.scss";
+
+:host {
+  pointer-events: all;
+  position: absolute;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  place-items: center;
+  gap: 0.3rem;
+  transform-origin: left bottom;
+}
+.connection {
+  &__line {
+    width: 100%;
+    height: 0.8rem;
+    margin-bottom: 0.3rem;
+  }
+  &__label {
+    margin: 0;
+  }
+  &__label-background {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: $bg-primary-900;
+  }
+}

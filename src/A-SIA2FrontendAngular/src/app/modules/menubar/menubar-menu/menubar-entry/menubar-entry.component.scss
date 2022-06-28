@@ -1,0 +1,30 @@
+@import "../../../../../assets/colors.scss";
+:host {
+  display: flex;
+  white-space: nowrap;
+  padding: 0.6rem 1.5rem;
+  &:hover:not(.disabled) {
+    background-color: $bg-primary-200;
+
+    .menubar-entry__shortcut {
+      background-color: $bg-primary-300;
+    }
+  }
+}
+:host(.disabled) {
+  color: $bg-primary-300;
+
+  .menubar-entry__shortcut {
+    color: $bg-primary-300;
+  }
+}
+
+.menubar-entry {
+  &__description {
+    user-select: none;
+    margin-right: 1rem;
+  }
+  &__shortcut {
+    margin-left: auto;
+  }
+}

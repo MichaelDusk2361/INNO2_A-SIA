@@ -1,0 +1,46 @@
+<div class="menubar__menu-container">
+  <div class="menubar__explorer-link">
+    <button a-sia-button-small buttonStyle="modify" [routerLink]="['/explorer']" type="button">&lt; Explorer</button>
+  </div>
+  <a-sia-menubar-menu label="File">
+    <a-sia-menubar-entry [action]="this.menubarExampleCallback">New Network...</a-sia-menubar-entry>
+    <a-sia-menubar-entry>Open Network</a-sia-menubar-entry>
+    <div class="menubar__menu-line"></div>
+    <a-sia-menubar-entry>Save</a-sia-menubar-entry>
+    <a-sia-menubar-entry>Save as...</a-sia-menubar-entry>
+    <div class="menubar__menu-line"></div>
+    <a-sia-menubar-entry>Rename</a-sia-menubar-entry>
+    <a-sia-menubar-entry>Export to device</a-sia-menubar-entry>
+    <a-sia-menubar-entry>Import from device</a-sia-menubar-entry>
+    <a-sia-menubar-entry [action]="this.openLoginModal">Login</a-sia-menubar-entry>
+  </a-sia-menubar-menu>
+  <a-sia-menubar-menu label="Edit">
+    <a-sia-menubar-entry
+      [shortcutText]="this.commandHistoryService.undoShortcut.HTMLString"
+      [disabled]="!this.commandHistoryService.canUndo"
+      [action]="this.commandHistoryService.undo"
+      ><fa-icon [icon]="undoIcon"></fa-icon>&nbsp;Undo</a-sia-menubar-entry
+    >
+    <a-sia-menubar-entry
+      [shortcutText]="this.commandHistoryService.redoShortcutY.HTMLString"
+      [disabled]="!this.commandHistoryService.canRedo"
+      [action]="this.commandHistoryService.redo"
+      ><fa-icon [icon]="redoIcon"></fa-icon>&nbsp;Redo</a-sia-menubar-entry
+    >
+    <a-sia-menubar-entry [action]="this.runExampleMoveCommand">ExampleMoveCommand</a-sia-menubar-entry>
+    <a-sia-menubar-entry [action]="this.openSettingsModal">Preferences</a-sia-menubar-entry>
+  </a-sia-menubar-menu>
+  <a-sia-menubar-menu label="View">
+    <a-sia-menubar-entry>Toggle Anonymous Display</a-sia-menubar-entry>
+    <div class="menubar__menu-line"></div>
+    <a-sia-menubar-entry [action]="paneService.toggleSimulationDiagram" [closeOnAction]="false">
+      {{ paneService.simulationDiagramIsOpen ? "Hide" : "Show" }} Simulation Diagram
+    </a-sia-menubar-entry>
+    <a-sia-menubar-entry [action]="paneService.toggleGraphEditor" [closeOnAction]="false">
+      {{ paneService.graphEditorIsOpen ? "Hide" : "Show" }} Graph Editor
+    </a-sia-menubar-entry>
+    <a-sia-menubar-entry [action]="paneService.toggleDataPanel" [closeOnAction]="false">
+      {{ paneService.dataPanelIsOpen ? "Hide" : "Show" }} Data Panel
+    </a-sia-menubar-entry>
+  </a-sia-menubar-menu>
+</div>

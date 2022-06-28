@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "angular.ng-template",
+        "johnpapa.angular2",
+        "natewallace.angular2-inline",
+        "infinity1207.angular2-switcher",
+        "dbaeumer.vscode-eslint",
+        "christian-kohler.path-intellisense",
+        "esbenp.prettier-vscode"
+    ]
+}

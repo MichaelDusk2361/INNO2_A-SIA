@@ -1,0 +1,15 @@
+@import "../../../../../assets/colors.scss";
+@import "../../../../../assets/borders.scss";
+@import "../../../../../assets/shadows.scss";
+
+:host {
+  background-color: $bg-primary-700;
+  height: 4rem;
+  width: 4rem;
+  pointer-events: all;
+  border-radius: $border-radius-sm;
+  box-shadow: $shadow-blur;
+  padding: 0.2rem;
+  display: grid;
+  place-items: center;
+}

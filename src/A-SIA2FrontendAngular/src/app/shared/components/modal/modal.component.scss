@@ -1,0 +1,17 @@
+@import "../../../../assets/colors.scss";
+@import "../../../../assets/shadows.scss";
+
+:host {
+  position: fixed;
+  z-index: 1000;
+  background-color: $bg-primary-600;
+  color: $bg-primary-50;
+  border-radius: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+  padding: 2rem;
+}

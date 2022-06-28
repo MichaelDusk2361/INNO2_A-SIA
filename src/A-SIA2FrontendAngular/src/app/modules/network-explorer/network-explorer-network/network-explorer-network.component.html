@@ -1,0 +1,27 @@
+<form [formGroup]="networkForm" (ngSubmit)="submit()">
+  <div class="network-explorer-inspector__header">
+    <h1 *ngIf="!editing">{{ network?.name ?? "Loading..." }}</h1>
+    <input
+      class="inspector-explorer-inspector__title-edit"
+      formControlName="name"
+      *ngIf="editing"
+      type="text"
+      name="projectName"
+      id="projectName"
+    />
+    <div class="network-explorer-inspector__network-button-container">
+      <button a-sia-button-small buttonStyle="delete" (click)="delete()" type="delete" *ngIf="!editing" type="button">
+        Delete?
+      </button>
+      <button a-sia-button-small buttonStyle="modify" (click)="enableEditing()" *ngIf="!editing" type="button">
+        Modify
+      </button>
+      <button a-sia-button-small buttonStyle="primary" [disabled]="networkForm.invalid" *ngIf="editing" type="submit">
+        Save
+      </button>
+      <button a-sia-button-small buttonStyle="cancel" (click)="cancel()" type="cancel" *ngIf="editing">Cancel</button>
+    </div>
+  </div>
+</form>
+
+<button a-sia-button buttonStyle="primary" (click)="openNetwork()">Open</button>

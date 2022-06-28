@@ -1,0 +1,74 @@
+@import "../../../assets/colors.scss";
+
+:host {
+  display: block;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  pointer-events: none;
+  padding: 2rem;
+  z-index: 1;
+}
+
+// Example for enabling events on overlay elements
+// .overlay > p {
+//   pointer-events: all;
+//   user-select: text;
+// }
+
+.graph-editor-viewport {
+  -webkit-backface-visibility: hidden; /* add to fix webkit bug jitter */
+  -webkit-transform: perspective(1000px); /* add to fix webkit bug jitter */
+  rotate: deg(0.00001);
+  touch-action: none;
+  transform-origin: top left;
+  user-select: none;
+  position: absolute;
+  cursor: move;
+  z-index: 0;
+  background-color: $bg-primary-900;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="28 28 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M67.009,64C67.009,62.339 65.661,60.991 64,60.991C62.339,60.991 60.991,62.339 60.991,64C60.991,65.661 62.339,67.009 64,67.009C65.661,67.009 67.009,65.661 67.009,64Z" style="fill:#{url-friendly-colour($bg-primary-700)};"/></svg>');
+  //   background-size: contain;
+  //   background-image: url("../../../assets/generatedCoordMap.png");
+  // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.graph-editor-contents {
+  -webkit-backface-visibility: hidden; /* add to fix webkit bug jitter */
+  -webkit-transform: perspective(1000px); /* add to fix webkit bug jitter */
+  rotate: deg(0.00001);
+  touch-action: none;
+  pointer-events: none;
+  transform-origin: top left;
+  user-select: none;
+  position: absolute;
+}
+
+.transitionInterpolation {
+  //   transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  //   transition: all 0.2s linear;
+}
+
+.graph-editor__selected {
+  background-color: #00ffff41;
+  border: solid 0.2rem #00ffffbe;
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.graph-editor__selected-container {
+  position: absolute;
+  transform-origin: left bottom;
+  pointer-events: none;
+}

@@ -1,0 +1,38 @@
+<form [formGroup]="instanceForm" (ngSubmit)="submit()">
+  <div class="network-explorer-inspector__header">
+    <h1 *ngIf="!editing">{{ instance?.name }}</h1>
+    <input
+      class="inspector-explorer-inspector__title-edit"
+      formControlName="name"
+      *ngIf="editing"
+      type="text"
+      name="instanceName"
+      id="instanceName"
+    />
+    <div class="network-explorer-inspector__project-button-container">
+      <button a-sia-button-small buttonStyle="delete" (click)="delete()" type="delete" *ngIf="!editing" type="button">
+        Delete?
+      </button>
+      <button a-sia-button-small buttonStyle="modify" (click)="enableEditing()" *ngIf="!editing" type="button">
+        Modify
+      </button>
+      <button a-sia-button-small buttonStyle="primary" [disabled]="instanceForm.invalid" *ngIf="editing" type="submit">
+        Save
+      </button>
+      <button a-sia-button-small buttonStyle="cancel" (click)="cancel()" type="cancel" *ngIf="editing">Cancel</button>
+    </div>
+  </div>
+</form>
+<button (click)="createProject()" a-sia-button buttonStyle="create">Create Project</button>
+<ul class="network-explorer-inspector__project-list">
+  <li class="network-explorer-inspector__project-list-item" *ngFor="let project of projects">
+    <button
+      (click)="navigate(project.id)"
+      a-sia-button
+      class="network-explorer-inspector__button network-explorer-inspector__project-button"
+    >
+      <div class="network-explorer-inspector__project-list-name">{{ project.name }}</div>
+      <div class="network-explorer-inspector__project-list-network-count">17 Networks</div>
+    </button>
+  </li>
+</ul>

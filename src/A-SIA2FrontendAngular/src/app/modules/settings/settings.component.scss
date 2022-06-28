@@ -1,0 +1,125 @@
+@import "../../../assets/colors.scss";
+:host {
+  padding: 1rem;
+  line-height: 1.4;
+}
+
+.shortcuts {
+  grid-template-columns: auto auto;
+  display: grid;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.button {
+  color: $bg-primary-200;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.toggles [disabled] + label,
+.toggles [disabled]:hover + label {
+  color: #999;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.anonymousDisplayLabel {
+  white-space: nowrap;
+}
+
+.toggles [type="checkbox"] {
+  position: absolute;
+  top: auto;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+}
+
+.toggles [type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding: 0.5em;
+  padding-left: 4em;
+}
+
+.toggles [type="checkbox"]:focus + label::before,
+.toggles [type="checkbox"]:hover + label::before {
+  box-shadow: 0 0 0.5em #333;
+}
+
+.toggles [type="checkbox"] + label::before,
+.toggles [type="checkbox"] + label::after {
+  content: "";
+  position: absolute;
+  height: 1.5em;
+  transition: all 0.25s ease;
+}
+
+.toggles [type="checkbox"] + label::before {
+  left: 0;
+  top: 0.2em;
+  width: 3em;
+  border: 0.2em solid #767676;
+  background: #767676;
+  border-radius: 1.1em;
+}
+
+.toggles [type="checkbox"] + label::after {
+  left: 0;
+  top: 0.25em;
+  background-color: #fff;
+  background-position: center center;
+  border-radius: 50%;
+  width: 1.5em;
+  border: 0.15em solid #767676;
+}
+
+.toggles [type="checkbox"]:checked + label::after {
+  left: 1.6em;
+  border-color: $color-1;
+  color: $color-1;
+}
+
+.toggles [type="checkbox"]:indeterminate + label::after {
+  left: 0.8em;
+}
+
+.toggles [type="checkbox"]:indeterminate + label::before {
+  background-color: #ddd;
+}
+
+.toggles [type="checkbox"]:checked + label::before {
+  background-color: $color-1;
+  border-color: $color-1;
+}
+
+.toggles.flip [type="checkbox"] + label::before,
+.toggles.flip [type="checkbox"] + label::after {
+  left: auto;
+  right: 0;
+}
+
+.toggles.flip [type="checkbox"] + label::after {
+  left: auto;
+  right: 1.6em;
+}
+
+.toggles.flip [type="checkbox"]:checked + label::after {
+  right: 0;
+}
+
+.toggles.flip [type="checkbox"]:indeterminate + label::after {
+  right: 0.8em;
+}
+
+.toggles.flip [type="checkbox"] + label {
+  padding-left: 0;
+  padding-right: 6em;
+}

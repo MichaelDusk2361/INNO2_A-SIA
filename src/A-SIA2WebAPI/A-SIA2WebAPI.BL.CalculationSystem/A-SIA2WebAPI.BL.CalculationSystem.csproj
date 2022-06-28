@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<RootNamespace>A_SIA2WebAPI.BL.CalculationSystem</RootNamespace>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\A-SIA2WebAPI.BL.PluginSystem\A-SIA2WebAPI.BL.PluginSystem.csproj" />
+		<ProjectReference Include="..\A-SIA2WebAPI.DAL.Neo4J\A-SIA2WebAPI.DAL.Neo4J.csproj" />
+		<ProjectReference Include="..\A-SIA2WebAPI.Models\A-SIA2WebAPI.Models.csproj" />
+	</ItemGroup>
+
+</Project>

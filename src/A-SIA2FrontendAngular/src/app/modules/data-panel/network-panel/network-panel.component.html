@@ -1,0 +1,23 @@
+<div *ngIf="!loading">
+  <div class="network-panel-header">
+    <h2>Your Network</h2>
+  </div>
+  <div class="network-panel-network">
+    <a-sia-input-medium label="Name" for="changeNetworkName">
+      <input id="changeNetworkName" aSiaInputMedium type="text" name="networkname" [(ngModel)]="openNetwork.name" />
+    </a-sia-input-medium>
+    <a-sia-input-large label="Description" for="changeNetworkDescription">
+      <textarea
+        name="networkdescription"
+        id="changeNetworkDescription"
+        rows="30"
+        aSiaInputLarge
+        [(ngModel)]="openNetwork.description"
+      >
+      </textarea>
+    </a-sia-input-large>
+  </div>
+  <div class="network-panel-summary">
+    <h2>Summary</h2>
+  </div>
+</div>

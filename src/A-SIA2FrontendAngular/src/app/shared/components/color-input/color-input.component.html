@@ -1,0 +1,88 @@
+<span class="color-label">{{ label }}</span>
+<div class="color-input">
+  <div
+    class="color-choice color-choice--selector"
+    [style.boxShadow]="color + ' 0 0 0 2px'"
+    #colorSelectorIcon
+    (mousedown)="onClickColorSelector()"
+  >
+    <fa-icon [icon]="paletteIcon" size="lg" class="color-selector__icon"></fa-icon>
+  </div>
+  <div
+    class="color-choice color-choice--1"
+    [style.background]="choiceList[0]"
+    [style]="selectedColorIndex === 0 ? 'outline:solid 3px #fff; outline-offset:-3px' : ''"
+    (click)="clickColor(0)"
+  ></div>
+  <div
+    class="color-choice color-choice--2"
+    [style.background]="choiceList[1]"
+    [style]="selectedColorIndex === 1 ? 'outline:solid 3px #fff; outline-offset:-3px' : ''"
+    (click)="clickColor(1)"
+  ></div>
+  <div
+    class="color-choice color-choice--3"
+    [style.background]="choiceList[2]"
+    [style]="selectedColorIndex === 2 ? 'outline:solid 3px #fff; outline-offset:-3px' : ''"
+    (click)="clickColor(2)"
+  ></div>
+  <div
+    class="color-choice color-choice--4"
+    [style.background]="choiceList[3]"
+    [style]="selectedColorIndex === 3 ? 'outline:solid 3px #fff; outline-offset:-3px' : ''"
+    (click)="clickColor(3)"
+  ></div>
+  <div
+    class="color-choice color-choice--5"
+    [style.background]="choiceList[4]"
+    [style]="selectedColorIndex === 4 ? 'outline:solid 3px #fff; outline-offset:-3px' : ''"
+    (click)="clickColor(4)"
+  ></div>
+  <div
+    class="color-choice color-choice--6"
+    [style.background]="choiceList[5]"
+    [style]="selectedColorIndex === 5 ? 'outline:solid 3px #fff; outline-offset:-3px' : ''"
+    (click)="clickColor(5)"
+  ></div>
+</div>
+
+<div class="color-selector" #colorSelector *ngIf="selectorIsOpen">
+  <div id="gradient-container" #gradientContainer (mousedown)="this.onColorBoxMouseDown($event)">
+    <img
+      src="../../../../assets/gradient0.png"
+      [style.opacity]="gradient0Style.opacity"
+      [style.mixBlendMode]="gradient0Style.mixBlendMode"
+      [style.zIndex]="gradient0Style.zIndex"
+      class="gradient"
+      alt=""
+      draggable="false"
+    />
+    <img
+      src="../../../../assets/gradient120.png"
+      [style.opacity]="gradient120Style.opacity"
+      [style.mixBlendMode]="gradient120Style.mixBlendMode"
+      [style.zIndex]="gradient120Style.zIndex"
+      class="gradient"
+      alt=""
+      draggable="false"
+    />
+    <img
+      src="../../../../assets/gradient240.png"
+      [style.opacity]="gradient240Style.opacity"
+      [style.mixBlendMode]="gradient240Style.mixBlendMode"
+      [style.zIndex]="gradient240Style.zIndex"
+      class="gradient"
+      alt=""
+      draggable="false"
+    />
+    <!-- <canvas id="canvas" (mousedown)="this.onColorBoxMouseDown($event)" #canvas width="25" height="25"></canvas> -->
+    <div #handle id="color-handle" [style.left.px]="this.handlePos.left" [style.top.px]="this.handlePos.top"></div>
+  </div>
+  <input type="range" #hueSlider (input)="this.onHueSliderInput()" class="hueSlider" min="0" max="360" value="50" />
+  <div class="color-container">
+    <div id="color-box" #colorBox></div>
+    <span id="color-hex" #colorHex>
+      {{ this.color }}
+    </span>
+  </div>
+</div>

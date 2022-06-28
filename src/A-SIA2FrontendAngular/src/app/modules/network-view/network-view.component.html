@@ -1,0 +1,28 @@
+<a-sia-menubar class="menubar"> </a-sia-menubar>
+<a-sia-pane-container direction="row" unit="rem" class="pane-container">
+  <a-sia-pane
+    class="pane-container__simulation-diagram"
+    [minSize]="10"
+    *aSiaPaneIf="paneService.simulationDiagramIsOpen"
+  >
+    <a-sia-simulation-diagram></a-sia-simulation-diagram>
+  </a-sia-pane>
+
+  <a-sia-pane
+    class="pane-container__graph-editor"
+    [minSize]="10"
+    *aSiaPaneIf="paneService.graphEditorIsOpen"
+    (onResize$)="onGraphEditorPaneResize()"
+    (onInit$)="onGraphEditorPaneInit()"
+  >
+    <a-sia-graph-editor #graphEditor></a-sia-graph-editor>
+  </a-sia-pane>
+  <a-sia-pane
+    class="pane-container__data-panel"
+    [minSize]="40"
+    [maxSize]="40"
+    *aSiaPaneIf="paneService.dataPanelIsOpen"
+  >
+    <a-sia-data-panel></a-sia-data-panel>
+  </a-sia-pane>
+</a-sia-pane-container>

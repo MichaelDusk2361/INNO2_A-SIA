@@ -1,0 +1,100 @@
+# ASP.NET
+# Build and test ASP.NET projects.
+# Add steps that publish symbols, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
+
+trigger:
+  branches:
+    include:
+    - develop
+  paths:
+    include:
+    - src/A-SIA2WebAPI
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+- task: NuGetToolInstaller@1
+  displayName: "Install NuGet.exe"
+
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '5.0.x'
+  displayName: "Install .NET Core SDK"
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+  displayName: "Restore NuGet packages"
+
+#- task: VSBuild@1
+#  inputs:
+#    solution: '$(solution)'
+#    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
+#    platform: '$(buildPlatform)'
+#    configuration: '$(buildConfiguration)'
+#  displayName: "Build solution"
+
+# - task: DotNetCoreCLI@2
+#   inputs:
+#     command: test
+#     projects: '**/*Test.csproj'
+#     arguments: '--configuration $(buildConfiguration)'
+#   displayName: "Test solution"
+
+# - task: PublishTestResults@2
+#   inputs:
+#     testResultsFormat: 'NUnit'
+#     testResultsFiles: '**/TEST-*.xml'
+#   displayName: "Publish tests"
+
+
+# Why not use this instead of above?
+#- task: DotNetCoreCLI@2
+#  inputs:
+#    command: 'test'
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet publish'
+  inputs:
+    command: 'publish'
+    publishWebProjects: false
+    projects: '**/A-SIA2WebAPI.BL.API.csproj'
+    arguments: '/p:platform=linux-x64 /p:configuration=Release -o $(Build.ArtifactStagingDirectory)/Output'
+    packDirectory: '$(Build.ArtifactStagingDirectory)/Output'
+    zipAfterPublish: true
+    modifyOutputPath: true
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'miduskanich.com VPS'
+    runOptions: 'commands'
+    commands: |
+      sudo systemctl stop kestrel-asia.service
+    readyTimeout: '20000'
+
+- task: CopyFilesOverSSH@0
+  inputs:
+    sshEndpoint: 'miduskanich.com VPS'
+    sourceFolder: '$(Build.ArtifactStagingDirectory)/Output'
+    contents: '**'
+    targetFolder: '/var/www/a-sia_server'
+    readyTimeout: '20000' 
+    cleanTargetFolder: true
+    overwrite: true
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'miduskanich.com VPS'
+    runOptions: 'commands'
+    commands: |
+      unzip /var/www/a-sia_server/A-SIA2WebAPI.BL.API.zip -d /var/www/a-sia_server
+      rm /var/www/a-sia_server/A-SIA2WebAPI.BL.API.zip
+      sudo systemctl start kestrel-asia.service
+    readyTimeout: '20000'

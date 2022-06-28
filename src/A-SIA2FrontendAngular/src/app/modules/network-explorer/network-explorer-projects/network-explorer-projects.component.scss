@@ -1,0 +1,41 @@
+@import "../../../../assets/measurements.scss";
+@import "../../../../assets/shadows.scss";
+@import "../../../../assets/colors.scss";
+
+:host {
+  display: block;
+}
+
+.network-explorer-inspector {
+  &__project-list {
+    list-style: none;
+    padding-left: 0;
+    &-item {
+      margin-top: 2rem;
+    }
+  }
+  &__project-button {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  &__project-list-name {
+    white-space: nowrap;
+  }
+  &__project-list-project-count {
+    white-space: nowrap;
+    text-align: right;
+  }
+  &__project-list-network-count {
+    white-space: nowrap;
+    text-align: right;
+  }
+  &__header {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  &__project-button-container {
+    place-self: center right;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+  }
+}

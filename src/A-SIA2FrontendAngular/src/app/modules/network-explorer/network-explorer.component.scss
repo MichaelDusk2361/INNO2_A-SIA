@@ -1,0 +1,64 @@
+@import "../../../assets/shadows.scss";
+@import "../../../assets/colors.scss";
+
+:host {
+  //   padding-top: $height-menubar;
+  display: block;
+}
+
+$panel-width: 30rem;
+
+.network-explorer-inspector {
+  overflow: auto; // Prevents margins from collapsing
+  margin-left: $panel-width;
+  padding: 3rem;
+  max-width: 80rem;
+}
+
+.network-explorer-panel {
+  position: fixed;
+  box-shadow: $shadow-right-blur;
+  padding: 1rem;
+  width: $panel-width;
+  background-color: $bg-primary-800;
+  height: 100%;
+  overflow-y: scroll;
+
+  &__leaf {
+    display: block;
+    margin-left: 2rem;
+    padding: 0.2rem 0 0.2rem 0.2rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__list-item {
+    width: 100%;
+    padding-left: 2rem;
+  }
+
+  &__selected {
+    background-color: $bg-primary-700;
+    &.network-explorer-panel__leaf,
+    & > summary {
+      font-weight: 500;
+    }
+  }
+}
+
+details {
+  padding-left: 0.5rem;
+}
+summary {
+  padding: 0.2rem 0;
+}
+
+.network-explorer-panel__leaf,
+summary {
+  user-select: none;
+  cursor: pointer;
+}

@@ -1,0 +1,28 @@
+<h2>Login</h2>
+<a-sia-input-medium label="Username" for="loginUsername">
+  <input
+    id="loginUsername"
+    aSiaInputMedium
+    [(ngModel)]="username"
+    type="text"
+    placeholder="Enter Username"
+    [value]="username"
+    name="username"
+    required
+  />
+</a-sia-input-medium>
+<a-sia-input-medium label="Password" for="loginPassword">
+  <input
+    id="loginPassword"
+    aSiaInputMedium
+    [(ngModel)]="password"
+    type="password"
+    placeholder="Enter Password"
+    name="password"
+    [value]="password"
+    required
+  />
+</a-sia-input-medium>
+
+<button (click)="onLogin()" a-sia-button buttonStyle="primary" class="button">Login</button>
+<a class="forgot-password" href="#"> Forgot password? </a>

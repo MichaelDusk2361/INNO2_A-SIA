@@ -1,0 +1,19 @@
+@import "../../../../assets/colors.scss";
+:host {
+  padding: 1rem;
+  display: block;
+}
+
+#delete {
+  background-color: $color-negative;
+  float: right;
+}
+
+#no-network > * {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.input-large {
+  height: 20rem;
+}
