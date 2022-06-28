@@ -97,6 +97,7 @@ export class GraphEditorComponent implements OnInit, OnDestroy {
    * Subscribes to global events for user interaction
    */
   ngOnInit(): void {
+    this.selection.graphEditorCenterPosition = this.graphEditorViewport.centerPosition;
     this.subSink.sink = this.inputService.onResize$.subscribe(() => {
       this.onPaneResize();
     });

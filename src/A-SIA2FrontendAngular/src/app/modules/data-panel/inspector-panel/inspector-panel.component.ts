@@ -140,8 +140,8 @@ export class InspectorPanelComponent implements OnInit, OnDestroy {
   updatePerson(person: {
     id: asiaGuid;
     name?: string;
-    reflection?: string;
-    persistance?: string;
+    reflection?: number;
+    persistance?: number;
     t0?: number;
     color?: string;
   }) {

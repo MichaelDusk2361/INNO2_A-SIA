@@ -30,7 +30,7 @@
     minColor="#ff013d"
     maxColor="#4bdb50"
     (valueChange)="updatePerson({ id: person.id, t0: $event })"
-    [value]="person.simulationValues.get(0)"
+    [value]="person.simulationValues.get(0) ?? 0"
   >
   </a-sia-slider>
   <a-sia-input-small for="name" label="Name">
@@ -42,24 +42,28 @@
       [value]="person.name"
     />
   </a-sia-input-small>
-  <a-sia-input-small for="reflection" label="Reflection">
-    <input
-      #reflectionInput
-      aSiaInputSmall
-      name="reflection"
-      (input)="updatePerson({ id: person.id, reflection: reflectionInput.value })"
-      [value]="person.reflection.toFixed(2)"
-    />
-  </a-sia-input-small>
-  <a-sia-input-small for="persistance" label="Persistance">
-    <input
-      #persistanceInput
-      aSiaInputSmall
-      name="persistance"
-      (input)="updatePerson({ id: person.id, persistance: persistanceInput.value })"
-      [value]="person.persistance.toFixed(2)"
-    />
-  </a-sia-input-small>
+
+  <a-sia-slider
+    for="reflection"
+    label="Reflection"
+    [min]="0"
+    [max]="1"
+    [step]="0.01"
+    (valueChange)="updatePerson({ id: person.id, reflection: $event })"
+    [value]="person.reflection"
+  >
+  </a-sia-slider>
+  <a-sia-slider
+    for="persistance"
+    label="Persistance"
+    [min]="0"
+    [max]="1"
+    [step]="0.01"
+    (valueChange)="updatePerson({ id: person.id, persistance: $event })"
+    [value]="person.persistance"
+  >
+  </a-sia-slider>
+
   <a-sia-color-input (colorChanged)="updatePerson({ id: person.id, color: $event })" [color]="person.color">
   </a-sia-color-input>
   <div>
@@ -165,8 +169,10 @@
   </a-sia-slider>
   <a-sia-input-small for="interval" label="Interval">
     <input
+      type="number"
       #intervalInput
       aSiaInputSmall
+      min="0"
       name="interval"
       (input)="updateConnection({ id: inspectedConnection.id, interval: intervalInput.value })"
       [value]="inspectedConnection.interval"
@@ -174,8 +180,10 @@
   </a-sia-input-small>
   <a-sia-input-small for="offset" label="Offset">
     <input
+      type="number"
       #offsetInput
       aSiaInputSmall
+      min="0"
       name="offset"
       (input)="updateConnection({ id: inspectedConnection.id, offset: offsetInput.value })"
       [value]="inspectedConnection.offset"
