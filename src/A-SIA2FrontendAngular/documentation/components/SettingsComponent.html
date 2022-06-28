@@ -1,0 +1,813 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>a-sia documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">a-sia documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  SettingsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/modules/settings/settings.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>a-sia-settings</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./settings.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./settings.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#inputservice" >inputservice</a>
+                            </li>
+                            <li>
+                                <a href="#network" >network</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#networkStore" >networkStore</a>
+                            </li>
+                            <li>
+                                <a href="#subSink" >subSink</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getShortcutNames" >getShortcutNames</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onApply" >onApply</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(networkStore: <a href="../injectables/NetworkStoreService.html" target="_self">NetworkStoreService</a>, inputservice: <a href="../injectables/InputService.html" target="_self">InputService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/modules/settings/settings.component.ts:12</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>networkStore</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/NetworkStoreService.html" target="_self" >NetworkStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>inputservice</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/InputService.html" target="_self" >InputService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getShortcutNames"></a>
+                    <span class="name">
+                        <span ><b>getShortcutNames</b></span>
+                        <a href="#getShortcutNames"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getShortcutNames()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/modules/settings/settings.component.ts:22</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>string[]</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <span ><b>ngOnDestroy</b></span>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app/modules/settings/settings.component.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="17"
+                            class="link-to-prism">src/app/modules/settings/settings.component.ts:17</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onApply"></a>
+                    <span class="name">
+                        <span ><b>onApply</b></span>
+                        <a href="#onApply"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onApply()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/modules/settings/settings.component.ts:26</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inputservice"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>inputservice</b></span>
+                        <a href="#inputservice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/InputService.html" target="_self" >InputService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/modules/settings/settings.component.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="network"></a>
+                    <span class="name">
+                        <span ><b>network</b></span>
+                        <a href="#network"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/asiaNetwork.html" target="_self" >asiaNetwork</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/modules/settings/settings.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="networkStore"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>networkStore</b></span>
+                        <a href="#networkStore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/NetworkStoreService.html" target="_self" >NetworkStoreService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/modules/settings/settings.component.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="subSink"></a>
+                    <span class="name">
+                        <span ><b>subSink</b></span>
+                        <a href="#subSink"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new SubSink()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/modules/settings/settings.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
+import { InputService } from &#x27;@shared/components/user-input/input.service&#x27;;
+import { asiaNetwork } from &#x27;@shared/models/network.model&#x27;;
+import { NetworkStoreService } from &#x27;@shared/store/network/network-store.service&#x27;;
+import { SubSink } from &#x27;subsink&#x27;;
+
+@Component({
+  selector: &#x27;a-sia-settings&#x27;,
+  templateUrl: &#x27;./settings.component.html&#x27;,
+  styleUrls: [&#x27;./settings.component.scss&#x27;]
+})
+export class SettingsComponent implements OnInit, OnDestroy {
+  constructor(public networkStore: NetworkStoreService, public inputservice: InputService) {}
+
+  network!: asiaNetwork;
+  subSink &#x3D; new SubSink();
+  ngOnInit(): void {
+    this.networkStore.openNetwork$.subscribe((network) &#x3D;&gt; {
+      this.network &#x3D; network!;
+    });
+  }
+  getShortcutNames(): string[] {
+    this.inputservice.shortcuts.get(&#x27;&#x27;)?.shortcut.HTMLString;
+    return Array.from(this.inputservice.shortcuts.keys());
+  }
+  onApply() {
+    this.networkStore.update(this.network);
+  }
+
+  ngOnDestroy(): void {
+    this.subSink.unsubscribe();
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;h2&gt;Settings&lt;/h2&gt;
+&lt;form&gt;
+  &lt;div class&#x3D;&quot;toggles flip&quot;&gt;
+    &lt;input
+      [checked]&#x3D;&quot;network?.anonymous&quot;
+      (change)&#x3D;&quot;network.anonymous &#x3D; !network.anonymous&quot;
+      type&#x3D;&quot;checkbox&quot;
+      name&#x3D;&quot;anonymousDisplay&quot;
+      id&#x3D;&quot;anonymousDisplay&quot;
+    /&gt;
+    &lt;label for&#x3D;&quot;anonymousDisplay&quot; class&#x3D;&quot;anonymousDisplayLabel&quot;&gt;Anonymous Display&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+&lt;div class&#x3D;&quot;shortcuts&quot;&gt;
+  &lt;ng-container *ngFor&#x3D;&quot;let shortcut of getShortcutNames()&quot;&gt;
+    &lt;div class&#x3D;&quot;shortcut shortcutHTMLString&quot;&gt;
+      {{ this.inputservice.shortcuts.get(shortcut)?.shortcut?.HTMLString }}
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;shortcutDescription&quot;&gt;
+      {{ this.inputservice.shortcuts.get(shortcut)?.shortcut?.Description }}
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+&lt;/div&gt;
+&lt;button a-sia-button buttonStyle&#x3D;&quot;primary&quot; (click)&#x3D;&quot;onApply()&quot; class&#x3D;&quot;button&quot;&gt;Apply&lt;/button&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./settings.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../../../assets/colors.scss&quot;;
+:host {
+  padding: 1rem;
+  line-height: 1.4;
+}
+
+.shortcuts {
+  grid-template-columns: auto auto;
+  display: grid;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.button {
+  color: $bg-primary-200;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.toggles [disabled] + label,
+.toggles [disabled]:hover + label {
+  color: #999;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.anonymousDisplayLabel {
+  white-space: nowrap;
+}
+
+.toggles [type&#x3D;&quot;checkbox&quot;] {
+  position: absolute;
+  top: auto;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+}
+
+.toggles [type&#x3D;&quot;checkbox&quot;] + label {
+  display: block;
+  position: relative;
+  padding: 0.5em;
+  padding-left: 4em;
+}
+
+.toggles [type&#x3D;&quot;checkbox&quot;]:focus + label::before,
+.toggles [type&#x3D;&quot;checkbox&quot;]:hover + label::before {
+  box-shadow: 0 0 0.5em #333;
+}
+
+.toggles [type&#x3D;&quot;checkbox&quot;] + label::before,
+.toggles [type&#x3D;&quot;checkbox&quot;] + label::after {
+  content: &quot;&quot;;
+  position: absolute;
+  height: 1.5em;
+  transition: all 0.25s ease;
+}
+
+.toggles [type&#x3D;&quot;checkbox&quot;] + label::before {
+  left: 0;
+  top: 0.2em;
+  width: 3em;
+  border: 0.2em solid #767676;
+  background: #767676;
+  border-radius: 1.1em;
+}
+
+.toggles [type&#x3D;&quot;checkbox&quot;] + label::after {
+  left: 0;
+  top: 0.25em;
+  background-color: #fff;
+  background-position: center center;
+  border-radius: 50%;
+  width: 1.5em;
+  border: 0.15em solid #767676;
+}
+
+.toggles [type&#x3D;&quot;checkbox&quot;]:checked + label::after {
+  left: 1.6em;
+  border-color: $color-1;
+  color: $color-1;
+}
+
+.toggles [type&#x3D;&quot;checkbox&quot;]:indeterminate + label::after {
+  left: 0.8em;
+}
+
+.toggles [type&#x3D;&quot;checkbox&quot;]:indeterminate + label::before {
+  background-color: #ddd;
+}
+
+.toggles [type&#x3D;&quot;checkbox&quot;]:checked + label::before {
+  background-color: $color-1;
+  border-color: $color-1;
+}
+
+.toggles.flip [type&#x3D;&quot;checkbox&quot;] + label::before,
+.toggles.flip [type&#x3D;&quot;checkbox&quot;] + label::after {
+  left: auto;
+  right: 0;
+}
+
+.toggles.flip [type&#x3D;&quot;checkbox&quot;] + label::after {
+  left: auto;
+  right: 1.6em;
+}
+
+.toggles.flip [type&#x3D;&quot;checkbox&quot;]:checked + label::after {
+  right: 0;
+}
+
+.toggles.flip [type&#x3D;&quot;checkbox&quot;]:indeterminate + label::after {
+  right: 0.8em;
+}
+
+.toggles.flip [type&#x3D;&quot;checkbox&quot;] + label {
+  padding-left: 0;
+  padding-right: 6em;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h2>Settings</h2><form>  <div class="toggles flip">    <input      [checked]="network?.anonymous"      (change)="network.anonymous = !network.anonymous"      type="checkbox"      name="anonymousDisplay"      id="anonymousDisplay"    />    <label for="anonymousDisplay" class="anonymousDisplayLabel">Anonymous Display</label>  </div></form><div class="shortcuts">  <ng-container *ngFor="let shortcut of getShortcutNames()">    <div class="shortcut shortcutHTMLString">      {{ this.inputservice.shortcuts.get(shortcut)?.shortcut?.HTMLString }}    </div>    <div class="shortcutDescription">      {{ this.inputservice.shortcuts.get(shortcut)?.shortcut?.Description }}    </div>  </ng-container></div><button a-sia-button buttonStyle="primary" (click)="onApply()" class="button">Apply</button></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'a-sia-root'},{'name': 'ColorInputComponent', 'selector': 'a-sia-color-input'},{'name': 'ConnectionComponent', 'selector': 'a-sia-connection'},{'name': 'DataPanelComponent', 'selector': 'a-sia-data-panel'},{'name': 'DataPanelNavbarComponent', 'selector': 'a-sia-data-panel-navbar'},{'name': 'DataPanelNavbarEntryComponent', 'selector': 'a-sia-data-panel-navbar-entry'},{'name': 'DiagramComponent', 'selector': 'a-sia-diagram'},{'name': 'DiagramLineComponent', 'selector': 'a-sia-diagram-line'},{'name': 'DropDownComponent', 'selector': 'a-sia-drop-down'},{'name': 'GraphControlSimulationNavigationComponent', 'selector': 'a-sia-graph-control-simulation-navigation'},{'name': 'GraphControlToolComponent', 'selector': 'a-sia-graph-control-tool'},{'name': 'GraphControlZoomComponent', 'selector': 'a-sia-graph-control-zoom'},{'name': 'GraphEditorComponent', 'selector': 'a-sia-graph-editor'},{'name': 'GraphEditorControlsComponent', 'selector': 'a-sia-graph-editor-controls'},{'name': 'GroupNodeComponent', 'selector': 'a-sia-group-node'},{'name': 'InputLargeComponent', 'selector': 'a-sia-input-large'},{'name': 'InputMediumComponent', 'selector': 'a-sia-input-medium'},{'name': 'InputSmallComponent', 'selector': 'a-sia-input-small'},{'name': 'InspectorPanelComponent', 'selector': 'a-sia-inspector-panel'},{'name': 'LegendComponent', 'selector': 'a-sia-legend'},{'name': 'LegendEntryComponent', 'selector': 'a-sia-legend-entry'},{'name': 'LoginComponent', 'selector': 'a-sia-login'},{'name': 'MenubarComponent', 'selector': 'a-sia-menubar'},{'name': 'MenubarEntryComponent', 'selector': 'a-sia-menubar-entry'},{'name': 'MenubarMenuComponent', 'selector': 'a-sia-menubar-menu'},{'name': 'ModalComponent', 'selector': 'a-sia-modal'},{'name': 'NetworkExplorerComponent', 'selector': 'a-sia-network-explorer'},{'name': 'NetworkExplorerInstancesComponent', 'selector': 'a-sia-network-explorer-instances'},{'name': 'NetworkExplorerNetworkComponent', 'selector': 'a-sia-network-explorer-network'},{'name': 'NetworkExplorerNetworksComponent', 'selector': 'a-sia-network-explorer-networks'},{'name': 'NetworkExplorerProjectsComponent', 'selector': 'a-sia-network-explorer-projects'},{'name': 'NetworkPanelComponent', 'selector': 'a-sia-network-panel'},{'name': 'NetworkViewComponent', 'selector': 'a-sia-network-view'},{'name': 'PaneComponent', 'selector': 'a-sia-pane'},{'name': 'PaneContainerComponent', 'selector': 'a-sia-pane-container'},{'name': 'PaneDividerComponent', 'selector': 'a-sia-pane-divider'},{'name': 'PersonNodeComponent', 'selector': 'a-sia-person-node'},{'name': 'SettingsComponent', 'selector': 'a-sia-settings'},{'name': 'SimulationDiagramComponent', 'selector': 'a-sia-simulation-diagram'},{'name': 'SliderComponent', 'selector': 'a-sia-slider'},{'name': 'SocialNodeComponent', 'selector': 'a-sia-social-node'},{'name': 'StructurePanelComponent', 'selector': 'a-sia-structure-panel'}];
+    var DIRECTIVES = [{'name': 'ButtonDirective', 'selector': '[a-sia-button]'},{'name': 'ButtonSmallDirective', 'selector': '[a-sia-button-small]'},{'name': 'InputLargeDirective', 'selector': '[aSiaInputLarge]'},{'name': 'InputMediumDirective', 'selector': '[aSiaInputMedium]'},{'name': 'InputSmallDirective', 'selector': '[aSiaInputSmall]'},{'name': 'PaneIfDirective', 'selector': '[aSiaPaneIf]'}];
+    var ACTUAL_COMPONENT = {'name': 'SettingsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SettingsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

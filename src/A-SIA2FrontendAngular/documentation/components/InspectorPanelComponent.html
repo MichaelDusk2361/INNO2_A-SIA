@@ -1,0 +1,1988 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>a-sia documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">a-sia documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  InspectorPanelComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>a-sia-inspector-panel</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./inspector-panel.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./inspector-panel.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#connectedPersons" >connectedPersons</a>
+                            </li>
+                            <li>
+                                <a href="#connectionChanged" >connectionChanged</a>
+                            </li>
+                            <li>
+                                <a href="#inspectedConnection" >inspectedConnection</a>
+                            </li>
+                            <li>
+                                <a href="#inspectedPerson" >inspectedPerson</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#inspectionState" >inspectionState</a>
+                            </li>
+                            <li>
+                                <a href="#network" >network</a>
+                            </li>
+                            <li>
+                                <a href="#personA" >personA</a>
+                            </li>
+                            <li>
+                                <a href="#personB" >personB</a>
+                            </li>
+                            <li>
+                                <a href="#personChanged" >personChanged</a>
+                            </li>
+                            <li>
+                                <a href="#state" >state</a>
+                            </li>
+                            <li>
+                                <a href="#subSink" >subSink</a>
+                            </li>
+                            <li>
+                                <a href="#updatedConnection" >updatedConnection</a>
+                            </li>
+                            <li>
+                                <a href="#updatedConnectionDebounced" >updatedConnectionDebounced</a>
+                            </li>
+                            <li>
+                                <a href="#updatedPerson" >updatedPerson</a>
+                            </li>
+                            <li>
+                                <a href="#updatedPersonDebounced" >updatedPersonDebounced</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#deleteInspectedConnection" >deleteInspectedConnection</a>
+                            </li>
+                            <li>
+                                <a href="#deleteInspectedPerson" >deleteInspectedPerson</a>
+                            </li>
+                            <li>
+                                <a href="#getAdjacentConnections" >getAdjacentConnections</a>
+                            </li>
+                            <li>
+                                <a href="#getInfluenceColor" >getInfluenceColor</a>
+                            </li>
+                            <li>
+                                <a href="#inspectConnection" >inspectConnection</a>
+                            </li>
+                            <li>
+                                <a href="#inspectNothing" >inspectNothing</a>
+                            </li>
+                            <li>
+                                <a href="#inspectPerson" >inspectPerson</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#updateConnection" >updateConnection</a>
+                            </li>
+                            <li>
+                                <a href="#updateConnectionInBackend" >updateConnectionInBackend</a>
+                            </li>
+                            <li>
+                                <a href="#updatePerson" >updatePerson</a>
+                            </li>
+                            <li>
+                                <a href="#updatePersonInBackend" >updatePersonInBackend</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(selection: <a href="../injectables/GraphEditorSelectionService.html" target="_self">GraphEditorSelectionService</a>, store: <a href="../injectables/NetworkStructureStoreService.html" target="_self">NetworkStructureStoreService</a>, helper: <a href="../injectables/HelperService.html" target="_self">HelperService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>selection</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/GraphEditorSelectionService.html" target="_self" >GraphEditorSelectionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>store</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/NetworkStructureStoreService.html" target="_self" >NetworkStructureStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>helper</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/HelperService.html" target="_self" >HelperService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteInspectedConnection"></a>
+                    <span class="name">
+                        <span ><b>deleteInspectedConnection</b></span>
+                        <a href="#deleteInspectedConnection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteInspectedConnection()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:86</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteInspectedPerson"></a>
+                    <span class="name">
+                        <span ><b>deleteInspectedPerson</b></span>
+                        <a href="#deleteInspectedPerson"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteInspectedPerson()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="106"
+                            class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:106</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAdjacentConnections"></a>
+                    <span class="name">
+                        <span ><b>getAdjacentConnections</b></span>
+                        <a href="#getAdjacentConnections"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAdjacentConnections(person: <a href="../classes/asiaPerson.html" target="_self">asiaPerson</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="111"
+                            class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:111</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>person</td>
+                                    <td>
+                                                <code><a href="../classes/asiaPerson.html" target="_self" >asiaPerson</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>literal type</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getInfluenceColor"></a>
+                    <span class="name">
+                        <span ><b>getInfluenceColor</b></span>
+                        <a href="#getInfluenceColor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getInfluenceColor(influence: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="135"
+                            class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:135</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>influence</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inspectConnection"></a>
+                    <span class="name">
+                        <span ><b>inspectConnection</b></span>
+                        <a href="#inspectConnection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>inspectConnection(connection: <a href="../classes/asiaInfluencesRelation.html" target="_self">asiaInfluencesRelation</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>connection</td>
+                                    <td>
+                                                <code><a href="../classes/asiaInfluencesRelation.html" target="_self" >asiaInfluencesRelation</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inspectNothing"></a>
+                    <span class="name">
+                        <span ><b>inspectNothing</b></span>
+                        <a href="#inspectNothing"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>inspectNothing()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:56</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inspectPerson"></a>
+                    <span class="name">
+                        <span ><b>inspectPerson</b></span>
+                        <a href="#inspectPerson"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>inspectPerson(person: <a href="../classes/asiaPerson.html" target="_self">asiaPerson</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:101</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>person</td>
+                                    <td>
+                                                <code><a href="../classes/asiaPerson.html" target="_self" >asiaPerson</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <span ><b>ngOnDestroy</b></span>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="169"
+                            class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:169</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:35</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateConnection"></a>
+                    <span class="name">
+                        <span ><b>updateConnection</b></span>
+                        <a href="#updateConnection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateConnection(connection: literal type)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>connection</td>
+                                    <td>
+                                            <code>literal type</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateConnectionInBackend"></a>
+                    <span class="name">
+                        <span ><b>updateConnectionInBackend</b></span>
+                        <a href="#updateConnectionInBackend"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateConnectionInBackend(connection: <a href="../classes/asiaInfluencesRelation.html" target="_self">asiaInfluencesRelation</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="80"
+                            class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:80</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>connection</td>
+                                    <td>
+                                                <code><a href="../classes/asiaInfluencesRelation.html" target="_self" >asiaInfluencesRelation</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updatePerson"></a>
+                    <span class="name">
+                        <span ><b>updatePerson</b></span>
+                        <a href="#updatePerson"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updatePerson(person: literal type)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="140"
+                            class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:140</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>person</td>
+                                    <td>
+                                            <code>literal type</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updatePersonInBackend"></a>
+                    <span class="name">
+                        <span ><b>updatePersonInBackend</b></span>
+                        <a href="#updatePersonInBackend"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updatePersonInBackend(person: <a href="../classes/asiaPerson.html" target="_self">asiaPerson</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="160"
+                            class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:160</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>person</td>
+                                    <td>
+                                                <code><a href="../classes/asiaPerson.html" target="_self" >asiaPerson</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="connectedPersons"></a>
+                    <span class="name">
+                        <span ><b>connectedPersons</b></span>
+                        <a href="#connectedPersons"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:97</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="connectionChanged"></a>
+                    <span class="name">
+                        <span ><b>connectionChanged</b></span>
+                        <a href="#connectionChanged"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:60</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inspectedConnection"></a>
+                    <span class="name">
+                        <span ><b>inspectedConnection</b></span>
+                        <a href="#inspectedConnection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/asiaInfluencesRelation.html" target="_self" >asiaInfluencesRelation</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:61</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inspectedPerson"></a>
+                    <span class="name">
+                        <span ><b>inspectedPerson</b></span>
+                        <a href="#inspectedPerson"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/asiaPerson.html" target="_self" >asiaPerson</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:96</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inspectionState"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>inspectionState</b></span>
+                        <a href="#inspectionState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>InspectionState</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="network"></a>
+                    <span class="name">
+                        <span ><b>network</b></span>
+                        <a href="#network"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/asiaNetworkStructure.html" target="_self" >asiaNetworkStructure</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="personA"></a>
+                    <span class="name">
+                        <span ><b>personA</b></span>
+                        <a href="#personA"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/asiaPerson.html" target="_self" >asiaPerson</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:62</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="personB"></a>
+                    <span class="name">
+                        <span ><b>personB</b></span>
+                        <a href="#personB"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/asiaPerson.html" target="_self" >asiaPerson</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:63</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="personChanged"></a>
+                    <span class="name">
+                        <span ><b>personChanged</b></span>
+                        <a href="#personChanged"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:95</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="state"></a>
+                    <span class="name">
+                        <span ><b>state</b></span>
+                        <a href="#state"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>InspectionState.Nothing</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:55</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="subSink"></a>
+                    <span class="name">
+                        <span ><b>subSink</b></span>
+                        <a href="#subSink"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new SubSink()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updatedConnection"></a>
+                    <span class="name">
+                        <span ><b>updatedConnection</b></span>
+                        <a href="#updatedConnection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/asiaInfluencesRelation.html" target="_self" >Subject&lt;asiaInfluencesRelation&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subject()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:92</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updatedConnectionDebounced"></a>
+                    <span class="name">
+                        <span ><b>updatedConnectionDebounced</b></span>
+                        <a href="#updatedConnectionDebounced"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.updatedConnection.asObservable().pipe(debounceTime(1000))</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:93</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updatedPerson"></a>
+                    <span class="name">
+                        <span ><b>updatedPerson</b></span>
+                        <a href="#updatedPerson"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/asiaPerson.html" target="_self" >Subject&lt;asiaPerson&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subject()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="166" class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:166</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updatedPersonDebounced"></a>
+                    <span class="name">
+                        <span ><b>updatedPersonDebounced</b></span>
+                        <a href="#updatedPersonDebounced"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.updatedPerson.asObservable().pipe(debounceTime(1000))</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="167" class="link-to-prism">src/app/modules/data-panel/inspector-panel/inspector-panel.component.ts:167</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
+import { GraphEditorSelectionService } from &#x27;@shared/components/graph-edior-selection.service&#x27;;
+import { HelperService } from &#x27;@shared/components/helper.service&#x27;;
+import { asiaGuid } from &#x27;@shared/models/entity.model&#x27;;
+import { asiaInstanceProjectNetworkRelations } from &#x27;@shared/models/instanceProjectNetworkRelations.model&#x27;;
+import { asiaNetworkStructure } from &#x27;@shared/models/network-structure.model&#x27;;
+import { asiaPerson } from &#x27;@shared/models/person.Model&#x27;;
+import { asiaInfluencesRelation } from &#x27;@shared/models/relations/influencesRelation.model&#x27;;
+import { NetworkStructureStoreService } from &#x27;@shared/store/network-structure/network-structure-store.service&#x27;;
+import { debounceTime, skipWhile, Subject } from &#x27;rxjs&#x27;;
+import { SubSink } from &#x27;subsink&#x27;;
+
+enum InspectionState {
+  Nothing,
+  Connection,
+  Person
+}
+
+@Component({
+  selector: &#x27;a-sia-inspector-panel&#x27;,
+  templateUrl: &#x27;./inspector-panel.component.html&#x27;,
+  styleUrls: [&#x27;./inspector-panel.component.scss&#x27;]
+})
+export class InspectorPanelComponent implements OnInit, OnDestroy {
+  constructor(
+    private selection: GraphEditorSelectionService,
+    private store: NetworkStructureStoreService,
+    private helper: HelperService
+  ) {}
+
+  public inspectionState &#x3D; InspectionState;
+  network!: asiaNetworkStructure;
+  subSink &#x3D; new SubSink();
+
+  ngOnInit(): void {
+    this.subSink.sink &#x3D; this.store.values$.subscribe((network) &#x3D;&gt; {
+      this.network &#x3D; network;
+      if (this.state &#x3D;&#x3D;&#x3D; InspectionState.Person)
+        this.connectedPersons &#x3D; this.getAdjacentConnections(this.inspectedPerson);
+    });
+    this.subSink.sink &#x3D; this.selection.selected$.subscribe((e) &#x3D;&gt; {
+      if (this.personChanged) this.updatePersonInBackend(this.inspectedPerson);
+
+      if (e.length &#x3D;&#x3D;&#x3D; 0) this.inspectNothing();
+      else if (e[0].data instanceof asiaPerson) this.inspectPerson(e[0].data);
+      else if (e[0].data instanceof asiaInfluencesRelation) this.inspectConnection(e[0].data);
+    });
+    this.subSink.sink &#x3D; this.updatedPersonDebounced.subscribe((person) &#x3D;&gt; {
+      this.updatePersonInBackend(person);
+    });
+    this.subSink.sink &#x3D; this.updatedConnectionDebounced.subscribe((connection) &#x3D;&gt; {
+      this.updateConnectionInBackend(connection);
+    });
+  }
+  state &#x3D; InspectionState.Nothing;
+  inspectNothing() {
+    this.state &#x3D; InspectionState.Nothing;
+  }
+
+  connectionChanged &#x3D; false;
+  inspectedConnection!: asiaInfluencesRelation;
+  personA!: asiaPerson;
+  personB!: asiaPerson;
+  inspectConnection(connection: asiaInfluencesRelation) {
+    this.state &#x3D; InspectionState.Connection;
+    this.inspectedConnection &#x3D; connection;
+    this.personA &#x3D; this.network.people.find((p) &#x3D;&gt; p.id &#x3D;&#x3D;&#x3D; connection.from)!;
+    this.personB &#x3D; this.network.people.find((p) &#x3D;&gt; p.id &#x3D;&#x3D;&#x3D; connection.to)!;
+  }
+
+  updateConnection(connection: { id: asiaGuid; influence?: number; interval?: string; offset?: string }) {
+    this.connectionChanged &#x3D; true;
+    if (connection.influence !&#x3D;&#x3D; undefined) this.inspectedConnection.influence &#x3D; connection.influence;
+    if (connection.interval !&#x3D;&#x3D; undefined) this.inspectedConnection.interval &#x3D; Number(connection.interval);
+    if (connection.offset !&#x3D;&#x3D; undefined) this.inspectedConnection.offset &#x3D; Number(connection.offset);
+
+    this.updatedConnection.next(this.inspectedConnection);
+  }
+
+  updateConnectionInBackend(connection: asiaInfluencesRelation) {
+    this.connectionChanged &#x3D; false;
+    if (!this.network.influenceRelations.some((r) &#x3D;&gt; r.id &#x3D;&#x3D;&#x3D; connection.id)) return;
+    this.store.updateConnection(connection);
+  }
+
+  deleteInspectedConnection() {
+    this.state &#x3D; InspectionState.Nothing;
+    this.selection.selectOnly();
+    this.store.deleteConnection(this.inspectedConnection);
+  }
+
+  updatedConnection: Subject&lt;asiaInfluencesRelation&gt; &#x3D; new Subject();
+  updatedConnectionDebounced &#x3D; this.updatedConnection.asObservable().pipe(debounceTime(1000));
+
+  personChanged &#x3D; false;
+  inspectedPerson!: asiaPerson;
+  connectedPersons!: {
+    incoming: { person: asiaPerson; relation: asiaInfluencesRelation }[];
+    outgoing: { person: asiaPerson; relation: asiaInfluencesRelation }[];
+  };
+  inspectPerson(person: asiaPerson) {
+    this.state &#x3D; InspectionState.Person;
+    this.inspectedPerson &#x3D; person;
+    this.connectedPersons &#x3D; this.getAdjacentConnections(this.inspectedPerson);
+  }
+  deleteInspectedPerson() {
+    this.state &#x3D; InspectionState.Nothing;
+    this.selection.selectOnly();
+    this.store.deletePerson(this.inspectedPerson);
+  }
+  getAdjacentConnections(person: asiaPerson): {
+    incoming: { person: asiaPerson; relation: asiaInfluencesRelation }[];
+    outgoing: { person: asiaPerson; relation: asiaInfluencesRelation }[];
+  } {
+    const adjacentConnections: { from: asiaInfluencesRelation[]; to: asiaInfluencesRelation[] } &#x3D; { from: [], to: [] };
+    this.network.influenceRelations.forEach((r) &#x3D;&gt; {
+      if (r.from &#x3D;&#x3D;&#x3D; person.id) adjacentConnections.from.push(r);
+      else if (r.to &#x3D;&#x3D;&#x3D; person.id) adjacentConnections.to.push(r);
+    });
+    const connectedPersons: {
+      incoming: { person: asiaPerson; relation: asiaInfluencesRelation }[];
+      outgoing: { person: asiaPerson; relation: asiaInfluencesRelation }[];
+    } &#x3D; { incoming: [], outgoing: [] };
+    adjacentConnections.from.forEach((r) &#x3D;&gt; {
+      const person &#x3D; this.network.people.find((p) &#x3D;&gt; p.id &#x3D;&#x3D;&#x3D; r.to);
+      if (person !&#x3D;&#x3D; undefined) connectedPersons.outgoing.push({ person: person, relation: r });
+    });
+    adjacentConnections.to.forEach((r) &#x3D;&gt; {
+      const person &#x3D; this.network.people.find((p) &#x3D;&gt; p.id &#x3D;&#x3D;&#x3D; r.from);
+      if (person !&#x3D;&#x3D; undefined) connectedPersons.incoming.push({ person: person, relation: r });
+    });
+    return connectedPersons;
+  }
+
+  getInfluenceColor(influence: number): string {
+    if (influence &lt; 0) return this.helper.lerpHexColor(&#x27;#ffb805&#x27;, &#x27;#ff013d&#x27;, Math.abs(influence));
+    else return this.helper.lerpHexColor(&#x27;#ffb805&#x27;, &#x27;#4bdb50&#x27;, influence);
+  }
+
+  updatePerson(person: {
+    id: asiaGuid;
+    name?: string;
+    reflection?: string;
+    persistance?: string;
+    t0?: number;
+    color?: string;
+  }) {
+    this.personChanged &#x3D; true;
+    if (person.name !&#x3D;&#x3D; undefined) this.inspectedPerson.name &#x3D; person.name;
+    if (person.reflection !&#x3D;&#x3D; undefined) this.inspectedPerson.reflection &#x3D; Number(person.reflection);
+    if (person.persistance !&#x3D;&#x3D; undefined) this.inspectedPerson.persistance &#x3D; Number(person.persistance);
+    if (person.t0 !&#x3D;&#x3D; undefined)
+      setTimeout(() &#x3D;&gt; {
+        this.inspectedPerson.simulationValues.set(0, Number(person.t0));
+      });
+    if (person.color !&#x3D;&#x3D; undefined) this.inspectedPerson.color &#x3D; person.color;
+    this.updatedPerson.next(this.inspectedPerson);
+  }
+
+  updatePersonInBackend(person: asiaPerson) {
+    this.personChanged &#x3D; false;
+    if (!this.network.people.some((p) &#x3D;&gt; p.id &#x3D;&#x3D;&#x3D; person.id)) return;
+    this.store.updatePerson(person);
+  }
+
+  updatedPerson: Subject&lt;asiaPerson&gt; &#x3D; new Subject();
+  updatedPersonDebounced &#x3D; this.updatedPerson.asObservable().pipe(debounceTime(1000));
+
+  ngOnDestroy(): void {
+    this.subSink.unsubscribe();
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ng-container [ngSwitch]&#x3D;&quot;state&quot;&gt;
+  &lt;ng-container *ngSwitchCase&#x3D;&quot;inspectionState.Nothing&quot;&gt;
+    &lt;ng-container *ngTemplateOutlet&#x3D;&quot;nothingTmpl&quot;&gt;&lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-container *ngSwitchCase&#x3D;&quot;inspectionState.Person&quot;&gt;
+    &lt;ng-container *ngTemplateOutlet&#x3D;&quot;personTmpl; context: { person: inspectedPerson }&quot;&gt;&lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-container *ngSwitchCase&#x3D;&quot;inspectionState.Connection&quot;&gt;
+    &lt;ng-container *ngTemplateOutlet&#x3D;&quot;connectionTmpl; context: { connection: inspectedConnection }&quot;&gt;&lt;/ng-container&gt;
+  &lt;/ng-container&gt;
+&lt;/ng-container&gt;
+
+&lt;ng-template #nothingTmpl&gt;
+  &lt;p class&#x3D;&quot;inspector-nothing__info&quot;&gt;Select nodes / connections / groups to inspect them&lt;/p&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #personTmpl let-person&#x3D;&quot;person&quot;&gt;
+  &lt;div class&#x3D;&quot;header&quot;&gt;
+    &lt;h1 class&#x3D;&quot;inspector-person__heading&quot;&gt;{{ person.name }}&lt;/h1&gt;
+    &lt;button a-sia-button-small buttonStyle&#x3D;&quot;delete&quot; (click)&#x3D;&quot;deleteInspectedPerson()&quot; type&#x3D;&quot;delete&quot; type&#x3D;&quot;button&quot;&gt;
+      Delete?
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;a-sia-slider
+    for&#x3D;&quot;t0&quot;
+    label&#x3D;&quot;T(0)&quot;
+    [min]&#x3D;&quot;-3&quot;
+    [max]&#x3D;&quot;3&quot;
+    [step]&#x3D;&quot;0.1&quot;
+    minColor&#x3D;&quot;#ff013d&quot;
+    maxColor&#x3D;&quot;#4bdb50&quot;
+    (valueChange)&#x3D;&quot;updatePerson({ id: person.id, t0: $event })&quot;
+    [value]&#x3D;&quot;person.simulationValues.get(0)&quot;
+  &gt;
+  &lt;/a-sia-slider&gt;
+  &lt;a-sia-input-small for&#x3D;&quot;name&quot; label&#x3D;&quot;Name&quot;&gt;
+    &lt;input
+      #nameInput
+      aSiaInputSmall
+      name&#x3D;&quot;name&quot;
+      (input)&#x3D;&quot;updatePerson({ id: person.id, name: nameInput.value })&quot;
+      [value]&#x3D;&quot;person.name&quot;
+    /&gt;
+  &lt;/a-sia-input-small&gt;
+  &lt;a-sia-input-small for&#x3D;&quot;reflection&quot; label&#x3D;&quot;Reflection&quot;&gt;
+    &lt;input
+      #reflectionInput
+      aSiaInputSmall
+      name&#x3D;&quot;reflection&quot;
+      (input)&#x3D;&quot;updatePerson({ id: person.id, reflection: reflectionInput.value })&quot;
+      [value]&#x3D;&quot;person.reflection.toFixed(2)&quot;
+    /&gt;
+  &lt;/a-sia-input-small&gt;
+  &lt;a-sia-input-small for&#x3D;&quot;persistance&quot; label&#x3D;&quot;Persistance&quot;&gt;
+    &lt;input
+      #persistanceInput
+      aSiaInputSmall
+      name&#x3D;&quot;persistance&quot;
+      (input)&#x3D;&quot;updatePerson({ id: person.id, persistance: persistanceInput.value })&quot;
+      [value]&#x3D;&quot;person.persistance.toFixed(2)&quot;
+    /&gt;
+  &lt;/a-sia-input-small&gt;
+  &lt;a-sia-color-input (colorChanged)&#x3D;&quot;updatePerson({ id: person.id, color: $event })&quot; [color]&#x3D;&quot;person.color&quot;&gt;
+  &lt;/a-sia-color-input&gt;
+  &lt;div&gt;
+    &lt;h3&gt;Incoming Relations&lt;/h3&gt;
+    &lt;div *ngFor&#x3D;&quot;let personIncoming of connectedPersons.incoming&quot; class&#x3D;&quot;relation relation-incoming&quot;&gt;
+      &lt;span class&#x3D;&quot;relation__person-name&quot;&gt;
+        {{ person.name }}
+      &lt;/span&gt;
+      &lt;div
+        class&#x3D;&quot;relation__incoming-symbol&quot;
+        [style.borderBottom]&#x3D;&quot;&#x27;0.3rem solid &#x27; + getInfluenceColor(personIncoming.relation.influence)&quot;
+      &gt;
+        &lt;svg
+          xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot;
+          width&#x3D;&quot;26&quot;
+          height&#x3D;&quot;12&quot;
+          viewBox&#x3D;&quot;0 0 22 10&quot;
+          fill&#x3D;&quot;none&quot;
+          style&#x3D;&quot;transform: scale(-1, 1)&quot;
+        &gt;
+          &lt;path
+            d&#x3D;&quot;M20.3429 8H2L2 2L20.3429 8Z&quot;
+            fill&#x3D;&quot;#E7EBEE&quot;
+            stroke&#x3D;&quot;#E7EBEE&quot;
+            stroke-width&#x3D;&quot;2.5&quot;
+            stroke-linejoin&#x3D;&quot;round&quot;
+          /&gt;
+        &lt;/svg&gt;
+        {{ personIncoming.relation.influence.toFixed(2) }}
+      &lt;/div&gt;
+      &lt;span class&#x3D;&quot;relation__person-name&quot;&gt;
+        {{ personIncoming.person.name }}
+      &lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;h3&gt;Outgoing Relations&lt;/h3&gt;
+    &lt;div *ngFor&#x3D;&quot;let personOutgoing of connectedPersons.outgoing&quot; class&#x3D;&quot;relation relation-outgoing&quot;&gt;
+      &lt;span class&#x3D;&quot;relation__person-name&quot;&gt;
+        {{ person.name }}
+      &lt;/span&gt;
+      &lt;div
+        class&#x3D;&quot;relation__incoming-symbol&quot;
+        [style.borderBottom]&#x3D;&quot;&#x27;0.3rem solid &#x27; + getInfluenceColor(personOutgoing.relation.influence)&quot;
+      &gt;
+        {{ personOutgoing.relation.influence.toFixed(2) }}
+        &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;26&quot; height&#x3D;&quot;12&quot; viewBox&#x3D;&quot;0 0 22 10&quot; fill&#x3D;&quot;none&quot;&gt;
+          &lt;path
+            d&#x3D;&quot;M20.3429 8H2L2 2L20.3429 8Z&quot;
+            fill&#x3D;&quot;#E7EBEE&quot;
+            stroke&#x3D;&quot;#E7EBEE&quot;
+            stroke-width&#x3D;&quot;2.5&quot;
+            stroke-linejoin&#x3D;&quot;round&quot;
+          /&gt;
+        &lt;/svg&gt;
+      &lt;/div&gt;
+      &lt;span class&#x3D;&quot;relation__person-name&quot;&gt;
+        {{ personOutgoing.person.name }}
+      &lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #connectionTmpl let-connection&#x3D;&quot;connection&quot;&gt;
+  &lt;div class&#x3D;&quot;relation relation-outgoing&quot;&gt;
+    &lt;h3 class&#x3D;&quot;relation__person-name&quot;&gt;
+      {{ personA.name }}
+    &lt;/h3&gt;
+    &lt;div
+      class&#x3D;&quot;relation__incoming-symbol&quot;
+      [style.borderBottom]&#x3D;&quot;&#x27;0.3rem solid &#x27; + getInfluenceColor(inspectedConnection.influence)&quot;
+    &gt;
+      {{ inspectedConnection.influence.toFixed(2) }}
+      &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;26&quot; height&#x3D;&quot;12&quot; viewBox&#x3D;&quot;0 0 22 10&quot; fill&#x3D;&quot;none&quot;&gt;
+        &lt;path
+          d&#x3D;&quot;M20.3429 8H2L2 2L20.3429 8Z&quot;
+          fill&#x3D;&quot;#E7EBEE&quot;
+          stroke&#x3D;&quot;#E7EBEE&quot;
+          stroke-width&#x3D;&quot;2.5&quot;
+          stroke-linejoin&#x3D;&quot;round&quot;
+        /&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;
+    &lt;h3 class&#x3D;&quot;relation__person-name&quot;&gt;
+      {{ personB.name }}
+    &lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;delete-connection-container&quot;&gt;
+    &lt;button a-sia-button-small buttonStyle&#x3D;&quot;delete&quot; (click)&#x3D;&quot;deleteInspectedConnection()&quot; type&#x3D;&quot;delete&quot; type&#x3D;&quot;button&quot;&gt;
+      Delete?
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;a-sia-slider
+    for&#x3D;&quot;influence&quot;
+    label&#x3D;&quot;Influence&quot;
+    [min]&#x3D;&quot;-1&quot;
+    [max]&#x3D;&quot;1&quot;
+    [step]&#x3D;&quot;0.01&quot;
+    minColor&#x3D;&quot;#ff013d&quot;
+    maxColor&#x3D;&quot;#4bdb50&quot;
+    (valueChange)&#x3D;&quot;updateConnection({ id: inspectedConnection.id, influence: $event })&quot;
+    [value]&#x3D;&quot;inspectedConnection.influence&quot;
+  &gt;
+  &lt;/a-sia-slider&gt;
+  &lt;a-sia-input-small for&#x3D;&quot;interval&quot; label&#x3D;&quot;Interval&quot;&gt;
+    &lt;input
+      #intervalInput
+      aSiaInputSmall
+      name&#x3D;&quot;interval&quot;
+      (input)&#x3D;&quot;updateConnection({ id: inspectedConnection.id, interval: intervalInput.value })&quot;
+      [value]&#x3D;&quot;inspectedConnection.interval&quot;
+    /&gt;
+  &lt;/a-sia-input-small&gt;
+  &lt;a-sia-input-small for&#x3D;&quot;offset&quot; label&#x3D;&quot;Offset&quot;&gt;
+    &lt;input
+      #offsetInput
+      aSiaInputSmall
+      name&#x3D;&quot;offset&quot;
+      (input)&#x3D;&quot;updateConnection({ id: inspectedConnection.id, offset: offsetInput.value })&quot;
+      [value]&#x3D;&quot;inspectedConnection.offset&quot;
+    /&gt;
+  &lt;/a-sia-input-small&gt;
+&lt;/ng-template&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./inspector-panel.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../../../../assets/colors.scss&quot;;
+:host {
+  padding: 1rem;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow-y: scroll;
+}
+
+.inspector-nothing {
+  &amp;__info {
+    text-align: center;
+    font-size: 1.3rem;
+    color: $bg-primary-500;
+  }
+}
+.inspector-person {
+  &amp;__heading {
+    font-size: 2.6rem;
+    margin-top: 1rem;
+    width: fit-content;
+  }
+}
+.inspector-connection {
+  &amp;__heading {
+    font-size: 2.6rem;
+    margin-top: 1rem;
+  }
+}
+.delete-connection-container {
+  margin: 0 auto 1rem auto;
+}
+.relation {
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 8rem 1fr;
+  align-items: center;
+  &amp;__person-name {
+    text-align: center;
+    overflow: ellipsis;
+  }
+  &amp;__incoming-symbol {
+    text-align: center;
+  }
+}
+.header {
+  display: grid;
+  grid-template-columns: auto min-content;
+  align-items: center;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ng-container [ngSwitch]="state">  <ng-container *ngSwitchCase="inspectionState.Nothing">    <ng-container *ngTemplateOutlet="nothingTmpl"></ng-container>  </ng-container>  <ng-container *ngSwitchCase="inspectionState.Person">    <ng-container *ngTemplateOutlet="personTmpl; context: { person: inspectedPerson }"></ng-container>  </ng-container>  <ng-container *ngSwitchCase="inspectionState.Connection">    <ng-container *ngTemplateOutlet="connectionTmpl; context: { connection: inspectedConnection }"></ng-container>  </ng-container></ng-container><ng-template #nothingTmpl>  <p class="inspector-nothing__info">Select nodes / connections / groups to inspect them</p></ng-template><ng-template #personTmpl let-person="person">  <div class="header">    <h1 class="inspector-person__heading">{{ person.name }}</h1>    <button a-sia-button-small buttonStyle="delete" (click)="deleteInspectedPerson()" type="delete" type="button">      Delete?    </button>  </div>  <a-sia-slider    for="t0"    label="T(0)"    [min]="-3"    [max]="3"    [step]="0.1"    minColor="#ff013d"    maxColor="#4bdb50"    (valueChange)="updatePerson({ id: person.id, t0: $event })"    [value]="person.simulationValues.get(0)"  >  </a-sia-slider>  <a-sia-input-small for="name" label="Name">    <input      #nameInput      aSiaInputSmall      name="name"      (input)="updatePerson({ id: person.id, name: nameInput.value })"      [value]="person.name"    />  </a-sia-input-small>  <a-sia-input-small for="reflection" label="Reflection">    <input      #reflectionInput      aSiaInputSmall      name="reflection"      (input)="updatePerson({ id: person.id, reflection: reflectionInput.value })"      [value]="person.reflection.toFixed(2)"    />  </a-sia-input-small>  <a-sia-input-small for="persistance" label="Persistance">    <input      #persistanceInput      aSiaInputSmall      name="persistance"      (input)="updatePerson({ id: person.id, persistance: persistanceInput.value })"      [value]="person.persistance.toFixed(2)"    />  </a-sia-input-small>  <a-sia-color-input (colorChanged)="updatePerson({ id: person.id, color: $event })" [color]="person.color">  </a-sia-color-input>  <div>    <h3>Incoming Relations</h3>    <div *ngFor="let personIncoming of connectedPersons.incoming" class="relation relation-incoming">      <span class="relation__person-name">        {{ person.name }}      </span>      <div        class="relation__incoming-symbol"        [style.borderBottom]="\'0.3rem solid \' + getInfluenceColor(personIncoming.relation.influence)"      >        <svg          xmlns="http://www.w3.org/2000/svg"          width="26"          height="12"          viewBox="0 0 22 10"          fill="none"          style="transform: scale(-1, 1)"        >          <path            d="M20.3429 8H2L2 2L20.3429 8Z"            fill="#E7EBEE"            stroke="#E7EBEE"            stroke-width="2.5"            stroke-linejoin="round"          />        </svg>        {{ personIncoming.relation.influence.toFixed(2) }}      </div>      <span class="relation__person-name">        {{ personIncoming.person.name }}      </span>    </div>    <h3>Outgoing Relations</h3>    <div *ngFor="let personOutgoing of connectedPersons.outgoing" class="relation relation-outgoing">      <span class="relation__person-name">        {{ person.name }}      </span>      <div        class="relation__incoming-symbol"        [style.borderBottom]="\'0.3rem solid \' + getInfluenceColor(personOutgoing.relation.influence)"      >        {{ personOutgoing.relation.influence.toFixed(2) }}        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="12" viewBox="0 0 22 10" fill="none">          <path            d="M20.3429 8H2L2 2L20.3429 8Z"            fill="#E7EBEE"            stroke="#E7EBEE"            stroke-width="2.5"            stroke-linejoin="round"          />        </svg>      </div>      <span class="relation__person-name">        {{ personOutgoing.person.name }}      </span>    </div>  </div></ng-template><ng-template #connectionTmpl let-connection="connection">  <div class="relation relation-outgoing">    <h3 class="relation__person-name">      {{ personA.name }}    </h3>    <div      class="relation__incoming-symbol"      [style.borderBottom]="\'0.3rem solid \' + getInfluenceColor(inspectedConnection.influence)"    >      {{ inspectedConnection.influence.toFixed(2) }}      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="12" viewBox="0 0 22 10" fill="none">        <path          d="M20.3429 8H2L2 2L20.3429 8Z"          fill="#E7EBEE"          stroke="#E7EBEE"          stroke-width="2.5"          stroke-linejoin="round"        />      </svg>    </div>    <h3 class="relation__person-name">      {{ personB.name }}    </h3>  </div>  <div class="delete-connection-container">    <button a-sia-button-small buttonStyle="delete" (click)="deleteInspectedConnection()" type="delete" type="button">      Delete?    </button>  </div>  <a-sia-slider    for="influence"    label="Influence"    [min]="-1"    [max]="1"    [step]="0.01"    minColor="#ff013d"    maxColor="#4bdb50"    (valueChange)="updateConnection({ id: inspectedConnection.id, influence: $event })"    [value]="inspectedConnection.influence"  >  </a-sia-slider>  <a-sia-input-small for="interval" label="Interval">    <input      #intervalInput      aSiaInputSmall      name="interval"      (input)="updateConnection({ id: inspectedConnection.id, interval: intervalInput.value })"      [value]="inspectedConnection.interval"    />  </a-sia-input-small>  <a-sia-input-small for="offset" label="Offset">    <input      #offsetInput      aSiaInputSmall      name="offset"      (input)="updateConnection({ id: inspectedConnection.id, offset: offsetInput.value })"      [value]="inspectedConnection.offset"    />  </a-sia-input-small></ng-template></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'a-sia-root'},{'name': 'ColorInputComponent', 'selector': 'a-sia-color-input'},{'name': 'ConnectionComponent', 'selector': 'a-sia-connection'},{'name': 'DataPanelComponent', 'selector': 'a-sia-data-panel'},{'name': 'DataPanelNavbarComponent', 'selector': 'a-sia-data-panel-navbar'},{'name': 'DataPanelNavbarEntryComponent', 'selector': 'a-sia-data-panel-navbar-entry'},{'name': 'DiagramComponent', 'selector': 'a-sia-diagram'},{'name': 'DiagramLineComponent', 'selector': 'a-sia-diagram-line'},{'name': 'DropDownComponent', 'selector': 'a-sia-drop-down'},{'name': 'GraphControlSimulationNavigationComponent', 'selector': 'a-sia-graph-control-simulation-navigation'},{'name': 'GraphControlToolComponent', 'selector': 'a-sia-graph-control-tool'},{'name': 'GraphControlZoomComponent', 'selector': 'a-sia-graph-control-zoom'},{'name': 'GraphEditorComponent', 'selector': 'a-sia-graph-editor'},{'name': 'GraphEditorControlsComponent', 'selector': 'a-sia-graph-editor-controls'},{'name': 'GroupNodeComponent', 'selector': 'a-sia-group-node'},{'name': 'InputLargeComponent', 'selector': 'a-sia-input-large'},{'name': 'InputMediumComponent', 'selector': 'a-sia-input-medium'},{'name': 'InputSmallComponent', 'selector': 'a-sia-input-small'},{'name': 'InspectorPanelComponent', 'selector': 'a-sia-inspector-panel'},{'name': 'LegendComponent', 'selector': 'a-sia-legend'},{'name': 'LegendEntryComponent', 'selector': 'a-sia-legend-entry'},{'name': 'LoginComponent', 'selector': 'a-sia-login'},{'name': 'MenubarComponent', 'selector': 'a-sia-menubar'},{'name': 'MenubarEntryComponent', 'selector': 'a-sia-menubar-entry'},{'name': 'MenubarMenuComponent', 'selector': 'a-sia-menubar-menu'},{'name': 'ModalComponent', 'selector': 'a-sia-modal'},{'name': 'NetworkExplorerComponent', 'selector': 'a-sia-network-explorer'},{'name': 'NetworkExplorerInstancesComponent', 'selector': 'a-sia-network-explorer-instances'},{'name': 'NetworkExplorerNetworkComponent', 'selector': 'a-sia-network-explorer-network'},{'name': 'NetworkExplorerNetworksComponent', 'selector': 'a-sia-network-explorer-networks'},{'name': 'NetworkExplorerProjectsComponent', 'selector': 'a-sia-network-explorer-projects'},{'name': 'NetworkPanelComponent', 'selector': 'a-sia-network-panel'},{'name': 'NetworkViewComponent', 'selector': 'a-sia-network-view'},{'name': 'PaneComponent', 'selector': 'a-sia-pane'},{'name': 'PaneContainerComponent', 'selector': 'a-sia-pane-container'},{'name': 'PaneDividerComponent', 'selector': 'a-sia-pane-divider'},{'name': 'PersonNodeComponent', 'selector': 'a-sia-person-node'},{'name': 'SettingsComponent', 'selector': 'a-sia-settings'},{'name': 'SimulationDiagramComponent', 'selector': 'a-sia-simulation-diagram'},{'name': 'SliderComponent', 'selector': 'a-sia-slider'},{'name': 'SocialNodeComponent', 'selector': 'a-sia-social-node'},{'name': 'StructurePanelComponent', 'selector': 'a-sia-structure-panel'}];
+    var DIRECTIVES = [{'name': 'ButtonDirective', 'selector': '[a-sia-button]'},{'name': 'ButtonSmallDirective', 'selector': '[a-sia-button-small]'},{'name': 'InputLargeDirective', 'selector': '[aSiaInputLarge]'},{'name': 'InputMediumDirective', 'selector': '[aSiaInputMedium]'},{'name': 'InputSmallDirective', 'selector': '[aSiaInputSmall]'},{'name': 'PaneIfDirective', 'selector': '[aSiaPaneIf]'}];
+    var ACTUAL_COMPONENT = {'name': 'InspectorPanelComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'InspectorPanelComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

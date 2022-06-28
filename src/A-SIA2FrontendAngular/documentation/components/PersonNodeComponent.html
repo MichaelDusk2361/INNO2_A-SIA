@@ -1,0 +1,1100 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>a-sia documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">a-sia documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  PersonNodeComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/modules/graph-editor/person-node/person-node.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="../interfaces/ISelectable.html" target="_self" >ISelectable</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>a-sia-person-node</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./person-node.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./person-node.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#selected" >selected</a>
+                            </li>
+                            <li>
+                                <a href="#subSink" >subSink</a>
+                            </li>
+                            <li>
+                                <a href="#x" >x</a>
+                            </li>
+                            <li>
+                                <a href="#y" >y</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#deselect" >deselect</a>
+                            </li>
+                            <li>
+                                <a href="#getSimulationColor" >getSimulationColor</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onClick" >onClick</a>
+                            </li>
+                            <li>
+                                <a href="#select" >select</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#person" >person</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostBindings</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#style.left.px" >style.left.px</a>
+                            </li>
+                            <li>
+                                <a href="#style.top.px" >style.top.px</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostListeners</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#click" >click</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(selection: <a href="../injectables/GraphEditorSelectionService.html" target="_self">GraphEditorSelectionService</a>, helper: <a href="../injectables/HelperService.html" target="_self">HelperService</a>, store: <a href="../injectables/NetworkStructureStoreService.html" target="_self">NetworkStructureStoreService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/modules/graph-editor/person-node/person-node.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>selection</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/GraphEditorSelectionService.html" target="_self" >GraphEditorSelectionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>helper</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/HelperService.html" target="_self" >HelperService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>store</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/NetworkStructureStoreService.html" target="_self" >NetworkStructureStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="person"></a>
+                        <b>person</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/asiaPerson.html" target="_self" >asiaPerson</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/modules/graph-editor/person-node/person-node.component.ts:30</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3>HostBindings</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="style.left.px"></a>
+                    <span class="name">
+                        <span ><b>style.left.px</b></span>
+                        <a href="#style.left.px"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/modules/graph-editor/person-node/person-node.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="style.top.px"></a>
+                    <span class="name">
+                        <span ><b>style.top.px</b></span>
+                        <a href="#style.top.px"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/modules/graph-editor/person-node/person-node.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3>HostListeners</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="click"></a>
+                    <span class="name">
+                        <span ><b>click</b></span>
+                        <a href="#click"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <i>Arguments : </i><code>'$event' </code>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>click(event: MouseEvent)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/modules/graph-editor/person-node/person-node.component.ts:34</a></div>
+                </td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deselect"></a>
+                    <span class="name">
+                        <span ><b>deselect</b></span>
+                        <a href="#deselect"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deselect()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/modules/graph-editor/person-node/person-node.component.ts:26</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSimulationColor"></a>
+                    <span class="name">
+                        <span ><b>getSimulationColor</b></span>
+                        <a href="#getSimulationColor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSimulationColor()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/app/modules/graph-editor/person-node/person-node.component.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <span ><b>ngOnDestroy</b></span>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="75"
+                            class="link-to-prism">src/app/modules/graph-editor/person-node/person-node.component.ts:75</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">src/app/modules/graph-editor/person-node/person-node.component.ts:51</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onClick"></a>
+                    <span class="name">
+                        <span ><b>onClick</b></span>
+                        <a href="#onClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onClick(event: MouseEvent)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@HostListener(&#x27;click&#x27;, [&#x27;$event&#x27;])<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/modules/graph-editor/person-node/person-node.component.ts:34</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>MouseEvent</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="select"></a>
+                    <span class="name">
+                        <span ><b>select</b></span>
+                        <a href="#select"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>select()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">src/app/modules/graph-editor/person-node/person-node.component.ts:23</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selected"></a>
+                    <span class="name">
+                        <span ><b>selected</b></span>
+                        <a href="#selected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/modules/graph-editor/person-node/person-node.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="subSink"></a>
+                    <span class="name">
+                        <span ><b>subSink</b></span>
+                        <a href="#subSink"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new SubSink()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/modules/graph-editor/person-node/person-node.component.ts:62</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="x"></a>
+                    <span class="name">
+                        <span ><b>x</b></span>
+                        <a href="#x"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @HostBinding(&#x27;style.left.px&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/modules/graph-editor/person-node/person-node.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="y"></a>
+                    <span class="name">
+                        <span ><b>y</b></span>
+                        <a href="#y"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @HostBinding(&#x27;style.top.px&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/modules/graph-editor/person-node/person-node.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, HostBinding, HostListener, Input, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
+import { GraphEditorSelectionService } from &#x27;@shared/components/graph-edior-selection.service&#x27;;
+import { HelperService } from &#x27;@shared/components/helper.service&#x27;;
+import { ISelectable } from &#x27;@shared/components/ISelectable&#x27;;
+import { asiaPerson } from &#x27;@shared/models/person.Model&#x27;;
+import { NetworkStructureStoreService } from &#x27;@shared/store/network-structure/network-structure-store.service&#x27;;
+import { debounceTime, Subject } from &#x27;rxjs&#x27;;
+import { SubSink } from &#x27;subsink&#x27;;
+
+@Component({
+  selector: &#x27;a-sia-person-node&#x27;,
+  templateUrl: &#x27;./person-node.component.html&#x27;,
+  styleUrls: [&#x27;./person-node.component.scss&#x27;]
+})
+export class PersonNodeComponent implements OnInit, ISelectable, OnDestroy {
+  constructor(
+    private selection: GraphEditorSelectionService,
+    private helper: HelperService,
+    private store: NetworkStructureStoreService
+  ) {}
+
+  selected &#x3D; true;
+  select(): void {
+    this.selected &#x3D; true;
+  }
+  deselect(): void {
+    this.selected &#x3D; true;
+  }
+
+  @Input() person!: asiaPerson;
+  @HostBinding(&#x27;style.left.px&#x27;) x!: number;
+  @HostBinding(&#x27;style.top.px&#x27;) y!: number;
+
+  @HostListener(&#x27;click&#x27;, [&#x27;$event&#x27;]) onClick(event: MouseEvent): void {
+    if (event.ctrlKey || event.shiftKey)
+      this.selection.selectAdditional({
+        selectable: this,
+        id: this.person.id,
+        data: this.person,
+        viewBox: { x: this.person.positionX, y: this.person.positionY, width: 100, height: 150, rotationRad: 0 }
+      });
+    else
+      this.selection.selectOnly({
+        selectable: this,
+        id: this.person.id,
+        data: this.person,
+        viewBox: { x: this.person.positionX, y: this.person.positionY, width: 100, height: 150, rotationRad: 0 }
+      });
+  }
+
+  ngOnInit() {
+    this.x &#x3D; this.person.positionX;
+    this.y &#x3D; this.person.positionY;
+
+    this.subSink.sink &#x3D; this.selection.moveNode$.subscribe((node) &#x3D;&gt; {
+      if (node.id !&#x3D;&#x3D; this.person.id) return;
+      this.x &#x3D; this.person.positionX;
+      this.y &#x3D; this.person.positionY;
+    });
+  }
+
+  subSink &#x3D; new SubSink();
+
+  getSimulationColor(): string {
+    let color &#x3D; &#x27;#2b3d5a&#x27;;
+    if (!this.person.simulationValues.has(0)) return color;
+
+    const firstSimulationValue &#x3D; this.person.simulationValues.get(0)! / 3;
+    if (firstSimulationValue &lt; 0)
+      color &#x3D; this.helper.lerpHexColor(&#x27;#ffb805&#x27;, &#x27;#ff013d&#x27;, Math.abs(firstSimulationValue));
+    else color &#x3D; this.helper.lerpHexColor(&#x27;#ffb805&#x27;, &#x27;#4bdb50&#x27;, firstSimulationValue);
+    return color;
+  }
+
+  ngOnDestroy(): void {
+    this.subSink.unsubscribe();
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;simulation-circle&quot; [style.background]&#x3D;&quot;getSimulationColor()&quot;&gt;
+  &lt;div class&#x3D;&quot;identifier-circle&quot; [style.background]&#x3D;&quot;person.color&quot;&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;node&quot;&gt;
+    &lt;svg
+      width&#x3D;&quot;40&quot;
+      height&#x3D;&quot;40&quot;
+      class&#x3D;&quot;anonymous-icon&quot;
+      viewBox&#x3D;&quot;0 0 130 151&quot;
+      version&#x3D;&quot;1.1&quot;
+      xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot;
+      xmlns:xlink&#x3D;&quot;http://www.w3.org/1999/xlink&quot;
+      xml:space&#x3D;&quot;preserve&quot;
+      xmlns:serif&#x3D;&quot;http://www.serif.com/&quot;
+    &gt;
+      &lt;path
+        class&#x3D;&quot;anonymous-icon__fill&quot;
+        d&#x3D;&quot;M97.256,33.441c-0,9.019 -3.191,16.719 -9.572,23.1c-6.381,6.382 -14.082,9.572 -23.101,9.572c-9.019,0 -16.719,-3.19 -23.1,-9.572c-6.382,-6.381 -9.572,-14.081 -9.572,-23.1c-0,-9.019 3.19,-16.719 9.572,-23.101c6.381,-6.381 14.081,-9.572 23.1,-9.572c9.019,0 16.72,3.191 23.101,9.572c6.381,6.382 9.572,14.082 9.572,23.101Z&quot;
+      /&gt;
+      &lt;path
+        class&#x3D;&quot;anonymous-icon__fill&quot;
+        d&#x3D;&quot;M64.583,84.691c0.58,-0.012 9.828,-0.244 18.403,-3.712c8.856,-3.581 10.726,-5.144 12.819,-6.511c2.092,-1.368 5.224,-3.414 5.224,-3.414c0,0 4.617,0.679 8.329,2.046c4.338,1.598 5.827,3.322 7.619,5.991c3.724,5.549 5.864,10.858 7.097,15.303c1.889,6.804 2.605,13.935 2.931,18.688c0.325,4.754 0.26,9.051 -1.042,13.284c-1.303,4.233 -2.865,6.121 -5.34,8.66c-2.474,2.54 -9.593,7.098 -18.568,9.508c-8.961,2.405 -26.317,4.802 -37.443,4.81l0,0.001l-0.057,-0l-0,-0.001c-11.127,-0.008 -28.482,-2.405 -37.443,-4.81c-8.976,-2.41 -16.094,-6.968 -18.569,-9.508c-2.474,-2.539 -4.037,-4.427 -5.339,-8.66c-1.302,-4.233 -1.368,-8.53 -1.042,-13.284c0.326,-4.753 1.042,-11.884 2.93,-18.688c1.234,-4.445 3.374,-9.754 7.098,-15.303c1.791,-2.669 3.281,-4.393 7.619,-5.991c3.711,-1.367 8.329,-2.046 8.329,-2.046c-0,0 3.131,2.046 5.224,3.414c2.093,1.367 3.963,2.93 12.819,6.511c8.574,3.468 17.823,3.7 18.402,3.712Z&quot;
+      /&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;name-container&quot;&gt;
+  &lt;p class&#x3D;&quot;name&quot;&gt;{{ person.name }}&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./person-node.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../../../../assets/colors.scss&quot;;
+:host {
+  display: grid;
+  width: max-content;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  place-items: center;
+  gap: 0.7rem;
+  position: absolute;
+  pointer-events: all;
+}
+
+.simulation-circle {
+  border: 0.6rem $bg-primary-900 solid;
+  border-radius: 50%;
+  width: 9.3rem;
+  height: 9.3rem;
+  display: grid;
+  place-items: center;
+}
+.node {
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border: 0.6rem $bg-primary-900 solid;
+  background-color: $bg-primary-600;
+  border-radius: 50%;
+  width: 7.3rem;
+  height: 7.3rem;
+}
+.identifier-circle {
+  // transform-origin: center;
+  transform: translate(2.8rem, -2.8rem);
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.6rem $bg-primary-900 solid;
+  border-radius: 50%;
+  stroke: $bg-primary-900;
+  background-color: $color-negative; // temp
+}
+.anonymous-icon {
+  &amp;__fill {
+    fill: $bg-primary-100;
+  }
+  &amp;__stroke {
+    stroke: $bg-primary-600;
+  }
+}
+
+.name-container {
+  width: min-content;
+  min-width: 10rem;
+  grid-row: 2;
+  background-color: $bg-primary-900;
+  padding: 0.3rem;
+  border-radius: 1rem;
+}
+.name {
+  text-align: center;
+  margin: 0;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="simulation-circle" [style.background]="getSimulationColor()">  <div class="identifier-circle" [style.background]="person.color"></div>  <div class="node">    <svg      width="40"      height="40"      class="anonymous-icon"      viewBox="0 0 130 151"      version="1.1"      xmlns="http://www.w3.org/2000/svg"      xmlns:xlink="http://www.w3.org/1999/xlink"      xml:space="preserve"      xmlns:serif="http://www.serif.com/"    >      <path        class="anonymous-icon__fill"        d="M97.256,33.441c-0,9.019 -3.191,16.719 -9.572,23.1c-6.381,6.382 -14.082,9.572 -23.101,9.572c-9.019,0 -16.719,-3.19 -23.1,-9.572c-6.382,-6.381 -9.572,-14.081 -9.572,-23.1c-0,-9.019 3.19,-16.719 9.572,-23.101c6.381,-6.381 14.081,-9.572 23.1,-9.572c9.019,0 16.72,3.191 23.101,9.572c6.381,6.382 9.572,14.082 9.572,23.101Z"      />      <path        class="anonymous-icon__fill"        d="M64.583,84.691c0.58,-0.012 9.828,-0.244 18.403,-3.712c8.856,-3.581 10.726,-5.144 12.819,-6.511c2.092,-1.368 5.224,-3.414 5.224,-3.414c0,0 4.617,0.679 8.329,2.046c4.338,1.598 5.827,3.322 7.619,5.991c3.724,5.549 5.864,10.858 7.097,15.303c1.889,6.804 2.605,13.935 2.931,18.688c0.325,4.754 0.26,9.051 -1.042,13.284c-1.303,4.233 -2.865,6.121 -5.34,8.66c-2.474,2.54 -9.593,7.098 -18.568,9.508c-8.961,2.405 -26.317,4.802 -37.443,4.81l0,0.001l-0.057,-0l-0,-0.001c-11.127,-0.008 -28.482,-2.405 -37.443,-4.81c-8.976,-2.41 -16.094,-6.968 -18.569,-9.508c-2.474,-2.539 -4.037,-4.427 -5.339,-8.66c-1.302,-4.233 -1.368,-8.53 -1.042,-13.284c0.326,-4.753 1.042,-11.884 2.93,-18.688c1.234,-4.445 3.374,-9.754 7.098,-15.303c1.791,-2.669 3.281,-4.393 7.619,-5.991c3.711,-1.367 8.329,-2.046 8.329,-2.046c-0,0 3.131,2.046 5.224,3.414c2.093,1.367 3.963,2.93 12.819,6.511c8.574,3.468 17.823,3.7 18.402,3.712Z"      />    </svg>  </div></div><div class="name-container">  <p class="name">{{ person.name }}</p></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'a-sia-root'},{'name': 'ColorInputComponent', 'selector': 'a-sia-color-input'},{'name': 'ConnectionComponent', 'selector': 'a-sia-connection'},{'name': 'DataPanelComponent', 'selector': 'a-sia-data-panel'},{'name': 'DataPanelNavbarComponent', 'selector': 'a-sia-data-panel-navbar'},{'name': 'DataPanelNavbarEntryComponent', 'selector': 'a-sia-data-panel-navbar-entry'},{'name': 'DiagramComponent', 'selector': 'a-sia-diagram'},{'name': 'DiagramLineComponent', 'selector': 'a-sia-diagram-line'},{'name': 'DropDownComponent', 'selector': 'a-sia-drop-down'},{'name': 'GraphControlSimulationNavigationComponent', 'selector': 'a-sia-graph-control-simulation-navigation'},{'name': 'GraphControlToolComponent', 'selector': 'a-sia-graph-control-tool'},{'name': 'GraphControlZoomComponent', 'selector': 'a-sia-graph-control-zoom'},{'name': 'GraphEditorComponent', 'selector': 'a-sia-graph-editor'},{'name': 'GraphEditorControlsComponent', 'selector': 'a-sia-graph-editor-controls'},{'name': 'GroupNodeComponent', 'selector': 'a-sia-group-node'},{'name': 'InputLargeComponent', 'selector': 'a-sia-input-large'},{'name': 'InputMediumComponent', 'selector': 'a-sia-input-medium'},{'name': 'InputSmallComponent', 'selector': 'a-sia-input-small'},{'name': 'InspectorPanelComponent', 'selector': 'a-sia-inspector-panel'},{'name': 'LegendComponent', 'selector': 'a-sia-legend'},{'name': 'LegendEntryComponent', 'selector': 'a-sia-legend-entry'},{'name': 'LoginComponent', 'selector': 'a-sia-login'},{'name': 'MenubarComponent', 'selector': 'a-sia-menubar'},{'name': 'MenubarEntryComponent', 'selector': 'a-sia-menubar-entry'},{'name': 'MenubarMenuComponent', 'selector': 'a-sia-menubar-menu'},{'name': 'ModalComponent', 'selector': 'a-sia-modal'},{'name': 'NetworkExplorerComponent', 'selector': 'a-sia-network-explorer'},{'name': 'NetworkExplorerInstancesComponent', 'selector': 'a-sia-network-explorer-instances'},{'name': 'NetworkExplorerNetworkComponent', 'selector': 'a-sia-network-explorer-network'},{'name': 'NetworkExplorerNetworksComponent', 'selector': 'a-sia-network-explorer-networks'},{'name': 'NetworkExplorerProjectsComponent', 'selector': 'a-sia-network-explorer-projects'},{'name': 'NetworkPanelComponent', 'selector': 'a-sia-network-panel'},{'name': 'NetworkViewComponent', 'selector': 'a-sia-network-view'},{'name': 'PaneComponent', 'selector': 'a-sia-pane'},{'name': 'PaneContainerComponent', 'selector': 'a-sia-pane-container'},{'name': 'PaneDividerComponent', 'selector': 'a-sia-pane-divider'},{'name': 'PersonNodeComponent', 'selector': 'a-sia-person-node'},{'name': 'SettingsComponent', 'selector': 'a-sia-settings'},{'name': 'SimulationDiagramComponent', 'selector': 'a-sia-simulation-diagram'},{'name': 'SliderComponent', 'selector': 'a-sia-slider'},{'name': 'SocialNodeComponent', 'selector': 'a-sia-social-node'},{'name': 'StructurePanelComponent', 'selector': 'a-sia-structure-panel'}];
+    var DIRECTIVES = [{'name': 'ButtonDirective', 'selector': '[a-sia-button]'},{'name': 'ButtonSmallDirective', 'selector': '[a-sia-button-small]'},{'name': 'InputLargeDirective', 'selector': '[aSiaInputLarge]'},{'name': 'InputMediumDirective', 'selector': '[aSiaInputMedium]'},{'name': 'InputSmallDirective', 'selector': '[aSiaInputSmall]'},{'name': 'PaneIfDirective', 'selector': '[aSiaPaneIf]'}];
+    var ACTUAL_COMPONENT = {'name': 'PersonNodeComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'PersonNodeComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

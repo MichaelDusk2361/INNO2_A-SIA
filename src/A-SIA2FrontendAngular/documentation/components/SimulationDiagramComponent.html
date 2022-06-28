@@ -1,0 +1,258 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>a-sia documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">a-sia documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  SimulationDiagramComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/modules/simulation-diagram/simulation-diagram.component.ts</code>
+</p>
+
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>a-sia-simulation-diagram</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./simulation-diagram.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./simulation-diagram.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;a-sia-simulation-diagram&#x27;,
+  templateUrl: &#x27;./simulation-diagram.component.html&#x27;,
+  styleUrls: [&#x27;./simulation-diagram.component.scss&#x27;]
+})
+export class SimulationDiagramComponent {}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;p&gt;simulation-diagram works!&lt;/p&gt;
+&lt;a-sia-diagram&gt;&lt;/a-sia-diagram&gt;
+&lt;a-sia-legend&gt;&lt;/a-sia-legend&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./simulation-diagram.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../../../assets/colors.scss&quot;;
+
+:host {
+  display: block;
+  background-color: $bg-primary-800;
+  padding: 1rem;
+  height: 100%;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><p>simulation-diagram works!</p><a-sia-diagram></a-sia-diagram><a-sia-legend></a-sia-legend></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'a-sia-root'},{'name': 'ColorInputComponent', 'selector': 'a-sia-color-input'},{'name': 'ConnectionComponent', 'selector': 'a-sia-connection'},{'name': 'DataPanelComponent', 'selector': 'a-sia-data-panel'},{'name': 'DataPanelNavbarComponent', 'selector': 'a-sia-data-panel-navbar'},{'name': 'DataPanelNavbarEntryComponent', 'selector': 'a-sia-data-panel-navbar-entry'},{'name': 'DiagramComponent', 'selector': 'a-sia-diagram'},{'name': 'DiagramLineComponent', 'selector': 'a-sia-diagram-line'},{'name': 'DropDownComponent', 'selector': 'a-sia-drop-down'},{'name': 'GraphControlSimulationNavigationComponent', 'selector': 'a-sia-graph-control-simulation-navigation'},{'name': 'GraphControlToolComponent', 'selector': 'a-sia-graph-control-tool'},{'name': 'GraphControlZoomComponent', 'selector': 'a-sia-graph-control-zoom'},{'name': 'GraphEditorComponent', 'selector': 'a-sia-graph-editor'},{'name': 'GraphEditorControlsComponent', 'selector': 'a-sia-graph-editor-controls'},{'name': 'GroupNodeComponent', 'selector': 'a-sia-group-node'},{'name': 'InputLargeComponent', 'selector': 'a-sia-input-large'},{'name': 'InputMediumComponent', 'selector': 'a-sia-input-medium'},{'name': 'InputSmallComponent', 'selector': 'a-sia-input-small'},{'name': 'InspectorPanelComponent', 'selector': 'a-sia-inspector-panel'},{'name': 'LegendComponent', 'selector': 'a-sia-legend'},{'name': 'LegendEntryComponent', 'selector': 'a-sia-legend-entry'},{'name': 'LoginComponent', 'selector': 'a-sia-login'},{'name': 'MenubarComponent', 'selector': 'a-sia-menubar'},{'name': 'MenubarEntryComponent', 'selector': 'a-sia-menubar-entry'},{'name': 'MenubarMenuComponent', 'selector': 'a-sia-menubar-menu'},{'name': 'ModalComponent', 'selector': 'a-sia-modal'},{'name': 'NetworkExplorerComponent', 'selector': 'a-sia-network-explorer'},{'name': 'NetworkExplorerInstancesComponent', 'selector': 'a-sia-network-explorer-instances'},{'name': 'NetworkExplorerNetworkComponent', 'selector': 'a-sia-network-explorer-network'},{'name': 'NetworkExplorerNetworksComponent', 'selector': 'a-sia-network-explorer-networks'},{'name': 'NetworkExplorerProjectsComponent', 'selector': 'a-sia-network-explorer-projects'},{'name': 'NetworkPanelComponent', 'selector': 'a-sia-network-panel'},{'name': 'NetworkViewComponent', 'selector': 'a-sia-network-view'},{'name': 'PaneComponent', 'selector': 'a-sia-pane'},{'name': 'PaneContainerComponent', 'selector': 'a-sia-pane-container'},{'name': 'PaneDividerComponent', 'selector': 'a-sia-pane-divider'},{'name': 'PersonNodeComponent', 'selector': 'a-sia-person-node'},{'name': 'SettingsComponent', 'selector': 'a-sia-settings'},{'name': 'SimulationDiagramComponent', 'selector': 'a-sia-simulation-diagram'},{'name': 'SliderComponent', 'selector': 'a-sia-slider'},{'name': 'SocialNodeComponent', 'selector': 'a-sia-social-node'},{'name': 'StructurePanelComponent', 'selector': 'a-sia-structure-panel'}];
+    var DIRECTIVES = [{'name': 'ButtonDirective', 'selector': '[a-sia-button]'},{'name': 'ButtonSmallDirective', 'selector': '[a-sia-button-small]'},{'name': 'InputLargeDirective', 'selector': '[aSiaInputLarge]'},{'name': 'InputMediumDirective', 'selector': '[aSiaInputMedium]'},{'name': 'InputSmallDirective', 'selector': '[aSiaInputSmall]'},{'name': 'PaneIfDirective', 'selector': '[aSiaPaneIf]'}];
+    var ACTUAL_COMPONENT = {'name': 'SimulationDiagramComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SimulationDiagramComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

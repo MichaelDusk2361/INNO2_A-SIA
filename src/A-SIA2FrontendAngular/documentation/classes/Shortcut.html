@@ -1,0 +1,592 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>a-sia documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">a-sia documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li >Shortcut</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/shared/components/user-input/shortcut.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Contains the shortcut config <a href="../miscellaneous/typealiases.html#ShortcutConfig">ShortcutConfig</a> and helper functions
+for getting an event string / a visual representation of the shortcut.</p>
+
+            </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#isMac" >isMac</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#settings" >settings</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#EventString" >EventString</a>
+                                </li>
+                                <li>
+                                    <a href="#HTMLString" >HTMLString</a>
+                                </li>
+                                <li>
+                                    <a href="#Description" >Description</a>
+                                </li>
+                                <li>
+                                    <a href="#AllowedInInputFields" >AllowedInInputFields</a>
+                                </li>
+                                <li>
+                                    <a href="#PreventDefault" >PreventDefault</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(shortcutConfig: <a href="../classes/Shortcut.html" target="_self">ShortcutConfig</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/shared/components/user-input/shortcut.ts:49</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>assigns parameters to settings if they were defined</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>shortcutConfig</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/Shortcut.html" target="_self" >ShortcutConfig</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isMac"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Static</span>
+                        <span ><b>isMac</b></span>
+                        <a href="#isMac"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>/mac/i.test(
+    // reason for disable: ts doesn&#x27;t have definition for userAgentData.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (navigator as any).userAgentData ? (navigator as any).userAgentData.platform : navigator.platform
+  )</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/shared/components/user-input/shortcut.ts:35</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Because mac users usually use their command key (CMD), which is a meta key.
+Windows users usually use their control key (CTRL), which is a control key.
+WIN == CMD, Control == CTRL
+This bool is used to convert between ctrl and cmd depending on the users os.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="settings"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>settings</b></span>
+                        <a href="#settings"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Shortcut.html" target="_self" >ShortcutConfig</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    allowedInInputFields: false,
+    preventDefault: false,
+    ctrl: false,
+    shift: false,
+    alt: false,
+    key: &#x27;&#x27;,
+    description: &#x27;description is missing&#x27;
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/shared/components/user-input/shortcut.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="EventString"></a>
+                        <span class="name"><b>EventString</b><a href="#EventString"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>EventString()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/shared/components/user-input/shortcut.ts:71</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Builds the string to be used by renderer2.listen().</p>
+<p>Will be in format &quot;keydown.control.shift.alt.KEY&quot;,
+or &quot;keydown.meta.shift.alt.KEY&quot; on macos.</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="HTMLString"></a>
+                        <span class="name"><b>HTMLString</b><a href="#HTMLString"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>HTMLString()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/shared/components/user-input/shortcut.ts:84</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Creates string that is visually representative for this shortcut (to the end user).</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="Description"></a>
+                        <span class="name"><b>Description</b><a href="#Description"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>Description()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">src/app/shared/components/user-input/shortcut.ts:94</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="AllowedInInputFields"></a>
+                        <span class="name"><b>AllowedInInputFields</b><a href="#AllowedInInputFields"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>AllowedInInputFields()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">src/app/shared/components/user-input/shortcut.ts:98</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="PreventDefault"></a>
+                        <span class="name"><b>PreventDefault</b><a href="#PreventDefault"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>PreventDefault()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="102" class="link-to-prism">src/app/shared/components/user-input/shortcut.ts:102</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { StringMap } from &#x27;@angular/compiler/src/compiler_facade_interface&#x27;;
+
+/**
+ * @param {boolean} allowedInInputFields if set to true, the shortcut will not be executed when the user has a input, select or textarea selected.
+ * @param {boolean} preventDefault if set to true, the native implementation of the shortcut will be prevented (e.g. browser zoom on ctrl +).
+ * @param {boolean | undefined} ctrl whether the ctrl modifier is necessary. Will automatically convert to CMD on macos.
+ * @param {boolean | undefined} shift whether the shift modifier is necessary.
+ * @param {boolean | undefined} alt whether the alt modifier is necessary.
+ * @param {string} key the key to be pressed, should be lowercase.
+ * For more information as to what the key should be
+ * https://medium.com/claritydesignsystem/angular-pseudo-events-d4e7f89247ee
+ */
+export type ShortcutConfig &#x3D; {
+  allowedInInputFields?: boolean;
+  preventDefault?: boolean;
+  ctrl?: boolean;
+  shift?: boolean;
+  alt?: boolean;
+  key: string;
+  description: string;
+};
+
+/**
+ * Contains the shortcut config {@link ShortcutConfig} and helper functions
+ * for getting an event string / a visual representation of the shortcut.
+ */
+export class Shortcut {
+  /**
+   * Because mac users usually use their command key (CMD), which is a meta key.
+   * Windows users usually use their control key (CTRL), which is a control key.
+   * WIN &#x3D;&#x3D; CMD, Control &#x3D;&#x3D; CTRL
+   * This bool is used to convert between ctrl and cmd depending on the users os.
+   */
+  // https://stackoverflow.com/questions/29033081/setting-os-specific-keybindings-cmd-on-mac-and-ctrl-on-everything-else
+  private static isMac &#x3D; /mac/i.test(
+    // reason for disable: ts doesn&#x27;t have definition for userAgentData.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (navigator as any).userAgentData ? (navigator as any).userAgentData.platform : navigator.platform
+  );
+
+  private settings: ShortcutConfig &#x3D; {
+    allowedInInputFields: false,
+    preventDefault: false,
+    ctrl: false,
+    shift: false,
+    alt: false,
+    key: &#x27;&#x27;,
+    description: &#x27;description is missing&#x27;
+  };
+
+  /**
+   * assigns parameters to settings if they were defined
+   */
+  constructor(shortcutConfig: ShortcutConfig) {
+    this.settings &#x3D; shortcutConfig;
+    let key: keyof ShortcutConfig;
+    for (key in shortcutConfig) {
+      if (Object.prototype.hasOwnProperty.call(shortcutConfig, key))
+        if (typeof shortcutConfig[key] !&#x3D;&#x3D; undefined)
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          (this.settings[key] as any) &#x3D; shortcutConfig[key];
+    }
+  }
+
+  /**
+   * Builds the string to be used by renderer2.listen().
+   *
+   * Will be in format &quot;keydown.control.shift.alt.KEY&quot;,
+   * or &quot;keydown.meta.shift.alt.KEY&quot; on macos.
+   */
+  get EventString(): string {
+    let eventString &#x3D; &#x27;keydown.&#x27;;
+    if (this.settings.ctrl)
+      if (Shortcut.isMac) eventString +&#x3D; &#x27;meta.&#x27;;
+      else eventString +&#x3D; &#x27;control.&#x27;;
+    if (this.settings.shift) eventString +&#x3D; &#x27;shift.&#x27;;
+    if (this.settings.alt) eventString +&#x3D; &#x27;alt.&#x27;;
+    return (eventString +&#x3D; this.settings.key);
+  }
+
+  /**
+   * Creates string that is visually representative for this shortcut (to the end user).
+   */
+  get HTMLString(): string {
+    let htmlString &#x3D; &#x27;&#x27;;
+    if (this.settings.ctrl)
+      if (Shortcut.isMac) htmlString +&#x3D; &#x27;CMD &#x27;;
+      else htmlString +&#x3D; &#x27;CTRL &#x27;;
+    if (this.settings.shift) htmlString +&#x3D; &#x27;SHIFT &#x27;;
+    if (this.settings.alt) htmlString +&#x3D; &#x27;ALT &#x27;;
+    return (htmlString +&#x3D; this.settings.key.toUpperCase());
+  }
+
+  get Description(): string {
+    return this.settings.description;
+  }
+
+  get AllowedInInputFields(): boolean {
+    return this.settings.allowedInInputFields as boolean;
+  }
+
+  get PreventDefault(): boolean {
+    return this.settings.preventDefault as boolean;
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'Shortcut.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

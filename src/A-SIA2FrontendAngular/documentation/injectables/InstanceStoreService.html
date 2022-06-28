@@ -1,0 +1,892 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>a-sia documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">a-sia documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >InstanceStoreService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/shared/store/instance/instance-store.service.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>An example implementation of a store, using rxjs, it is basically a primitive implementation of the redux pattern / ngrx.
+This store especially, implements endpoints for optimistic UI updates, which changes the UI (aka. cached values), sends
+the server request afterwards, and reverts the UI in case of an error.</p>
+<p>The store uses BehaviorSubjects to cache, and publish values (in this case asiaInstances).
+BehaviorSubjects are especially advantageous as they always have a value, and therefore don&#39;t necessarily need to be subscribed to.
+Instead, a value can be retrieved by calling .getValue (or _getSourceValues in the store). The BehaviorSubject is exposed to the outside as
+an Observable (get values$()), so that no-one can do responsibility breaking stuff with the subject itself (like calling .next() in a component).</p>
+<p>The $ symbol at the end of variable / getter names is a naming convention commonly used for observables.</p>
+<p>Every store has a initialization (_load()), a way to get cached values from the inside (_getSourceValues) / outside (values$) and
+a way to set values from the inside (_setSourceValues()).</p>
+<p>Be careful to keep values immutable, that is, don&#39;t change an existing cached value. Rather, copy all values, add / remove some, and then _setSourceValues();.
+This can be easily done with the spread operator. This ensures that references change when notifying subscribers, and therefore enables ChangeDetection.OnPush
+for future performance gains.</p>
+<p>In some cases, especially when wanting to enable undo / redo, it might be advantageous to extract actions like add, update, and
+delete, into their own classes <a href="../classes/Action.html">Action</a>. While not only keeping the Store classes themselves slim, as they only have to
+call .act(), and maybe .revert(), this also makes caching possibly to be reverted values easier.
+Actions usually also have a loading$ observable that indicate wether they are done / successful.</p>
+
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#_source" >_source</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_getSourceValues" >_getSourceValues</a>
+                            </li>
+                            <li>
+                                <a href="#_load" >_load</a>
+                            </li>
+                            <li>
+                                <a href="#_setSourceValues" >_setSourceValues</a>
+                            </li>
+                            <li>
+                                <a href="#add" >add</a>
+                            </li>
+                            <li>
+                                <a href="#delete" >delete</a>
+                            </li>
+                            <li>
+                                <a href="#update" >update</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#values$" >values$</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(userService: <a href="../injectables/UserService.html" target="_self">UserService</a>, instanceService: <a href="../injectables/InstanceService.html" target="_self">InstanceService</a>, hierarchy: <a href="../injectables/ProjectHierarchyStoreService.html" target="_self">ProjectHierarchyStoreService</a>, logger: <a href="../injectables/LoggerService.html" target="_self">LoggerService</a>, actionState: <a href="../injectables/ActionsStateService.html" target="_self">ActionsStateService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/shared/store/instance/instance-store.service.ts:49</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>instanceService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/InstanceService.html" target="_self" >InstanceService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>hierarchy</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProjectHierarchyStoreService.html" target="_self" >ProjectHierarchyStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>logger</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LoggerService.html" target="_self" >LoggerService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>actionState</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ActionsStateService.html" target="_self" >ActionsStateService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_getSourceValues"></a>
+                    <span class="name">
+                        <span ><b>_getSourceValues</b></span>
+                        <a href="#_getSourceValues"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>_getSourceValues()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/app/shared/store/instance/instance-store.service.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/asiaInstance.html" target="_self" >asiaInstance[]</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_load"></a>
+                    <span class="name">
+                        <span ><b>_load</b></span>
+                        <a href="#_load"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>_load()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/shared/store/instance/instance-store.service.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_setSourceValues"></a>
+                    <span class="name">
+                        <span ><b>_setSourceValues</b></span>
+                        <a href="#_setSourceValues"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>_setSourceValues(instances: <a href="../classes/asiaInstance.html" target="_self">asiaInstance[]</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/app/shared/store/instance/instance-store.service.ts:66</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>instances</td>
+                                    <td>
+                                                <code><a href="../classes/asiaInstance.html" target="_self" >asiaInstance[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="add"></a>
+                    <span class="name">
+                        <span ><b>add</b></span>
+                        <a href="#add"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>add(instance?: <a href="../classes/asiaInstance.html" target="_self">asiaInstance</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="74"
+                            class="link-to-prism">src/app/shared/store/instance/instance-store.service.ts:74</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>instance</td>
+                                    <td>
+                                                <code><a href="../classes/asiaInstance.html" target="_self" >asiaInstance</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>instance to be added, will be defaulted to if not provided</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Action.html" target="_self" >Action</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>loading status of the actual request</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="delete"></a>
+                    <span class="name">
+                        <span ><b>delete</b></span>
+                        <a href="#delete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>delete(instanceId: <a href="../undefineds/asiaGuid.html" target="_self">asiaGuid</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="112"
+                            class="link-to-prism">src/app/shared/store/instance/instance-store.service.ts:112</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>instanceId</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#asiaGuid" target="_self" >asiaGuid</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>instance to delete</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Action.html" target="_self" >Action</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>loading status of the actual request</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="update"></a>
+                    <span class="name">
+                        <span ><b>update</b></span>
+                        <a href="#update"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>update(instance: <a href="../classes/asiaInstance.html" target="_self">asiaInstance</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">src/app/shared/store/instance/instance-store.service.ts:94</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>instance</td>
+                                    <td>
+                                                <code><a href="../classes/asiaInstance.html" target="_self" >asiaInstance</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>instance to update, watch out that the id matches the backend</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Action.html" target="_self" >Action</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>loading status of the actual request</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_source"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                        <span ><b>_source</b></span>
+                        <a href="#_source"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new BehaviorSubject&lt;asiaInstance[]&gt;([])</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/shared/store/instance/instance-store.service.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="values$"></a>
+                        <span class="name"><b>values$</b><a href="#values$"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>values$()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/shared/store/instance/instance-store.service.ts:47</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { InstanceService } from &#x27;@shared/backend/instance.service&#x27;;
+import { UserService } from &#x27;@shared/backend/user.service&#x27;;
+import { LoggerService } from &#x27;@shared/components/logging/logger.service&#x27;;
+import { asiaGuid } from &#x27;@shared/models/entity.model&#x27;;
+import { asiaInstance } from &#x27;@shared/models/instance.model&#x27;;
+import { DetailsNode } from &#x27;@shared/models/other/DetailsNode&#x27;;
+import { ignoreErrors } from &#x27;@shared/operators/ignoreErrors&#x27;;
+import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
+import { Action } from &#x27;../action&#x27;;
+import { ActionsStateService } from &#x27;../actions-state.service&#x27;;
+import { ProjectHierarchyStoreService } from &#x27;../project-hierarchy/project-hierarchy-store.service&#x27;;
+import { InstanceDeleteAction } from &#x27;./actions/delete&#x27;;
+import { InstanceInsertAction } from &#x27;./actions/insert&#x27;;
+import { InstanceUpdateAction } from &#x27;./actions/update&#x27;;
+
+/**
+ * An example implementation of a store, using rxjs, it is basically a primitive implementation of the redux pattern / ngrx.
+ * This store especially, implements endpoints for optimistic UI updates, which changes the UI (aka. cached values), sends
+ * the server request afterwards, and reverts the UI in case of an error.
+ *
+ * The store uses BehaviorSubjects to cache, and publish values (in this case asiaInstances).
+ * BehaviorSubjects are especially advantageous as they always have a value, and therefore don&#x27;t necessarily need to be subscribed to.
+ * Instead, a value can be retrieved by calling .getValue (or _getSourceValues in the store). The BehaviorSubject is exposed to the outside as
+ * an Observable (get values$()), so that no-one can do responsibility breaking stuff with the subject itself (like calling .next() in a component).
+ *
+ * The $ symbol at the end of variable / getter names is a naming convention commonly used for observables.
+ *
+ * Every store has a initialization (_load()), a way to get cached values from the inside (_getSourceValues) / outside (values$) and
+ * a way to set values from the inside (_setSourceValues()).
+ *
+ * Be careful to keep values immutable, that is, don&#x27;t change an existing cached value. Rather, copy all values, add / remove some, and then _setSourceValues();.
+ * This can be easily done with the spread operator. This ensures that references change when notifying subscribers, and therefore enables ChangeDetection.OnPush
+ * for future performance gains.
+ *
+ * In some cases, especially when wanting to enable undo / redo, it might be advantageous to extract actions like add, update, and
+ * delete, into their own classes {@link Action}. While not only keeping the Store classes themselves slim, as they only have to
+ * call .act(), and maybe .revert(), this also makes caching possibly to be reverted values easier.
+ * Actions usually also have a loading$ observable that indicate wether they are done / successful.
+ *
+ */
+@Injectable({
+  providedIn: &#x27;root&#x27;
+})
+export class InstanceStoreService {
+  readonly _source &#x3D; new BehaviorSubject&lt;asiaInstance[]&gt;([]);
+  get values$(): Observable&lt;asiaInstance[]&gt; {
+    return this._source.asObservable().pipe(this.logger.rxjsDebug(&#x27;[InstanceStoreService] get values$&#x27;));
+  }
+
+  constructor(
+    private userService: UserService,
+    private instanceService: InstanceService,
+    private hierarchy: ProjectHierarchyStoreService,
+    private logger: LoggerService,
+    private actionState: ActionsStateService
+  ) {
+    this._load();
+  }
+  _load(): void {
+    this.userService.getInstances$.subscribe((res) &#x3D;&gt; this._source.next(res));
+  }
+  _getSourceValues(): asiaInstance[] {
+    return this._source.getValue();
+  }
+  _setSourceValues(instances: asiaInstance[]): void {
+    this._source.next([...instances]); // the objects are copied again just in case, probably unnecessary.
+  }
+
+  /**
+   * @param instance instance to be added, will be defaulted to if not provided
+   * @returns loading status of the actual request
+   */
+  add(instance?: asiaInstance): Action {
+    if (instance &#x3D;&#x3D;&#x3D; undefined) instance &#x3D; new asiaInstance(&#x27;Unnamed Instance&#x27;, &#x27;&#x27;);
+    const insertAction &#x3D; new InstanceInsertAction(this, instance, this.instanceService, this.actionState, this.logger);
+    const hierarchyInsertAction &#x3D; this.hierarchy.addInstance(instance); // add to hierarchy as well
+    insertAction.act(); // execute the action, updates frontend ui already
+    // do the actual post request
+    insertAction.loading$.subscribe({
+      error: (err) &#x3D;&gt; {
+        this.logger.logError(&#x27;[InstanceStoreService] add&#x27;, err);
+        hierarchyInsertAction?.revert();
+      }
+    });
+    return insertAction;
+  }
+
+  /**
+   *
+   * @param instance instance to update, watch out that the id matches the backend
+   * @returns loading status of the actual request
+   */
+  update(instance: asiaInstance): Action {
+    const hierarchyUpdateAction &#x3D; this.hierarchy.update(new DetailsNode(instance, &#x27;projects&#x27;));
+    const updateAction &#x3D; new InstanceUpdateAction(this, instance, this.instanceService, this.actionState, this.logger);
+    updateAction.loading$.subscribe({
+      error: (err) &#x3D;&gt; {
+        this.logger.logError(&#x27;[InstanceStoreService] update&#x27;, err);
+        hierarchyUpdateAction.revert();
+      }
+    });
+    updateAction.act();
+    return updateAction;
+  }
+
+  /**
+   *
+   * @param instanceId instance to delete
+   * @returns loading status of the actual request
+   */
+  delete(instanceId: asiaGuid): Action {
+    const hierarchyDeleteAction &#x3D; this.hierarchy.delete(instanceId);
+    const deleteAction &#x3D; new InstanceDeleteAction(
+      this,
+      instanceId,
+      this.instanceService,
+      this.actionState,
+      this.logger
+    );
+    deleteAction.loading$.subscribe({
+      error: (err) &#x3D;&gt; {
+        this.logger.logError(&#x27;[InstanceStoreService] delete&#x27;, err);
+        if (err !&#x3D; &#x27;Not Found&#x27;) hierarchyDeleteAction.revert();
+      }
+    });
+    deleteAction.act();
+    return deleteAction;
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'InstanceStoreService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

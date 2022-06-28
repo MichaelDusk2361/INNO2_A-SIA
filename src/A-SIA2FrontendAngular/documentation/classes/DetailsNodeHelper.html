@@ -1,0 +1,936 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>a-sia documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">a-sia documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li >DetailsNodeHelper</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/shared/models/other/DetailsNode.ts</code>
+        </p>
+
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#deepCopy" >deepCopy</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#find" >find</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#findRecursiveDFS" >findRecursiveDFS</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#getParent" >getParent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#getPathTo" >getPathTo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#getPathToRecursive" >getPathToRecursive</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#remove" >remove</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deepCopy"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span ><b>deepCopy</b></span>
+                        <a href="#deepCopy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deepCopy(root: <a href="../interfaces/IBaseNode.html" target="_self">DetailsNode&lt;IBaseNode&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="93"
+                            class="link-to-prism">src/app/shared/models/other/DetailsNode.ts:93</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>root</td>
+                                    <td>
+                                                <code><a href="../interfaces/IBaseNode.html" target="_self" >DetailsNode&lt;IBaseNode&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/IBaseNode.html" target="_self" >DetailsNode&lt;IBaseNode&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="find"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span ><b>find</b></span>
+                        <a href="#find"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>find(root: <a href="../classes/DetailsNode.html" target="_self">DetailsNode&lt;T&gt;</a>, searchId: <a href="../undefineds/asiaGuid.html" target="_self">asiaGuid</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="68"
+                            class="link-to-prism">src/app/shared/models/other/DetailsNode.ts:68</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>root</td>
+                                    <td>
+                                                <code><a href="../classes/DetailsNode.html" target="_self" >DetailsNode&lt;T&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>searchId</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#asiaGuid" target="_self" >asiaGuid</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/DetailsNode.html" target="_self" >DetailsNode | undefined</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findRecursiveDFS"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span class="modifier">Static</span>
+                        <span ><b>findRecursiveDFS</b></span>
+                        <a href="#findRecursiveDFS"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>findRecursiveDFS(searchId: <a href="../undefineds/asiaGuid.html" target="_self">asiaGuid</a>, node: <a href="../classes/DetailsNode.html" target="_self">DetailsNode&lt;T&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">src/app/shared/models/other/DetailsNode.ts:35</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>searchId</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#asiaGuid" target="_self" >asiaGuid</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>node</td>
+                                    <td>
+                                                <code><a href="../classes/DetailsNode.html" target="_self" >DetailsNode&lt;T&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/DetailsNode.html" target="_self" >DetailsNode | undefined</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getParent"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span ><b>getParent</b></span>
+                        <a href="#getParent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getParent(root: <a href="../classes/DetailsNode.html" target="_self">DetailsNode&lt;T&gt;</a>, searchId: <a href="../undefineds/asiaGuid.html" target="_self">asiaGuid</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/app/shared/models/other/DetailsNode.ts:78</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>root</td>
+                                    <td>
+                                                <code><a href="../classes/DetailsNode.html" target="_self" >DetailsNode&lt;T&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>searchId</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#asiaGuid" target="_self" >asiaGuid</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/DetailsNode.html" target="_self" >DetailsNode | undefined</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPathTo"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span ><b>getPathTo</b></span>
+                        <a href="#getPathTo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPathTo(root: <a href="../classes/DetailsNode.html" target="_self">DetailsNode&lt;T&gt;</a>, searchId: <a href="../undefineds/asiaGuid.html" target="_self">asiaGuid</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/app/shared/models/other/DetailsNode.ts:72</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>root</td>
+                                    <td>
+                                                <code><a href="../classes/DetailsNode.html" target="_self" >DetailsNode&lt;T&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>searchId</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#asiaGuid" target="_self" >asiaGuid</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/DetailsNode.html" target="_self" >DetailsNode[]</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPathToRecursive"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span class="modifier">Static</span>
+                        <span ><b>getPathToRecursive</b></span>
+                        <a href="#getPathToRecursive"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPathToRecursive(searchId: <a href="../undefineds/asiaGuid.html" target="_self">asiaGuid</a>, node: <a href="../classes/DetailsNode.html" target="_self">DetailsNode&lt;T&gt;</a>, path: <a href="../classes/DetailsNode.html" target="_self">DetailsNode&lt;T&gt;[]</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/app/shared/models/other/DetailsNode.ts:46</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>searchId</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#asiaGuid" target="_self" >asiaGuid</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>node</td>
+                                    <td>
+                                                <code><a href="../classes/DetailsNode.html" target="_self" >DetailsNode&lt;T&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>path</td>
+                                    <td>
+                                                <code><a href="../classes/DetailsNode.html" target="_self" >DetailsNode&lt;T&gt;[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="remove"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span ><b>remove</b></span>
+                        <a href="#remove"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>remove(root: <a href="../classes/DetailsNode.html" target="_self">DetailsNode&lt;T&gt;</a>, searchId: <a href="../undefineds/asiaGuid.html" target="_self">asiaGuid</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="84"
+                            class="link-to-prism">src/app/shared/models/other/DetailsNode.ts:84</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>root</td>
+                                    <td>
+                                                <code><a href="../classes/DetailsNode.html" target="_self" >DetailsNode&lt;T&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>searchId</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#asiaGuid" target="_self" >asiaGuid</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/DetailsNode.html" target="_self" >DetailsNode | undefined</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { asiaGuid } from &#x27;../entity.model&#x27;;
+
+export interface IBaseNode {
+  name: string;
+  id: asiaGuid;
+}
+
+export class DetailsNode&lt;T extends IBaseNode&gt; implements IBaseNode {
+  element?: HTMLElement;
+  id: asiaGuid;
+  url?: &#x27;instances&#x27; | &#x27;projects&#x27; | &#x27;networks&#x27; | &#x27;network&#x27;;
+  data: T;
+  name: string;
+  children: DetailsNode&lt;IBaseNode&gt;[];
+  constructor(data: T, url?: &#x27;instances&#x27; | &#x27;projects&#x27; | &#x27;networks&#x27; | &#x27;network&#x27;, element?: HTMLElement) {
+    this.data &#x3D; data;
+    this.name &#x3D; data.name;
+    this.id &#x3D; data.id;
+    this.children &#x3D; [];
+    if (url !&#x3D;&#x3D; undefined) this.url &#x3D; url;
+    if (element !&#x3D;&#x3D; undefined) this.element &#x3D; element;
+  }
+
+  /**
+   * copies contents, not children
+   * @param node
+   * @returns
+   */
+  static copy(node: DetailsNode&lt;IBaseNode&gt;) {
+    return new DetailsNode(node.data, node.url, node.element);
+  }
+}
+
+export class DetailsNodeHelper {
+  private static findRecursiveDFS&lt;T extends IBaseNode&gt;(
+    searchId: asiaGuid,
+    node: DetailsNode&lt;T&gt;
+  ): DetailsNode&lt;T&gt; | undefined {
+    if (searchId.toString() &#x3D;&#x3D;&#x3D; node.id?.toString()) return node;
+    for (const child of node.children) {
+      const result &#x3D; this.findRecursiveDFS(searchId, child);
+      if (result !&#x3D;&#x3D; undefined) return result as DetailsNode&lt;T&gt;;
+    }
+    return undefined;
+  }
+  private static getPathToRecursive&lt;T extends IBaseNode&gt;(
+    searchId: asiaGuid,
+    node: DetailsNode&lt;T&gt;,
+    path: DetailsNode&lt;T&gt;[]
+  ): boolean {
+    if (node &#x3D;&#x3D;&#x3D; undefined) return false;
+
+    if (node.id &#x3D;&#x3D;&#x3D; searchId) {
+      path.push(node);
+      return true;
+    }
+
+    for (const child of node.children) {
+      if (this.getPathToRecursive(searchId, child, path)) {
+        path.push(node);
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  static find&lt;T extends IBaseNode&gt;(root: DetailsNode&lt;T&gt;, searchId: asiaGuid): DetailsNode&lt;IBaseNode&gt; | undefined {
+    return this.findRecursiveDFS(searchId, root);
+  }
+
+  static getPathTo&lt;T extends IBaseNode&gt;(root: DetailsNode&lt;T&gt;, searchId: asiaGuid): DetailsNode&lt;IBaseNode&gt;[] {
+    const path: DetailsNode&lt;T&gt;[] &#x3D; [];
+    this.getPathToRecursive(searchId, root, path);
+    return path.reverse();
+  }
+
+  static getParent&lt;T extends IBaseNode&gt;(root: DetailsNode&lt;T&gt;, searchId: asiaGuid): DetailsNode&lt;IBaseNode&gt; | undefined {
+    const path &#x3D; this.getPathTo(root, searchId);
+    if (path.length &lt; 2) return undefined;
+    return path[path.length - 2];
+  }
+
+  static remove&lt;T extends IBaseNode&gt;(root: DetailsNode&lt;T&gt;, searchId: asiaGuid): DetailsNode&lt;IBaseNode&gt; | undefined {
+    const parent &#x3D; this.getParent(root, searchId);
+    const childNodeToRemoveIndex &#x3D; parent?.children.findIndex((n) &#x3D;&gt; n.id.toString() &#x3D;&#x3D;&#x3D; searchId.toString());
+    if (childNodeToRemoveIndex &#x3D;&#x3D;&#x3D; undefined) return undefined;
+    const childNodeToRemove &#x3D; parent?.children[childNodeToRemoveIndex];
+    parent?.children.splice(childNodeToRemoveIndex, 1);
+    return childNodeToRemove as DetailsNode&lt;T&gt;;
+  }
+
+  static deepCopy(root: DetailsNode&lt;IBaseNode&gt;): DetailsNode&lt;IBaseNode&gt; {
+    const newRoot &#x3D; DetailsNode.copy(root);
+    newRoot.children &#x3D; [];
+    root.children.forEach((node) &#x3D;&gt; {
+      newRoot.children.push(this.deepCopy(node));
+    });
+    return newRoot;
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'DetailsNodeHelper.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

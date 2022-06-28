@@ -1,0 +1,2582 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>a-sia documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">a-sia documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  PaneContainerComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/shared/components/pane-container/pane-container.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Handles sizing and initialization of children panes.</p>
+<p>Relevant information for the template: Dividers get initialized with the order depending
+on the count of displayed panes. The horrendous ngIf is there, so that the last divider is not shown
+(it would be right of / below the last pane). It also hides a divider if the last or first pane is not
+resizable (maxSize == minSize).</p>
+<p>See also: <a href="https://angular.io/api/common/NgForOf">https://angular.io/api/common/NgForOf</a>.</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;a-sia-pane-container direction=&quot;row&quot; unit=&quot;rem&quot; class=&quot;pane-container&quot;&gt;
+ &lt;a-sia-pane
+   [minSize]=&quot;10&quot;
+   class=&quot;pane-container__simulation-diagram&quot;
+   *aSiaPaneIf=&quot;paneService.simulationDiagramIsOpen&quot;
+ &gt;
+   &lt;a-sia-simulation-diagram&gt;&lt;/a-sia-simulation-diagram&gt;
+ &lt;/a-sia-pane&gt;
+ &lt;a-sia-pane [minSize]=&quot;10&quot; *aSiaPaneIf=&quot;paneService.graphEditorIsOpen&quot;&gt;
+   &lt;a-sia-graph-editor&gt;&lt;/a-sia-graph-editor&gt;
+ &lt;/a-sia-pane&gt;
+ &lt;a-sia-pane
+   [minSize]=&quot;40&quot;
+   [maxSize]=&quot;40&quot;
+   class=&quot;pane-container__data-panel&quot;
+   *aSiaPaneIf=&quot;paneService.dataPanelIsOpen&quot;
+ &gt;
+   &lt;a-sia-data-panel&gt;&lt;/a-sia-data-panel&gt;
+ &lt;/a-sia-pane&gt;
+&lt;/a-sia-pane-container&gt;</code></pre></div>
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+            <tr>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.Emulated</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>a-sia-pane-container</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./pane-container.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./pane-container.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_boundingClientRect" >_boundingClientRect</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_clickedPaneDivider" >_clickedPaneDivider</a>
+                            </li>
+                            <li>
+                                <a href="#_displayedPanes" >_displayedPanes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_panesAfterClickedPaneDivider" >_panesAfterClickedPaneDivider</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_panesBeforeClickedPaneDivider" >_panesBeforeClickedPaneDivider</a>
+                            </li>
+                            <li>
+                                <a href="#displayedDivider" >displayedDivider</a>
+                            </li>
+                            <li>
+                                <a href="#rootFontSize" >rootFontSize</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getClampedSizesIfPaneNotAtMaxOrMin" >getClampedSizesIfPaneNotAtMaxOrMin</a>
+                            </li>
+                            <li>
+                                <a href="#getDirectionalRelevantMousePosition" >getDirectionalRelevantMousePosition</a>
+                            </li>
+                            <li>
+                                <a href="#getRelevantBoundingSize" >getRelevantBoundingSize</a>
+                            </li>
+                            <li>
+                                <a href="#getRemFromPx" >getRemFromPx</a>
+                            </li>
+                            <li>
+                                <a href="#getSizeBeforeDivider" >getSizeBeforeDivider</a>
+                            </li>
+                            <li>
+                                <a href="#getSizeOfSkippedAfterPanes" >getSizeOfSkippedAfterPanes</a>
+                            </li>
+                            <li>
+                                <a href="#getSizeOfSkippedBeforePanes" >getSizeOfSkippedBeforePanes</a>
+                            </li>
+                            <li>
+                                <a href="#getSizeUntilBeginningOfPane" >getSizeUntilBeginningOfPane</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#hideChildrenBeforeNgIf" >hideChildrenBeforeNgIf</a>
+                            </li>
+                            <li>
+                                <a href="#initializePanes" >initializePanes</a>
+                            </li>
+                            <li>
+                                <a href="#initializePaneSizes" >initializePaneSizes</a>
+                            </li>
+                            <li>
+                                <a href="#moveDivider" >moveDivider</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnChanges" >ngOnChanges</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onResizeWindow" >onResizeWindow</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showChildrenAfterNgIf" >showChildrenAfterNgIf</a>
+                            </li>
+                            <li>
+                                <a href="#updateBoundingClientRect" >updateBoundingClientRect</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#direction" >direction</a>
+                            </li>
+                            <li>
+                                <a href="#unit" >unit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#boundingClientRect" >boundingClientRect</a>
+                                </li>
+                                <li>
+                                    <a href="#displayedPanes" >displayedPanes</a>
+                                </li>
+                                <li>
+                                    <a href="#clickedPaneDivider" >clickedPaneDivider</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(element: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, inputService: <a href="../injectables/InputService.html" target="_self">InputService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:83</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Subscribes to global move, up and resize</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>element</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>For getting BoundingClientRect</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>inputService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/InputService.html" target="_self" >InputService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>For reacting to pointermove and window resize events</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="direction"></a>
+                        <b>direction</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>&quot;row&quot; | &quot;column&quot;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;row&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:61</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="unit"></a>
+                        <b>unit</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#PaneUnit" target="_self" >PaneUnit</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;px&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:63</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getClampedSizesIfPaneNotAtMaxOrMin"></a>
+                    <span class="name">
+                        <span ><b>getClampedSizesIfPaneNotAtMaxOrMin</b></span>
+                        <a href="#getClampedSizesIfPaneNotAtMaxOrMin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getClampedSizesIfPaneNotAtMaxOrMin(beforePaneToResize: <a href="../components/PaneComponent.html" target="_self">PaneComponent</a>, afterPaneToResize: <a href="../components/PaneComponent.html" target="_self">PaneComponent</a>, newSize: literal type)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="525"
+                            class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:525</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>beforePaneToResize</td>
+                                    <td>
+                                                <code><a href="../components/PaneComponent.html" target="_self" >PaneComponent</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>beforePane to eventually clamp</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>afterPaneToResize</td>
+                                    <td>
+                                                <code><a href="../components/PaneComponent.html" target="_self" >PaneComponent</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>afterPane to eventually clamp</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>newSize</td>
+                                    <td>
+                                            <code>literal type</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Sizes that the before and after should get</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>literal type</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Eventually clamped sizes. Possibly the same as newSize if no minMax violations occurred.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDirectionalRelevantMousePosition"></a>
+                    <span class="name">
+                        <span ><b>getDirectionalRelevantMousePosition</b></span>
+                        <a href="#getDirectionalRelevantMousePosition"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDirectionalRelevantMousePosition(event: PointerEvent, unit: <a href="../undefineds/PaneUnit.html" target="_self">PaneUnit</a>, direction: "row" | "column")</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="429"
+                            class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:429</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>PointerEvent</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>event containing mouse position</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>unit</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#PaneUnit" target="_self" >PaneUnit</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>unit that the mouse position should be in</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>direction</td>
+                                    <td>
+                                            <code>&quot;row&quot; | &quot;column&quot;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>direction the container is in</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a mouse position in the correct unit, and relative to the correct side (left or right, depending on row or column)</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRelevantBoundingSize"></a>
+                    <span class="name">
+                        <span ><b>getRelevantBoundingSize</b></span>
+                        <a href="#getRelevantBoundingSize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getRelevantBoundingSize()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="130"
+                            class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:130</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>height or width of boundingClientRect, depending on direction</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRemFromPx"></a>
+                    <span class="name">
+                        <span ><b>getRemFromPx</b></span>
+                        <a href="#getRemFromPx"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getRemFromPx(px: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="142"
+                            class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:142</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>px</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The px that should get converted to Rem</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>px / root font-size</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSizeBeforeDivider"></a>
+                    <span class="name">
+                        <span ><b>getSizeBeforeDivider</b></span>
+                        <a href="#getSizeBeforeDivider"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSizeBeforeDivider()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="460"
+                            class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:460</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the total size of all panes before the divider</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSizeOfSkippedAfterPanes"></a>
+                    <span class="name">
+                        <span ><b>getSizeOfSkippedAfterPanes</b></span>
+                        <a href="#getSizeOfSkippedAfterPanes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSizeOfSkippedAfterPanes(afterIndexToApplyResize: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="506"
+                            class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:506</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets the size of all panes after the divider that were skipped due to minMax restraints.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>afterIndexToApplyResize</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>index of a pane before the divider</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the sizes of all panes that are between the afterIndexToApplyResize pane and the divider</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSizeOfSkippedBeforePanes"></a>
+                    <span class="name">
+                        <span ><b>getSizeOfSkippedBeforePanes</b></span>
+                        <a href="#getSizeOfSkippedBeforePanes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSizeOfSkippedBeforePanes(beforeIndexToApplyResize: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="489"
+                            class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:489</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets the size of all panes before the divider that were skipped due to minMax restraints.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>beforeIndexToApplyResize</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>index of a pane before the divider</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the sizes of all panes that are between the beforeIndexToApplyResize pane and the divider</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSizeUntilBeginningOfPane"></a>
+                    <span class="name">
+                        <span ><b>getSizeUntilBeginningOfPane</b></span>
+                        <a href="#getSizeUntilBeginningOfPane"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSizeUntilBeginningOfPane(paneIndex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="472"
+                            class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:472</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>paneIndex</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>index of pane until which to get the size</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>total size until beginning of pane with the index paneIndex</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hideChildrenBeforeNgIf"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>hideChildrenBeforeNgIf</b></span>
+                        <a href="#hideChildrenBeforeNgIf"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>hideChildrenBeforeNgIf()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="245"
+                            class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:245</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Hides panes and dividers before triggering PaneIfDirective, acts as a &quot;debounce&quot;,
+to reduce most flashing due to flex order that takes a tick to be corrected.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initializePanes"></a>
+                    <span class="name">
+                        <span ><b>initializePanes</b></span>
+                        <a href="#initializePanes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>initializePanes()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="164"
+                            class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:164</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Sets correct order, unit and display.
+Divider order gets initialized in template.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initializePaneSizes"></a>
+                    <span class="name">
+                        <span ><b>initializePaneSizes</b></span>
+                        <a href="#initializePaneSizes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>initializePaneSizes()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="175"
+                            class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:175</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Sets correct sizes. It tries to fulfill the pane&#39;s [size], but may not always be able to if the [size] is too small.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="moveDivider"></a>
+                    <span class="name">
+                        <span ><b>moveDivider</b></span>
+                        <a href="#moveDivider"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>moveDivider(event: PointerEvent)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="365"
+                            class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:365</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Tries to resize the panel left and right of the divider, in order to &quot;move&quot; the divider.
+The divider itself doesn&#39;t directly have a position, it&#39;s just set between two correctly resizing panes.
+If the pane before or after the divider isn&#39;t able to be resized (due to minMax size) it skips it,
+and tries to resize the pane next to it, and so on.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>PointerEvent</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>event containing new divider position (i.e. mouse position)</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <span ><b>ngOnChanges</b></span>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="107"
+                            class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:107</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>changes</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>when direction changes, reset to default sizing proportions</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:113</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onResizeWindow"></a>
+                    <span class="name">
+                        <span ><b>onResizeWindow</b></span>
+                        <a href="#onResizeWindow"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onResizeWindow()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="273"
+                            class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:273</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Whenever the window gets resized, the container does its best to keep the panes proportions.
+This means checking if the window has been shrunk or expanded, and resizing panels accordingly,
+while paying attention to all min/max sizes.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showChildrenAfterNgIf"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>showChildrenAfterNgIf</b></span>
+                        <a href="#showChildrenAfterNgIf"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>showChildrenAfterNgIf()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="257"
+                            class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:257</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Shows panes and dividers after triggering PaneIfDirective, acts as a &quot;debounce&quot;,
+to reduce most flashing due to flex order that takes a tick to be corrected.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateBoundingClientRect"></a>
+                    <span class="name">
+                        <span ><b>updateBoundingClientRect</b></span>
+                        <a href="#updateBoundingClientRect"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateBoundingClientRect()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="120"
+                            class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:120</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Should be called sparingly, and only when necessary (i.e. when the bounds change, and not onMouseMove).</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_boundingClientRect"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_boundingClientRect</b></span>
+                        <a href="#_boundingClientRect"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>DOMRect</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:67</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This is always in px.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_clickedPaneDivider"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_clickedPaneDivider</b></span>
+                        <a href="#_clickedPaneDivider"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../components/PaneDividerComponent.html" target="_self" >PaneDividerComponent | null</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="336" class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:336</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_displayedPanes"></a>
+                    <span class="name">
+                        <span ><b>_displayedPanes</b></span>
+                        <a href="#_displayedPanes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../components/PaneComponent.html" target="_self" >QueryList&lt;PaneComponent&gt;</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="146" class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:146</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_panesAfterClickedPaneDivider"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_panesAfterClickedPaneDivider</b></span>
+                        <a href="#_panesAfterClickedPaneDivider"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../components/PaneComponent.html" target="_self" >PaneComponent[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="334" class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:334</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_panesBeforeClickedPaneDivider"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_panesBeforeClickedPaneDivider</b></span>
+                        <a href="#_panesBeforeClickedPaneDivider"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../components/PaneComponent.html" target="_self" >PaneComponent[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="333" class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:333</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="displayedDivider"></a>
+                    <span class="name">
+                        <span ><b>displayedDivider</b></span>
+                        <a href="#displayedDivider"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../components/PaneDividerComponent.html" target="_self" >QueryList&lt;PaneDividerComponent&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChildren(&#x27;divider&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="239" class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:239</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get all divider for temporarily hiding them whenever a pane is toggled with *aSiaPaneIf</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="rootFontSize"></a>
+                    <span class="name">
+                        <span ><b>rootFontSize</b></span>
+                        <a href="#rootFontSize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>parseFloat(getComputedStyle(document.documentElement).fontSize.replace(&#x27;px&#x27;, &#x27;&#x27;))</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="137" class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:137</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>gets buffered at start as getComputedStyle() is expensive</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="boundingClientRect"></a>
+                        <span class="name"><b>boundingClientRect</b><a href="#boundingClientRect"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>boundingClientRect()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:72</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Gets boundingClientRect with the correct unit in mind.
+(Converts px to rem, and sets width &amp; height to 100 for %).</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code>DOMRect</code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayedPanes"></a>
+                        <span class="name"><b>displayedPanes</b><a href="#displayedPanes"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>displayedPanes(v: <a href="../components/PaneComponent.html" target="_self">QueryList&lt;PaneComponent&gt;</a>)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="150" class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:150</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Gets called every time when ng-content changes. So it will also be called, if a pane is toggled with *aSiaPaneIf.</p>
+</div>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>v</td>
+                                                    
+                                                            <td>
+                                                                            <code><a href="../components/PaneComponent.html" target="_self" >QueryList&lt;PaneComponent&gt;</a></code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clickedPaneDivider"></a>
+                        <span class="name"><b>clickedPaneDivider</b><a href="#clickedPaneDivider"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>clickedPaneDivider()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="337" class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:337</a></div>
+                                </td>
+                            </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>clickedPaneDivider(value: <a href="../components/PaneDividerComponent.html" target="_self">PaneDividerComponent | null</a>)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="343" class="link-to-prism">src/app/shared/components/pane-container/pane-container.component.ts:343</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Gets set by a divider that has the parent PaneContainerComponent injected, and is clicked.</p>
+</div>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                            <td>
+                                                                            <code><a href="../components/PaneDividerComponent.html" target="_self" >PaneDividerComponent | null</a></code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Component,
+  ContentChildren,
+  ElementRef,
+  HostBinding,
+  Input,
+  OnChanges,
+  OnInit,
+  QueryList,
+  SimpleChanges,
+  ViewChildren,
+  ViewEncapsulation
+} from &#x27;@angular/core&#x27;;
+import { PaneComponent } from &#x27;./pane/pane.component&#x27;;
+import { InputService } from &#x27;@shared/components/user-input/input.service&#x27;;
+import { PaneDividerComponent } from &#x27;./pane-divider/pane-divider.component&#x27;;
+import { PaneContainerError } from &#x27;./PaneErrors&#x27;;
+import { PaneUnit } from &#x27;./PaneUnit&#x27;;
+
+/**
+ * Handles sizing and initialization of children panes.
+ *
+ * Relevant information for the template: Dividers get initialized with the order depending
+ * on the count of displayed panes. The horrendous ngIf is there, so that the last divider is not shown
+ * (it would be right of / below the last pane). It also hides a divider if the last or first pane is not
+ * resizable (maxSize &#x3D;&#x3D; minSize).
+ *
+ * See also: {@link https://angular.io/api/common/NgForOf}.
+ *
+ * @example
+ * &#x60;&#x60;&#x60;html
+ * &lt;a-sia-pane-container direction&#x3D;&quot;row&quot; unit&#x3D;&quot;rem&quot; class&#x3D;&quot;pane-container&quot;&gt;
+ *  &lt;a-sia-pane
+ *    [minSize]&#x3D;&quot;10&quot;
+ *    class&#x3D;&quot;pane-container__simulation-diagram&quot;
+ *    *aSiaPaneIf&#x3D;&quot;paneService.simulationDiagramIsOpen&quot;
+ *  &gt;
+ *    &lt;a-sia-simulation-diagram&gt;&lt;/a-sia-simulation-diagram&gt;
+ *  &lt;/a-sia-pane&gt;
+ *  &lt;a-sia-pane [minSize]&#x3D;&quot;10&quot; *aSiaPaneIf&#x3D;&quot;paneService.graphEditorIsOpen&quot;&gt;
+ *    &lt;a-sia-graph-editor&gt;&lt;/a-sia-graph-editor&gt;
+ *  &lt;/a-sia-pane&gt;
+ *  &lt;a-sia-pane
+ *    [minSize]&#x3D;&quot;40&quot;
+ *    [maxSize]&#x3D;&quot;40&quot;
+ *    class&#x3D;&quot;pane-container__data-panel&quot;
+ *    *aSiaPaneIf&#x3D;&quot;paneService.dataPanelIsOpen&quot;
+ *  &gt;
+ *    &lt;a-sia-data-panel&gt;&lt;/a-sia-data-panel&gt;
+ *  &lt;/a-sia-pane&gt;
+ *&lt;/a-sia-pane-container&gt;
+ *&#x60;&#x60;&#x60;
+ */
+@Component({
+  selector: &#x27;a-sia-pane-container&#x27;,
+  templateUrl: &#x27;./pane-container.component.html&#x27;,
+  styleUrls: [&#x27;./pane-container.component.scss&#x27;],
+  encapsulation: ViewEncapsulation.Emulated
+})
+export class PaneContainerComponent implements OnInit, OnChanges {
+  @Input() @HostBinding(&#x27;style.flexDirection&#x27;) direction: &#x27;row&#x27; | &#x27;column&#x27; &#x3D; &#x27;row&#x27;;
+
+  @Input() unit: PaneUnit &#x3D; &#x27;px&#x27;;
+  /**
+   * This is always in px.
+   */
+  private _boundingClientRect!: DOMRect;
+  /**
+   * Gets boundingClientRect with the correct unit in mind.
+   * (Converts px to rem, and sets width &amp; height to 100 for %).
+   */
+  public get boundingClientRect(): DOMRect {
+    if (this.unit &#x3D;&#x3D; &#x27;rem&#x27;)
+      return new DOMRect(
+        this.getRemFromPx(this._boundingClientRect.x),
+        this.getRemFromPx(this._boundingClientRect.y),
+        this.getRemFromPx(this._boundingClientRect.width),
+        this.getRemFromPx(this._boundingClientRect.height)
+      );
+    if (this.unit &#x3D;&#x3D; &#x27;%&#x27;) return new DOMRect(this._boundingClientRect.x, this._boundingClientRect.y, 100, 100);
+    if (this.unit &#x3D;&#x3D; &#x27;px&#x27;) return this._boundingClientRect;
+    throw new PaneContainerError(&#x60;unknown unit ${this.unit} in DomRect getter&#x60;);
+  }
+
+  /**
+   * Subscribes to global move, up and resize
+   * @param element {ElementRef} For getting BoundingClientRect
+   * @param inputService {InputService} For reacting to pointermove and window resize events
+   */
+  constructor(private element: ElementRef, private inputService: InputService) {
+    this.inputService.onResize$.subscribe(() &#x3D;&gt; {
+      this.onResizeWindow();
+    });
+    this.inputService.onPointerMove$.subscribe((e) &#x3D;&gt; {
+      if (this._clickedPaneDivider &#x3D;&#x3D; null) return;
+      this.moveDivider(e);
+    });
+    this.inputService.onPointerUp$.subscribe(() &#x3D;&gt; {
+      this._clickedPaneDivider &#x3D; null;
+    });
+  }
+
+  /**
+   *
+   * @param changes when direction changes, reset to default sizing proportions
+   */
+  ngOnChanges(changes: SimpleChanges): void {
+    if (!changes[&#x27;direction&#x27;].firstChange) {
+      this.initializePaneSizes();
+    }
+  }
+
+  ngOnInit(): void {
+    this.updateBoundingClientRect();
+  }
+
+  /**
+   * Should be called sparingly, and only when necessary (i.e. when the bounds change, and not onMouseMove).
+   */
+  updateBoundingClientRect(): void {
+    this._boundingClientRect &#x3D; this.element.nativeElement.getBoundingClientRect(); // expensive
+    // boundingClientRect is relative to the window, and may have to be offset by the scroll position.
+    this._boundingClientRect.x +&#x3D; window.scrollX;
+    this._boundingClientRect.y +&#x3D; window.scrollY;
+  }
+
+  /**
+   * @returns height or width of boundingClientRect, depending on direction
+   */
+  getRelevantBoundingSize(): number {
+    return this.direction &#x3D;&#x3D; &#x27;row&#x27; ? this.boundingClientRect.width : this.boundingClientRect.height;
+  }
+
+  /**
+   * gets buffered at start as getComputedStyle() is expensive
+   */
+  rootFontSize &#x3D; parseFloat(getComputedStyle(document.documentElement).fontSize.replace(&#x27;px&#x27;, &#x27;&#x27;));
+  /**
+   * @param px {number} The px that should get converted to Rem
+   * @returns px / root font-size
+   */
+  getRemFromPx(px: number): number {
+    return px / this.rootFontSize;
+  }
+
+  _displayedPanes!: QueryList&lt;PaneComponent&gt;;
+  /**
+   * Gets called every time when ng-content changes. So it will also be called, if a pane is toggled with *aSiaPaneIf.
+   */
+  @ContentChildren(PaneComponent, {}) set displayedPanes(v: QueryList&lt;PaneComponent&gt;) {
+    this._displayedPanes &#x3D; v;
+    /// setTimeout is used to delay initialization for one tick, so that I can avoid spending 30h with angular&#x27;s manual change detection.
+    /// (child of parent changes after child&#x27;s was initialized, and change detection had already ran &#x3D;&gt; [NG0100]{@link https://angular.io/errors/NG0100})
+    setTimeout(() &#x3D;&gt; {
+      this.initializePanes();
+      this.initializePaneSizes();
+    });
+  }
+
+  /**
+   * Sets correct order, unit and display.
+   * Divider order gets initialized in template.
+   */
+  initializePanes(): void {
+    this._displayedPanes.forEach((pane, index) &#x3D;&gt; {
+      pane.display &#x3D; &#x27;block&#x27;;
+      pane.order &#x3D; 2 * index;
+      pane.unit &#x3D; this.unit;
+    });
+  }
+
+  /**
+   * Sets correct sizes. It tries to fulfill the pane&#x27;s [size], but may not always be able to if the [size] is too small.
+   */
+  initializePaneSizes(): void {
+    const panesToAutomaticallySize: PaneComponent[] &#x3D; [];
+    let distributedSize &#x3D; 0;
+
+    // The first pass of sizing:
+    // Sets sizes of all custom [size] set panes
+    this._displayedPanes.forEach((pane) &#x3D;&gt; {
+      if (pane.initialSize &#x3D;&#x3D;&#x3D; null) {
+        panesToAutomaticallySize.push(pane);
+      } else distributedSize +&#x3D; pane.initialSize;
+    });
+
+    // distributes everything else evenly
+    panesToAutomaticallySize.forEach((pane) &#x3D;&gt; {
+      pane.size &#x3D;
+        ((this.direction &#x3D;&#x3D; &#x27;row&#x27; ? this.boundingClientRect.width : this.boundingClientRect.height) - distributedSize) /
+        panesToAutomaticallySize.length;
+    });
+
+    // The second pass of sizing:
+    distributedSize &#x3D; 0;
+    const panesToResizeAfterFixingMinMaxViolations: PaneComponent[] &#x3D; [];
+    // clamp all panes that are violating the sizing restrictions, and store everything else
+    this._displayedPanes.forEach((pane) &#x3D;&gt; {
+      if (pane.size &lt; pane.minSize) {
+        // pane to small
+        pane.size &#x3D; pane.maxSize;
+        distributedSize +&#x3D; pane.size;
+      } else if (pane.size &gt; pane.maxSize) {
+        // pane to big
+        pane.size &#x3D; pane.maxSize;
+        distributedSize +&#x3D; pane.size;
+      } else if (pane.initialSize !&#x3D;&#x3D; null) {
+        // pane has a custom size set
+        distributedSize +&#x3D; pane.size;
+      } else {
+        panesToResizeAfterFixingMinMaxViolations.push(pane); // everything else gets dumped here
+      }
+    });
+
+    /// Distribute all remaining sizes. This might cause a pane that was previously not violating a minMax rule,
+    /// to actually pop over their restriction, but you would have to try very hard to produce that edge case.
+    /// Also may be the case in onResizeWindow().
+    panesToResizeAfterFixingMinMaxViolations.forEach((pane) &#x3D;&gt; {
+      pane.size &#x3D;
+        ((this.direction &#x3D;&#x3D; &#x27;row&#x27; ? this.boundingClientRect.width : this.boundingClientRect.height) - distributedSize) /
+        panesToResizeAfterFixingMinMaxViolations.length;
+    });
+
+    this._displayedPanes.forEach((pane) &#x3D;&gt; {
+      pane.refreshFlexStyle();
+    });
+
+    // notify all panes that their sizes were initialized, after a timeout so that the html/css has time to catch up.
+    setTimeout(() &#x3D;&gt; {
+      this._displayedPanes.forEach((pane) &#x3D;&gt; {
+        pane.onInit$.emit(pane);
+      });
+    });
+  }
+
+  /**
+   * Get all divider for temporarily hiding them whenever a pane is toggled with *aSiaPaneIf
+   */
+  @ViewChildren(&#x27;divider&#x27;) displayedDivider!: QueryList&lt;PaneDividerComponent&gt;;
+
+  /**
+   * Hides panes and dividers before triggering PaneIfDirective, acts as a &quot;debounce&quot;,
+   * to reduce most flashing due to flex order that takes a tick to be corrected.
+   */
+  public hideChildrenBeforeNgIf(): void {
+    this._displayedPanes?.forEach((pane) &#x3D;&gt; {
+      pane.display &#x3D; &#x27;none&#x27;;
+    });
+    this.displayedDivider?.forEach((divider) &#x3D;&gt; {
+      divider.hide();
+    });
+  }
+  /**
+   * Shows panes and dividers after triggering PaneIfDirective, acts as a &quot;debounce&quot;,
+   * to reduce most flashing due to flex order that takes a tick to be corrected.
+   */
+  public showChildrenAfterNgIf(): void {
+    setTimeout(() &#x3D;&gt; {
+      this._displayedPanes?.forEach((pane) &#x3D;&gt; {
+        pane.display &#x3D; &#x27;block&#x27;;
+      });
+      this.displayedDivider?.forEach((divider) &#x3D;&gt; {
+        divider.show();
+      });
+    });
+  }
+
+  /**
+   * Whenever the window gets resized, the container does its best to keep the panes proportions.
+   * This means checking if the window has been shrunk or expanded, and resizing panels accordingly,
+   * while paying attention to all min/max sizes.
+   */
+  onResizeWindow(): void {
+    if (this.unit &#x3D;&#x3D; &#x27;%&#x27;) return; // % doesn&#x27;t care about container size.
+    const containerSizeBeforeResize &#x3D; this.getRelevantBoundingSize(); // size before window resize
+    this.updateBoundingClientRect();
+    const containerSizeAfterResize &#x3D; this.getRelevantBoundingSize(); // size after resize
+    // factor &#x3D;&#x3D; 1: no relevant change, factor &lt; 1: window is smaller, factor &gt; 1: window is larger
+    const resizeFactor &#x3D; containerSizeAfterResize / containerSizeBeforeResize;
+    if (resizeFactor &#x3D;&#x3D; 1) return; // no relevant change, no resize necessary (i.e. if height changes, but the container is in row mode)
+    let distributedSize &#x3D; 0; // Will be needed for knowing the remaining budget
+    const panesToAutomaticallySizeWithoutMaxMinPanes: PaneComponent[] &#x3D; [];
+
+    // First sizing pass for possibly violation of min/max sizes
+    this._displayedPanes.forEach((pane) &#x3D;&gt; {
+      const newPaneSize &#x3D; pane.size * resizeFactor; // e.g. 400px pane, with 0.5 resize factor becomes 200px pane
+      if (resizeFactor &lt; 1) {
+        // window got smaller &#x3D;&gt; only minSizes have to be checked
+        if (newPaneSize &lt; pane.minSize) {
+          // if a new Size would violate minSize, it will clamp to its minSite
+          pane.size &#x3D; pane.minSize;
+          distributedSize +&#x3D; pane.minSize;
+        } else {
+          panesToAutomaticallySizeWithoutMaxMinPanes.push(pane); // store for automatic sizing
+        }
+      } else if (resizeFactor &gt; 1) {
+        // window got larger &#x3D;&gt; only maxSizes have to be checked
+        if (newPaneSize &gt; pane.maxSize) {
+          // if a new Size would violate maxSize, it will clamp to its maxSite
+          pane.size &#x3D; pane.maxSize;
+          distributedSize +&#x3D; pane.maxSize;
+        } else {
+          panesToAutomaticallySizeWithoutMaxMinPanes.push(pane); // store for automatic sizing
+        }
+      }
+    });
+
+    let totalSizeOfNonMaxMinPanes &#x3D; 0;
+    const paneSizesRelativeToContainer: number[] &#x3D; []; // container for proportions of remaining panes to their total sum
+    /// get the total size of the remaining un-resized panes
+    /// (can probably be calculated with boundingSize - distributedSize, but it works and I won&#x27;t touch it.)
+    panesToAutomaticallySizeWithoutMaxMinPanes.forEach((pane) &#x3D;&gt; {
+      totalSizeOfNonMaxMinPanes +&#x3D; pane.size;
+    });
+    // populate the container with proportions relative to the total remaining size
+    panesToAutomaticallySizeWithoutMaxMinPanes.forEach((pane) &#x3D;&gt; {
+      // avoids division by 0 in else
+      if (totalSizeOfNonMaxMinPanes &#x3D;&#x3D; 0) paneSizesRelativeToContainer.push(0);
+      else paneSizesRelativeToContainer.push(pane.size / totalSizeOfNonMaxMinPanes);
+    });
+
+    // distribute the panes that didn&#x27;t violate their min/max sizes
+    panesToAutomaticallySizeWithoutMaxMinPanes.forEach((pane, index) &#x3D;&gt; {
+      pane.size &#x3D; (containerSizeAfterResize - distributedSize) * paneSizesRelativeToContainer[index];
+    });
+
+    // push changes to css
+    this._displayedPanes.forEach((pane) &#x3D;&gt; {
+      pane.refreshFlexStyle();
+    });
+  }
+
+  private _panesBeforeClickedPaneDivider: PaneComponent[] &#x3D; [];
+  private _panesAfterClickedPaneDivider: PaneComponent[] &#x3D; [];
+
+  private _clickedPaneDivider!: PaneDividerComponent | null;
+  public get clickedPaneDivider(): PaneDividerComponent | null {
+    return this._clickedPaneDivider;
+  }
+  /**
+   * Gets set by a divider that has the parent PaneContainerComponent injected, and is clicked.
+   */
+  public set clickedPaneDivider(value: PaneDividerComponent | null) {
+    this._clickedPaneDivider &#x3D; value;
+    if (this._clickedPaneDivider &#x3D;&#x3D; null) return; // will probably never happen
+
+    this.updateBoundingClientRect(); // to be safe, will probably not always be necessary.
+    // Reset arrays, and fill them with panes before and after the divider. This can be found out by looking at the order.
+    this._panesBeforeClickedPaneDivider &#x3D; [];
+    this._panesAfterClickedPaneDivider &#x3D; [];
+    this._displayedPanes.forEach((pane) &#x3D;&gt; {
+      if (pane.order &lt; (this._clickedPaneDivider as PaneDividerComponent).order)
+        this._panesBeforeClickedPaneDivider.push(pane);
+      else this._panesAfterClickedPaneDivider.push(pane);
+    });
+  }
+
+  /**
+   * Tries to resize the panel left and right of the divider, in order to &quot;move&quot; the divider.
+   * The divider itself doesn&#x27;t directly have a position, it&#x27;s just set between two correctly resizing panes.
+   * If the pane before or after the divider isn&#x27;t able to be resized (due to minMax size) it skips it,
+   * and tries to resize the pane next to it, and so on.
+   * @param event event containing new divider position (i.e. mouse position)
+   */
+  moveDivider(event: PointerEvent): void {
+    const directionallyRelevantMousePos &#x3D; this.getDirectionalRelevantMousePosition(event, this.unit, this.direction);
+
+    let panelsWereResized &#x3D; false; // bool for breaking out of while, and knowing when to apply changes afterwards
+    let beforeIndexToApplyResize &#x3D; this._panesBeforeClickedPaneDivider.length - 1; // index of the pane directly before the divider
+    let afterIndexToApplyResize &#x3D; 0; // index of the pane directly after the divider
+    let newSize &#x3D; { beforePane: 0, afterPane: 0 }; // new sizes
+    let beforePaneToResize!: PaneComponent;
+    let afterPaneToResize!: PaneComponent;
+
+    /// Try to resize the panel left and right of the divider. If it can&#x27;t be resized, skip it, and try to resize the next one.
+    /// Repeat this until either all panes before / after the divider can&#x27;t be resized, or they were successfully resized.
+    do {
+      beforePaneToResize &#x3D; this._panesBeforeClickedPaneDivider[beforeIndexToApplyResize];
+      // magic math
+      newSize.beforePane &#x3D;
+        directionallyRelevantMousePos -
+        this.getSizeUntilBeginningOfPane(beforeIndexToApplyResize) -
+        this.getSizeOfSkippedBeforePanes(beforeIndexToApplyResize);
+
+      afterPaneToResize &#x3D; this._panesAfterClickedPaneDivider[afterIndexToApplyResize];
+      // more magic math
+      newSize.afterPane &#x3D;
+        this.getSizeUntilBeginningOfPane(this._panesBeforeClickedPaneDivider.length + afterIndexToApplyResize) +
+        afterPaneToResize.size -
+        directionallyRelevantMousePos -
+        this.getSizeOfSkippedAfterPanes(afterIndexToApplyResize);
+
+      newSize &#x3D; this.getClampedSizesIfPaneNotAtMaxOrMin(beforePaneToResize, afterPaneToResize, newSize);
+
+      // check if the pane before the divider violates its minMax sizes, if yes, try the next one
+      if (beforePaneToResize.maxSize &lt; newSize.beforePane || beforePaneToResize.minSize &gt; newSize.beforePane) {
+        beforeIndexToApplyResize--;
+        continue;
+      }
+      // check if the pane after the divider violates its minMax sizes, if yes, try the next one
+      if (afterPaneToResize.maxSize &lt; newSize.afterPane || afterPaneToResize.minSize &gt; newSize.afterPane) {
+        afterIndexToApplyResize++;
+        continue;
+      }
+      // if both resizes were within boundaries, leave.
+      panelsWereResized &#x3D; true;
+    } while (
+      !panelsWereResized &amp;&amp;
+      beforeIndexToApplyResize &gt;&#x3D; 0 &amp;&amp;
+      afterIndexToApplyResize &lt; this._panesAfterClickedPaneDivider.length
+    );
+
+    // only apply changes if the panels could be resized
+    if (panelsWereResized) {
+      this._panesBeforeClickedPaneDivider[beforeIndexToApplyResize].size &#x3D; newSize.beforePane as number;
+      this._panesAfterClickedPaneDivider[afterIndexToApplyResize].size &#x3D; newSize.afterPane as number;
+      this._panesBeforeClickedPaneDivider[beforeIndexToApplyResize].refreshFlexStyle();
+      this._panesAfterClickedPaneDivider[afterIndexToApplyResize].refreshFlexStyle();
+    }
+  }
+
+  /**
+   *
+   * @param event event containing mouse position
+   * @param unit unit that the mouse position should be in
+   * @param direction direction the container is in
+   * @returns a mouse position in the correct unit, and relative to the correct side (left or right, depending on row or column)
+   */
+  getDirectionalRelevantMousePosition(event: PointerEvent, unit: PaneUnit, direction: &#x27;row&#x27; | &#x27;column&#x27;): number {
+    let mousePos!: { x: number; y: number };
+
+    switch (unit) {
+      case &#x27;px&#x27;:
+        mousePos &#x3D; {
+          x: event.x - this._boundingClientRect.left,
+          y: event.y - this._boundingClientRect.top
+        };
+        break;
+      case &#x27;%&#x27;:
+        mousePos &#x3D; {
+          x: ((event.x - this._boundingClientRect.left) / this._boundingClientRect.width) * 100,
+          y: ((event.y - this._boundingClientRect.top) / this._boundingClientRect.height) * 100
+        };
+        break;
+      case &#x27;rem&#x27;:
+        mousePos &#x3D; {
+          x: this.getRemFromPx(event.x - this._boundingClientRect.left),
+          y: this.getRemFromPx(event.y - this._boundingClientRect.top)
+        };
+        break;
+      default:
+        throw new PaneContainerError(&#x60;unknown unit ${unit} in getDirectionalRelevantMousePosition&#x60;);
+    }
+    return direction &#x3D;&#x3D; &#x27;row&#x27; ? mousePos.x : mousePos.y;
+  }
+
+  /**
+   * @returns the total size of all panes before the divider
+   */
+  getSizeBeforeDivider(): number {
+    let sizeBeforeDivider &#x3D; 0;
+    this._panesBeforeClickedPaneDivider.forEach((pane) &#x3D;&gt; {
+      sizeBeforeDivider +&#x3D; pane.size;
+    });
+    return sizeBeforeDivider;
+  }
+
+  /**
+   * @param paneIndex index of pane until which to get the size
+   * @returns total size until beginning of pane with the index paneIndex
+   */
+  getSizeUntilBeginningOfPane(paneIndex: number): number {
+    if (paneIndex &lt; 0 || paneIndex &gt;&#x3D; this._displayedPanes.length)
+      throw new PaneContainerError(&#x60;Cannot get Pane at index ${paneIndex}&#x60;);
+    let sizeUntilBeginningOfPane &#x3D; 0;
+    this._displayedPanes.forEach((pane, index) &#x3D;&gt; {
+      if (index &lt; paneIndex) {
+        sizeUntilBeginningOfPane +&#x3D; pane.size;
+      }
+    });
+    return sizeUntilBeginningOfPane;
+  }
+
+  /**
+   * Gets the size of all panes before the divider that were skipped due to minMax restraints.
+   * @param beforeIndexToApplyResize index of a pane before the divider
+   * @returns the sizes of all panes that are between the beforeIndexToApplyResize pane and the divider
+   */
+  getSizeOfSkippedBeforePanes(beforeIndexToApplyResize: number): number {
+    if (beforeIndexToApplyResize &lt; 0 || beforeIndexToApplyResize &gt;&#x3D; this._panesBeforeClickedPaneDivider.length)
+      throw new PaneContainerError(&#x60;Cannot get BeforePane at index ${beforeIndexToApplyResize}&#x60;);
+
+    let sizeOfSkippedBeforePanes &#x3D; 0;
+    this._panesBeforeClickedPaneDivider.forEach((pane, index) &#x3D;&gt; {
+      if (index &gt; beforeIndexToApplyResize) {
+        sizeOfSkippedBeforePanes +&#x3D; pane.size;
+      }
+    });
+    return sizeOfSkippedBeforePanes;
+  }
+  /**
+   * Gets the size of all panes after the divider that were skipped due to minMax restraints.
+   * @param afterIndexToApplyResize index of a pane before the divider
+   * @returns the sizes of all panes that are between the afterIndexToApplyResize pane and the divider
+   */
+  getSizeOfSkippedAfterPanes(afterIndexToApplyResize: number): number {
+    if (afterIndexToApplyResize &lt; 0 || afterIndexToApplyResize &gt;&#x3D; this._panesAfterClickedPaneDivider.length)
+      throw new PaneContainerError(&#x60;Cannot get AfterPane at index ${afterIndexToApplyResize}&#x60;);
+    let sizeOfSkippedAfterPanes &#x3D; 0;
+    this._panesAfterClickedPaneDivider.forEach((pane, index) &#x3D;&gt; {
+      if (index &lt; afterIndexToApplyResize) {
+        sizeOfSkippedAfterPanes +&#x3D; pane.size;
+      }
+    });
+    return sizeOfSkippedAfterPanes;
+  }
+
+  /**
+   *
+   * @param beforePaneToResize beforePane to eventually clamp
+   * @param afterPaneToResize afterPane to eventually clamp
+   * @param newSize Sizes that the before and after should get
+   * @returns Eventually clamped sizes. Possibly the same as newSize if no minMax violations occurred.
+   */
+  getClampedSizesIfPaneNotAtMaxOrMin(
+    beforePaneToResize: PaneComponent,
+    afterPaneToResize: PaneComponent,
+    newSize: { beforePane: number; afterPane: number }
+  ): { beforePane: number; afterPane: number } {
+    const clampedSize &#x3D; newSize;
+    // check if beforePane violates maxSize, clamp if yes
+    if (beforePaneToResize.maxSize &lt; clampedSize.beforePane &amp;&amp; beforePaneToResize.maxSize &gt; beforePaneToResize.size) {
+      clampedSize.afterPane +&#x3D; clampedSize.beforePane - beforePaneToResize.maxSize;
+      clampedSize.beforePane &#x3D; beforePaneToResize.maxSize;
+    } // check if beforePane violates minSize, clamp if yes
+    else if (
+      beforePaneToResize.minSize &gt; clampedSize.beforePane &amp;&amp;
+      beforePaneToResize.minSize &lt; beforePaneToResize.size
+    ) {
+      clampedSize.afterPane +&#x3D; clampedSize.beforePane - beforePaneToResize.minSize;
+      clampedSize.beforePane &#x3D; beforePaneToResize.minSize;
+    }
+
+    // check if afterPane violates maxSize, clamp if yes
+    if (afterPaneToResize.maxSize &lt; clampedSize.afterPane &amp;&amp; afterPaneToResize.maxSize &gt; afterPaneToResize.size) {
+      clampedSize.beforePane +&#x3D; clampedSize.afterPane - afterPaneToResize.maxSize;
+      clampedSize.afterPane &#x3D; afterPaneToResize.maxSize;
+    } // check if afterPane violates minSize, clamp if yes
+    else if (afterPaneToResize.minSize &gt; clampedSize.afterPane &amp;&amp; afterPaneToResize.minSize &lt; afterPaneToResize.size) {
+      clampedSize.beforePane +&#x3D; clampedSize.afterPane - afterPaneToResize.minSize;
+      clampedSize.afterPane &#x3D; afterPaneToResize.minSize;
+    }
+    return clampedSize;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ng-content&gt;&lt;/ng-content&gt;
+&lt;ng-template
+  ngFor
+  let-isLastPane&#x3D;&quot;last&quot;
+  let-isFirstPane&#x3D;&quot;first&quot;
+  let-length&#x3D;&quot;count&quot;
+  let-paneIndex&#x3D;&quot;index&quot;
+  [ngForOf]&#x3D;&quot;_displayedPanes&quot;
+&gt;
+  &lt;a-sia-pane-divider
+    #divider
+    [order]&#x3D;&quot;paneIndex * 2 + 1&quot;
+    [direction]&#x3D;&quot;direction&quot;
+    *ngIf&#x3D;&quot;
+      !(
+        isLastPane ||
+        (paneIndex &#x3D;&#x3D; length - 2 &amp;&amp;
+          _displayedPanes.get(paneIndex + 1)?.maxSize &#x3D;&#x3D; _displayedPanes.get(paneIndex + 1)?.minSize) ||
+        (paneIndex &#x3D;&#x3D; length - 2 &amp;&amp;
+          _displayedPanes.get(paneIndex + 1)?.maxSize &#x3D;&#x3D; _displayedPanes.get(paneIndex + 1)?.minSize) ||
+        (isFirstPane &amp;&amp; _displayedPanes.get(0)?.maxSize &#x3D;&#x3D; _displayedPanes.get(0)?.minSize)
+      )
+    &quot;
+  &gt;&lt;/a-sia-pane-divider&gt;
+&lt;/ng-template&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./pane-container.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">:host {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ng-content></ng-content><ng-template  ngFor  let-isLastPane="last"  let-isFirstPane="first"  let-length="count"  let-paneIndex="index"  [ngForOf]="_displayedPanes">  <a-sia-pane-divider    #divider    [order]="paneIndex * 2 + 1"    [direction]="direction"    *ngIf="      !(        isLastPane ||        (paneIndex == length - 2 &&          _displayedPanes.get(paneIndex + 1)?.maxSize == _displayedPanes.get(paneIndex + 1)?.minSize) ||        (paneIndex == length - 2 &&          _displayedPanes.get(paneIndex + 1)?.maxSize == _displayedPanes.get(paneIndex + 1)?.minSize) ||        (isFirstPane && _displayedPanes.get(0)?.maxSize == _displayedPanes.get(0)?.minSize)      )    "  ></a-sia-pane-divider></ng-template></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'a-sia-root'},{'name': 'ColorInputComponent', 'selector': 'a-sia-color-input'},{'name': 'ConnectionComponent', 'selector': 'a-sia-connection'},{'name': 'DataPanelComponent', 'selector': 'a-sia-data-panel'},{'name': 'DataPanelNavbarComponent', 'selector': 'a-sia-data-panel-navbar'},{'name': 'DataPanelNavbarEntryComponent', 'selector': 'a-sia-data-panel-navbar-entry'},{'name': 'DiagramComponent', 'selector': 'a-sia-diagram'},{'name': 'DiagramLineComponent', 'selector': 'a-sia-diagram-line'},{'name': 'DropDownComponent', 'selector': 'a-sia-drop-down'},{'name': 'GraphControlSimulationNavigationComponent', 'selector': 'a-sia-graph-control-simulation-navigation'},{'name': 'GraphControlToolComponent', 'selector': 'a-sia-graph-control-tool'},{'name': 'GraphControlZoomComponent', 'selector': 'a-sia-graph-control-zoom'},{'name': 'GraphEditorComponent', 'selector': 'a-sia-graph-editor'},{'name': 'GraphEditorControlsComponent', 'selector': 'a-sia-graph-editor-controls'},{'name': 'GroupNodeComponent', 'selector': 'a-sia-group-node'},{'name': 'InputLargeComponent', 'selector': 'a-sia-input-large'},{'name': 'InputMediumComponent', 'selector': 'a-sia-input-medium'},{'name': 'InputSmallComponent', 'selector': 'a-sia-input-small'},{'name': 'InspectorPanelComponent', 'selector': 'a-sia-inspector-panel'},{'name': 'LegendComponent', 'selector': 'a-sia-legend'},{'name': 'LegendEntryComponent', 'selector': 'a-sia-legend-entry'},{'name': 'LoginComponent', 'selector': 'a-sia-login'},{'name': 'MenubarComponent', 'selector': 'a-sia-menubar'},{'name': 'MenubarEntryComponent', 'selector': 'a-sia-menubar-entry'},{'name': 'MenubarMenuComponent', 'selector': 'a-sia-menubar-menu'},{'name': 'ModalComponent', 'selector': 'a-sia-modal'},{'name': 'NetworkExplorerComponent', 'selector': 'a-sia-network-explorer'},{'name': 'NetworkExplorerInstancesComponent', 'selector': 'a-sia-network-explorer-instances'},{'name': 'NetworkExplorerNetworkComponent', 'selector': 'a-sia-network-explorer-network'},{'name': 'NetworkExplorerNetworksComponent', 'selector': 'a-sia-network-explorer-networks'},{'name': 'NetworkExplorerProjectsComponent', 'selector': 'a-sia-network-explorer-projects'},{'name': 'NetworkPanelComponent', 'selector': 'a-sia-network-panel'},{'name': 'NetworkViewComponent', 'selector': 'a-sia-network-view'},{'name': 'PaneComponent', 'selector': 'a-sia-pane'},{'name': 'PaneContainerComponent', 'selector': 'a-sia-pane-container'},{'name': 'PaneDividerComponent', 'selector': 'a-sia-pane-divider'},{'name': 'PersonNodeComponent', 'selector': 'a-sia-person-node'},{'name': 'SettingsComponent', 'selector': 'a-sia-settings'},{'name': 'SimulationDiagramComponent', 'selector': 'a-sia-simulation-diagram'},{'name': 'SliderComponent', 'selector': 'a-sia-slider'},{'name': 'SocialNodeComponent', 'selector': 'a-sia-social-node'},{'name': 'StructurePanelComponent', 'selector': 'a-sia-structure-panel'}];
+    var DIRECTIVES = [{'name': 'ButtonDirective', 'selector': '[a-sia-button]'},{'name': 'ButtonSmallDirective', 'selector': '[a-sia-button-small]'},{'name': 'InputLargeDirective', 'selector': '[aSiaInputLarge]'},{'name': 'InputMediumDirective', 'selector': '[aSiaInputMedium]'},{'name': 'InputSmallDirective', 'selector': '[aSiaInputSmall]'},{'name': 'PaneIfDirective', 'selector': '[aSiaPaneIf]'}];
+    var ACTUAL_COMPONENT = {'name': 'PaneContainerComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'PaneContainerComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
